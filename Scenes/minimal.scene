@@ -5,7 +5,6 @@
       "Id": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
       "Name": "Sun",
       "Rotation": "-0.0729315,0.4822396,0.1305433,0.8631827",
-      "Tags": "light_directional,light",
       "Enabled": true,
       "Components": [
         {
@@ -21,7 +20,6 @@
     {
       "Id": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
       "Name": "2D Skybox",
-      "Tags": "skybox",
       "Enabled": true,
       "Components": [
         {
@@ -98,7 +96,6 @@
           "Gravity": true,
           "LinearDamping": 0,
           "Locking": {},
-          "MassOverride": 0,
           "RigidbodyFlags": 0,
           "StartAsleep": false
         }
@@ -135,7 +132,6 @@
           "Gravity": true,
           "LinearDamping": 0,
           "Locking": {},
-          "MassOverride": 0,
           "RigidbodyFlags": 0,
           "StartAsleep": false
         }
@@ -172,7 +168,6 @@
           "Gravity": true,
           "LinearDamping": 0,
           "Locking": {},
-          "MassOverride": 0,
           "RigidbodyFlags": 0,
           "StartAsleep": false
         }
@@ -212,8 +207,7 @@
                 "t": 1,
                 "c": "1,1,1,1"
               }
-            ],
-            "alpha": []
+            ]
           },
           "BloomCurve": [
             {
@@ -266,6 +260,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-07T09:49:59.4330189-05:00",
+  "LastSaved": "2024-02-08T13:32:32.3548959\u002B00:00",
   "__references": []
 }
