@@ -119,7 +119,7 @@
           "MaterialOverride": "materials/default.vmat",
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
-          "Tint": "1,0,0.93333,1"
+          "Tint": "0,1,0.11667,1"
         },
         {
           "__type": "BoxCollider",
@@ -266,6 +266,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-07T10:48:23.2889726-05:00",
+  "LastSaved": "2024-03-07T10:55:39.1837749-05:00",
   "__references": []
 }
