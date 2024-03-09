@@ -1,2 +1,2 @@
 # Marbleriffic
-The best marble game you ever did see.
+The best marble game you've ever seen.
