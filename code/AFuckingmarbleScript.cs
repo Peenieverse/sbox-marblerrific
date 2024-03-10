@@ -16,16 +16,33 @@ public sealed class AFuckingmarbleScript : Component
 	[Property] private float mouseSensitivity {get;set;}= 100f;
 	[Property] private float forceMultForBetterConfig {get;set;}= 10000000f;
 	[Property] private float cameraReturnLerp {get;set;}= 100f;
+	[Property] private float Zrespwawn {get;set;}= -1000f;
 	public float mouseSensMult = 1f;
 	float xRotation = 0f;
 	float yRotation = 0f;
 	[Property] private Vector2 CamClamp { get; set; }
 	Vector3 cameraPosStart;
 	float CamRayDis;
+	GameObject respawnPoint;
 	protected override void OnAwake()
 	{
+		IEnumerable<GameObject> balls = Scene.GetAllObjects(true);
+		foreach(GameObject go in balls)
+		{
+			
+			if(go.Tags.Has("respawnpoint"))
+			{
+				respawnPoint = go;
+				break;
+			}
+		}
 		cameraPosStart = ActualCamera.Transform.LocalPosition;
 		CamRayDis = Vector3.DistanceBetween(ActualCamera.Transform.Position,Camera.Transform.Position);
+	}
+	public void Respawn(Vector3 point)
+	{
+		Transform.Position = point;
+		rb.Velocity = Vector3.Zero;
 	}
 	protected override void OnUpdate()
 	{
@@ -43,7 +60,7 @@ public sealed class AFuckingmarbleScript : Component
 			velocityExludingZ.z = 0;
 			if(Input.Down("Run")) rb.ApplyForce(forceMultForBetterConfig * -velocityExludingZ * BrakeAcceleration * Time.Delta);
 		}
-		
+		if(Transform.Position.z <= Zrespwawn) Respawn(respawnPoint.Transform.Position);
 		
 
 
