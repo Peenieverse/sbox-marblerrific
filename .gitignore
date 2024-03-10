@@ -26,3 +26,4 @@ code/Editor/.vscode/*
 *.los
 *.vpk
 *.sln
+code/marbleriffic.csproj

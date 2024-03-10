@@ -1,0 +1,158 @@
+{
+  "RootObject": {
+    "Id": "3ccb4f84-b086-4874-bf89-9e37bb020918",
+    "Name": "THEFUCKINGMARBLE",
+    "Enabled": true,
+    "Children": [
+      {
+        "Id": "457796cb-5bbc-416b-9a77-c522dd3649af",
+        "Name": "A FUCKING MARBLE",
+        "Position": "-126.4292,-187.5311,115.5769",
+        "Enabled": true,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "BodyGroups": 18446744073709551615,
+            "MaterialGroup": null,
+            "MaterialOverride": null,
+            "Model": "models/dev/sphere.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "SphereCollider",
+            "Center": "0,0,0",
+            "IsTrigger": false,
+            "Radius": 32,
+            "Static": false,
+            "Surface": null
+          },
+          {
+            "__type": "Rigidbody",
+            "AngularDamping": 0,
+            "Gravity": true,
+            "LinearDamping": 0,
+            "Locking": {},
+            "MassOverride": 0,
+            "RigidbodyFlags": 0,
+            "StartAsleep": false
+          },
+          {
+            "__type": "AFuckingmarbleScript",
+            "Acceleration": 100,
+            "ActualCamera": {
+              "_type": "gameobject",
+              "go": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a"
+            },
+            "AirControl": false,
+            "BrakeAcceleration": 5,
+            "CamClamp": "-90,90",
+            "Camera": {
+              "_type": "gameobject",
+              "go": "bb66de77-9ccb-4719-9b11-cc1826652238"
+            },
+            "cameraReturnLerp": 10,
+            "forceMultForBetterConfig": 1000000,
+            "forwardAxis": {
+              "_type": "gameobject",
+              "go": "8ec5e949-5ad8-460a-bb52-6eccc1c609db"
+            },
+            "JumpForce": 200,
+            "mouseSensitivity": 100,
+            "rayDis": 36.2,
+            "raySize": 20,
+            "rb": {
+              "_type": "component",
+              "go": "457796cb-5bbc-416b-9a77-c522dd3649af",
+              "component_type": "Rigidbody"
+            }
+          }
+        ],
+        "Children": [
+          {
+            "Id": "8ec5e949-5ad8-460a-bb52-6eccc1c609db",
+            "Name": "upAxis",
+            "Position": "0,0,0",
+            "Enabled": true
+          }
+        ]
+      },
+      {
+        "Id": "bb66de77-9ccb-4719-9b11-cc1826652238",
+        "Name": "CameraRotate",
+        "Position": "-126.4291,-187.5311,115.5769",
+        "Enabled": true,
+        "Children": [
+          {
+            "Id": "3ee1c9f4-07be-4e0b-8b23-67bee2d8ec8a",
+            "Name": "Camera",
+            "Position": "-274.5259,-0.0000236451,294.9662",
+            "Rotation": "0.00000003099143,0.3991939,-0.000000001282434,0.9168665",
+            "Enabled": true,
+            "Components": [
+              {
+                "__type": "CameraComponent",
+                "BackgroundColor": "0.33333,0.46275,0.52157,1",
+                "ClearFlags": "All",
+                "FieldOfView": 60,
+                "IsMainCamera": true,
+                "Orthographic": false,
+                "OrthographicHeight": 1204,
+                "Priority": 1,
+                "RenderExcludeTags": "",
+                "RenderTags": "",
+                "TargetEye": "None",
+                "Viewport": "0,0,1,1",
+                "ZFar": 10000,
+                "ZNear": 0.1
+              },
+              {
+                "__type": "Bloom",
+                "BloomColor": {
+                  "color": [
+                    {
+                      "c": "1,1,1,1"
+                    },
+                    {
+                      "t": 1,
+                      "c": "1,1,1,1"
+                    }
+                  ],
+                  "alpha": []
+                },
+                "BloomCurve": [
+                  {
+                    "y": 0.5
+                  },
+                  {
+                    "x": 1,
+                    "y": 1
+                  }
+                ],
+                "Mode": "Additive",
+                "Strength": 0.5,
+                "Threshold": 0.5,
+                "ThresholdWidth": 0.5
+              },
+              {
+                "__type": "Tonemapping",
+                "ExposureCompensation": 0,
+                "MaximumExposure": 2,
+                "MinimumExposure": 1,
+                "Rate": 1
+              },
+              {
+                "__type": "Sharpen",
+                "Scale": 0.2
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "__references": []
+}

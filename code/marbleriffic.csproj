@@ -34,22 +34,22 @@
 	</ItemGroup>
 
   <PropertyGroup>
-	<OutputPath>C:\Program Files (x86)\Steam\steamapps\common\sbox/.vs/output/</OutputPath>
-	<DocumentationFile>C:\Program Files (x86)\Steam\steamapps\common\sbox/.vs/output/marbleriffic.xml</DocumentationFile>
+	<OutputPath>D:\SteamLibrary\steamapps\common\sbox/.vs/output/</OutputPath>
+	<DocumentationFile>D:\SteamLibrary\steamapps\common\sbox/.vs/output/marbleriffic.xml</DocumentationFile>
 	<RootNamespace>Sandbox</RootNamespace>
 	<Nullable>disable</Nullable>
   </PropertyGroup>
 
 	<ItemGroup>
-		<Analyzer Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\bin\managed\Sandbox.Generator.dll"/>
-		<Reference Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\bin\managed/Sandbox.System.dll" />
-		<Reference Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\bin\managed/Sandbox.Engine.dll" />
-		<Reference Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\bin\managed/Sandbox.Game.dll" />
-		<Reference Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\bin\managed/Sandbox.Reflection.dll" />
+		<Analyzer Include="D:\SteamLibrary\steamapps\common\sbox\bin\managed\Sandbox.Generator.dll"/>
+		<Reference Include="D:\SteamLibrary\steamapps\common\sbox\bin\managed/Sandbox.System.dll" />
+		<Reference Include="D:\SteamLibrary\steamapps\common\sbox\bin\managed/Sandbox.Engine.dll" />
+		<Reference Include="D:\SteamLibrary\steamapps\common\sbox\bin\managed/Sandbox.Game.dll" />
+		<Reference Include="D:\SteamLibrary\steamapps\common\sbox\bin\managed/Sandbox.Reflection.dll" />
 	</ItemGroup>
 
   <ItemGroup>
-		<ProjectReference Include="C:\Program Files (x86)\Steam\steamapps\common\sbox\addons\base\code\Base Library.csproj" />
+		<ProjectReference Include="D:\SteamLibrary\steamapps\common\sbox\addons\base\code\Base Library.csproj" />
 
   </ItemGroup>
 
