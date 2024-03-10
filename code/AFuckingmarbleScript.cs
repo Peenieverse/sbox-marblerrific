@@ -3,6 +3,7 @@ using Sandbox;
 
 public sealed class AFuckingmarbleScript : Component
 {
+	[Property] private CameraComponent cameraComponent {get;set;}
 	[Property] private GameObject forwardAxis {get;set;}
 	[Property] private GameObject Camera {get;set;}
 	[Property] private GameObject ActualCamera {get;set;}
@@ -17,6 +18,8 @@ public sealed class AFuckingmarbleScript : Component
 	[Property] private float forceMultForBetterConfig {get;set;}= 10000000f;
 	[Property] private float cameraReturnLerp {get;set;}= 100f;
 	[Property] private float Zrespwawn {get;set;}= -1000f;
+	[Property] private float fovVelocityMult {get;set;}= 0.1f;
+	[Property] private float fovVelocityLerp {get;set;}= 0.2f;
 	public float mouseSensMult = 1f;
 	float xRotation = 0f;
 	float yRotation = 0f;
@@ -24,8 +27,10 @@ public sealed class AFuckingmarbleScript : Component
 	Vector3 cameraPosStart;
 	float CamRayDis;
 	GameObject respawnPoint;
+	float startFov;
 	protected override void OnAwake()
 	{
+		startFov = cameraComponent.FieldOfView;
 		IEnumerable<GameObject> balls = Scene.GetAllObjects(true);
 		foreach(GameObject go in balls)
 		{
@@ -76,6 +81,8 @@ public sealed class AFuckingmarbleScript : Component
 		yRotation += mouseX;
 		Camera.Transform.LocalRotation = new Angles(xRotation, yRotation, 0);
 		Camera.Transform.Position = Transform.Position;
+		//FOV
+		cameraComponent.FieldOfView = MathX.Lerp(cameraComponent.FieldOfView,startFov+((rb.Velocity.Abs().z+rb.Velocity.Abs().y+rb.Velocity.Abs().z)*fovVelocityMult),Time.Delta*fovVelocityLerp);
 
 	}
 }
