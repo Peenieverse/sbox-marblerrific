@@ -83,6 +83,6 @@ public sealed class AFuckingmarbleScript : Component
 		Camera.Transform.Position = Transform.Position;
 		//FOV
 		cameraComponent.FieldOfView = MathX.Lerp(cameraComponent.FieldOfView,startFov+((rb.Velocity.Abs().z+rb.Velocity.Abs().y+rb.Velocity.Abs().z)*fovVelocityMult),Time.Delta*fovVelocityLerp);
-
+		if(Input.Pressed("menu"))Time.Scale = 0;
 	}
 }

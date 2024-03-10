@@ -86,7 +86,7 @@
       "Components": [
         {
           "__type": "MapInstance",
-          "MapName": "maps/testing.vmap",
+          "MapName": "maps/testmap 2.vmap",
           "OnMapLoaded": null,
           "OnMapUnloaded": null,
           "UseMapFromLaunch": false
@@ -100,6 +100,32 @@
       "Position": "0,0,346.6632",
       "Tags": "respawnpoint",
       "Enabled": true
+    },
+    {
+      "Id": "7de5ddb6-3737-453c-89e4-c72618b3dc98",
+      "Name": "Cube",
+      "Position": "0,592.1958,0",
+      "Scale": "0.5,0.5,3.199999",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "MaterialGroup": null,
+          "MaterialOverride": null,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "BoxCollider",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false,
+          "Surface": null
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -125,6 +151,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-10T17:49:49.5198494\u002B07:00",
+  "LastSaved": "2024-03-10T18:38:44.5687824\u002B07:00",
   "__references": []
 }
