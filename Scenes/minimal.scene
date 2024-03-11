@@ -43,10 +43,171 @@
       ]
     },
     {
-      "Id": "3ccb4f84-b086-4874-bf89-9e37bb020918",
-      "Name": "THEFUCKINGMARBLE",
+      "Id": "a596b920-3dbb-4aed-bed9-209318e6cdac",
+      "Name": "A FUCKING MARBLE",
+      "Position": "0,0,205.0967",
       "Enabled": true,
-      "__Prefab": "trollfacemarble.prefab"
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__enabled": false,
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/sphere.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "SphereCollider",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Radius": 32,
+          "Static": false
+        },
+        {
+          "__type": "Rigidbody",
+          "AngularDamping": 0,
+          "Gravity": true,
+          "LinearDamping": 0,
+          "Locking": {},
+          "MassOverride": 0,
+          "RigidbodyFlags": 0,
+          "StartAsleep": false
+        },
+        {
+          "__type": "AFuckingmarbleScript",
+          "Acceleration": 100,
+          "ActualCamera": {
+            "_type": "gameobject",
+            "go": "29006af4-0d2c-4d73-a042-c5fb38141272"
+          },
+          "AirControl": false,
+          "BrakeAcceleration": 5,
+          "CamClamp": "-90,90",
+          "Camera": {
+            "_type": "gameobject",
+            "go": "4d0dbff8-6c65-4ddb-b2d6-5d34a64c79d4"
+          },
+          "cameraComponent": {
+            "_type": "component",
+            "go": "29006af4-0d2c-4d73-a042-c5fb38141272",
+            "component_type": "CameraComponent"
+          },
+          "cameraReturnLerp": 10,
+          "forceMultForBetterConfig": 1000000,
+          "forwardAxis": {
+            "_type": "gameobject",
+            "go": "6e8729b0-53b6-4948-8527-4d985453273b"
+          },
+          "fovVelocityLerp": 0.5,
+          "fovVelocityMult": 0.05,
+          "JumpForce": 200,
+          "mouseSensitivity": 100,
+          "rayDis": 36.2,
+          "raySize": 20,
+          "rb": {
+            "_type": "component",
+            "go": "a596b920-3dbb-4aed-bed9-209318e6cdac",
+            "component_type": "Rigidbody"
+          },
+          "Zrespwawn": -1000
+        }
+      ],
+      "Children": [
+        {
+          "Id": "6e8729b0-53b6-4948-8527-4d985453273b",
+          "Name": "upAxis",
+          "Position": "0,0,0",
+          "Enabled": true
+        },
+        {
+          "Id": "4d0dbff8-6c65-4ddb-b2d6-5d34a64c79d4",
+          "Name": "CameraRotate",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "Children": [
+            {
+              "Id": "29006af4-0d2c-4d73-a042-c5fb38141272",
+              "Name": "Camera",
+              "Position": "-624.9197,-0.00003516128,671.4487",
+              "Rotation": "0.00000003099143,0.3991939,-0.000000001282434,0.9168665",
+              "Enabled": true,
+              "Components": [
+                {
+                  "__type": "CameraComponent",
+                  "BackgroundColor": "0.33333,0.46275,0.52157,1",
+                  "ClearFlags": "All",
+                  "FieldOfView": 60,
+                  "IsMainCamera": true,
+                  "Orthographic": false,
+                  "OrthographicHeight": 1204,
+                  "Priority": 1,
+                  "RenderExcludeTags": "",
+                  "RenderTags": "",
+                  "TargetEye": "None",
+                  "Viewport": "0,0,1,1",
+                  "ZFar": 10000,
+                  "ZNear": 0.1
+                },
+                {
+                  "__type": "Bloom",
+                  "BloomColor": {
+                    "color": [
+                      {
+                        "c": "1,1,1,1"
+                      },
+                      {
+                        "t": 1,
+                        "c": "1,1,1,1"
+                      }
+                    ],
+                    "alpha": []
+                  },
+                  "BloomCurve": [
+                    {
+                      "y": 0.5
+                    },
+                    {
+                      "x": 1,
+                      "y": 1
+                    }
+                  ],
+                  "Mode": "Additive",
+                  "Strength": 0.5,
+                  "Threshold": 0.5,
+                  "ThresholdWidth": 0.5
+                },
+                {
+                  "__type": "Tonemapping",
+                  "ExposureCompensation": 0,
+                  "MaximumExposure": 2,
+                  "MinimumExposure": 1,
+                  "Rate": 1
+                },
+                {
+                  "__type": "Sharpen",
+                  "Scale": 0.2
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "Id": "66bf7e6e-13d5-4fb9-b25f-af0f2440d465",
+          "Name": "terrymarble",
+          "Position": "0,0,0",
+          "Scale": "2.25518,2.255181,2.25518",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/terrymarble/terrymarble.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            }
+          ]
+        }
+      ]
     },
     {
       "Id": "db981f74-0597-4900-8804-aad06453158e",
@@ -87,8 +248,6 @@
         {
           "__type": "MapInstance",
           "MapName": "maps/testmap 2.vmap",
-          "OnMapLoaded": null,
-          "OnMapUnloaded": null,
           "UseMapFromLaunch": false
         }
       ],
@@ -111,8 +270,6 @@
         {
           "__type": "ModelRenderer",
           "BodyGroups": 18446744073709551615,
-          "MaterialGroup": null,
-          "MaterialOverride": null,
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
           "Tint": "1,1,1,1"
@@ -122,8 +279,51 @@
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "50,50,50",
-          "Static": false,
-          "Surface": null
+          "Static": false
+        }
+      ]
+    },
+    {
+      "Id": "5afb0837-b886-411a-b04d-b7c0c96ab42e",
+      "Name": "swagpad",
+      "Position": "1248,1600,0",
+      "Rotation": "0,-0,-0.7071068,0.7071068",
+      "Enabled": true,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/swagpad.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/swagpad.vmdl",
+          "Static": false
+        }
+      ],
+      "Children": [
+        {
+          "Id": "c653baeb-5b59-44ba-b489-08bec02a11c9",
+          "Name": "Object",
+          "Position": "0,0,0",
+          "Scale": "1.02,1,1.2",
+          "Enabled": true,
+          "Components": [
+            {
+              "__type": "ModelCollider",
+              "IsTrigger": true,
+              "Model": "models/swagpad.vmdl",
+              "Static": false
+            },
+            {
+              "__type": "SpeedPadScript",
+              "delayT": 1,
+              "force": 200000000
+            }
+          ]
         }
       ]
     }
@@ -151,6 +351,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-10T18:38:44.5687824\u002B07:00",
+  "LastSaved": "2024-03-11T22:02:40.097321\u002B07:00",
   "__references": []
 }

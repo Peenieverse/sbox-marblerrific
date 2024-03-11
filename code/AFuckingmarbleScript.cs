@@ -30,6 +30,7 @@ public sealed class AFuckingmarbleScript : Component
 	float startFov;
 	protected override void OnAwake()
 	{
+		cameraComponent.GameObject.Parent.SetParent(null);
 		startFov = cameraComponent.FieldOfView;
 		IEnumerable<GameObject> balls = Scene.GetAllObjects(true);
 		foreach(GameObject go in balls)

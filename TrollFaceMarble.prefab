@@ -7,14 +7,12 @@
       {
         "Id": "457796cb-5bbc-416b-9a77-c522dd3649af",
         "Name": "A FUCKING MARBLE",
-        "Position": "-126.4292,-187.5311,115.5769",
-        "Scale": "2.182079,2.182079,2.182079",
         "Enabled": true,
         "Components": [
           {
             "__type": "ModelRenderer",
             "BodyGroups": 18446744073709551615,
-            "Model": "models/terrymarble/terrymarble.vmdl",
+            "Model": "models/dev/sphere.vmdl",
             "RenderType": "On",
             "Tint": "1,1,1,1"
           },
@@ -22,7 +20,7 @@
             "__type": "SphereCollider",
             "Center": "0,0,0",
             "IsTrigger": false,
-            "Radius": 14.499962,
+            "Radius": 32,
             "Static": false
           },
           {
@@ -78,7 +76,6 @@
           {
             "Id": "8ec5e949-5ad8-460a-bb52-6eccc1c609db",
             "Name": "upAxis",
-            "Position": "0,0,0",
             "Enabled": true
           }
         ]
@@ -86,7 +83,6 @@
       {
         "Id": "bb66de77-9ccb-4719-9b11-cc1826652238",
         "Name": "CameraRotate",
-        "Position": "-126.4291,-187.5311,115.5769",
         "Enabled": true,
         "Children": [
           {
