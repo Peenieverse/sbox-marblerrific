@@ -8,14 +8,13 @@
         "Id": "457796cb-5bbc-416b-9a77-c522dd3649af",
         "Name": "A FUCKING MARBLE",
         "Position": "-126.4292,-187.5311,115.5769",
+        "Scale": "2.182079,2.182079,2.182079",
         "Enabled": true,
         "Components": [
           {
             "__type": "ModelRenderer",
             "BodyGroups": 18446744073709551615,
-            "MaterialGroup": null,
-            "MaterialOverride": null,
-            "Model": "models/dev/sphere.vmdl",
+            "Model": "models/terrymarble/terrymarble.vmdl",
             "RenderType": "On",
             "Tint": "1,1,1,1"
           },
@@ -23,9 +22,8 @@
             "__type": "SphereCollider",
             "Center": "0,0,0",
             "IsTrigger": false,
-            "Radius": 32,
-            "Static": false,
-            "Surface": null
+            "Radius": 14.499962,
+            "Static": false
           },
           {
             "__type": "Rigidbody",
@@ -62,6 +60,7 @@
               "_type": "gameobject",
               "go": "8ec5e949-5ad8-460a-bb52-6eccc1c609db"
             },
+            "fovVelocityLerp": 0.2,
             "fovVelocityMult": 0.02,
             "JumpForce": 200,
             "mouseSensitivity": 100,
