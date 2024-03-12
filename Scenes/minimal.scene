@@ -7,6 +7,7 @@
       "Rotation": "-0.0729315,0.4822396,0.1305433,0.8631827",
       "Tags": "light_directional,light",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "DirectionalLight",
@@ -23,6 +24,7 @@
       "Name": "2D Skybox",
       "Tags": "skybox",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "SkyBox2D",
@@ -47,43 +49,50 @@
       "Name": "A FUCKING MARBLE",
       "Position": "0,0,205.0967",
       "Enabled": true,
+      "NetworkMode": 2,
       "__Prefab": "a fucking marble.prefab"
     },
     {
       "Id": "db981f74-0597-4900-8804-aad06453158e",
       "Name": "Object",
       "Position": "-277.3488,312.2467,268.5769",
-      "Enabled": true
+      "Enabled": true,
+      "NetworkMode": 2
     },
     {
       "Id": "c3ad2173-538b-4596-9615-b501f351171c",
       "Name": "--CONTROLLS--",
       "Position": "-277.3488,312.2467,268.5769",
-      "Enabled": true
+      "Enabled": true,
+      "NetworkMode": 2
     },
     {
       "Id": "a1ceafcb-b7f6-4c50-a7a0-e30834deb21d",
       "Name": "WASD MOVE",
       "Position": "-277.3488,312.2467,268.5769",
-      "Enabled": true
+      "Enabled": true,
+      "NetworkMode": 2
     },
     {
       "Id": "4fa8fee2-3622-4eff-9b12-e2b00906d4ae",
       "Name": "SPACE JUMP",
       "Position": "-277.3488,312.2467,268.5769",
-      "Enabled": true
+      "Enabled": true,
+      "NetworkMode": 2
     },
     {
       "Id": "f94ef6a7-4f00-4e55-86a3-6be332a65d4a",
       "Name": "SHIFT BRAKE",
       "Position": "-277.3488,312.2467,268.5769",
-      "Enabled": true
+      "Enabled": true,
+      "NetworkMode": 2
     },
     {
       "Id": "0920c525-7373-4ac2-98ce-c48439d80e8c",
       "Name": "Map",
       "Position": "-159.0344,101.8652,116.6809",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "MapInstance",
@@ -98,7 +107,8 @@
       "Name": "Object",
       "Position": "0,0,346.6632",
       "Tags": "respawnpoint",
-      "Enabled": true
+      "Enabled": true,
+      "NetworkMode": 2
     },
     {
       "Id": "7de5ddb6-3737-453c-89e4-c72618b3dc98",
@@ -106,6 +116,7 @@
       "Position": "0,592.1958,0",
       "Scale": "0.5,0.5,3.199999",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "ModelRenderer",
@@ -129,6 +140,7 @@
       "Position": "1248,1600,0",
       "Rotation": "0,-0,-0.7071068,0.7071068",
       "Enabled": true,
+      "NetworkMode": 2,
       "Components": [
         {
           "__type": "ModelRenderer",
@@ -151,6 +163,7 @@
           "Position": "0,0,0",
           "Scale": "1.02,1,1.2",
           "Enabled": true,
+          "NetworkMode": 2,
           "Components": [
             {
               "__type": "ModelCollider",
@@ -159,16 +172,66 @@
               "Static": false
             },
             {
-              "__type": "SpeedPadScript",
-              "delayT": 1,
-              "force": 200000000
-            },
-            {
               "__type": "ModelRenderer",
               "BodyGroups": 18446744073709551615,
               "Model": "models/swagpadborder.vmdl",
               "RenderType": "On",
               "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "SpeedPadScript",
+              "delayT": 1,
+              "force": 1000
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Id": "ad234c66-aaed-4fa3-b174-03e60e3a1f80",
+      "Name": "JumpPad",
+      "Position": "384,0,0",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/jumppad/jumppad.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "ModelCollider",
+          "IsTrigger": false,
+          "Model": "models/jumppad/jumppad.vmdl",
+          "Static": false
+        }
+      ],
+      "Children": [
+        {
+          "Id": "8c9baa22-d715-4185-9ee4-bbb5c9fc8542",
+          "Name": "Trigger",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "HullCollider",
+              "BoxSize": "50,50,50",
+              "Center": "0,0,0",
+              "Height": 58.99987,
+              "IsTrigger": true,
+              "Radius": 82.700035,
+              "Radius2": 0,
+              "Slices": 6,
+              "Static": false,
+              "Type": "Cylinder"
+            },
+            {
+              "__type": "JumpPadScript",
+              "delayT": 0,
+              "force": 300000000
             }
           ]
         }
@@ -198,6 +261,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-11T22:21:39.0873691\u002B07:00",
+  "LastSaved": "2024-03-12T20:03:01.8085577\u002B01:00",
   "__references": []
 }
