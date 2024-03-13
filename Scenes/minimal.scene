@@ -2,6 +2,24 @@
   "Id": "9f832399-4887-46b0-8f21-2ee284f538e2",
   "GameObjects": [
     {
+      "Id": "3b028326-345e-40fc-8fac-42445dd7d293",
+      "Name": "Controls",
+      "Position": "160,224,96",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "TextRenderer",
+          "Id": "fb543a8f-7b18-419a-a600-bc90ba5306d9",
+          "Color": "1,1,1,1",
+          "FontFamily": "Poppins",
+          "FontSize": 43.18,
+          "Scale": 0.69,
+          "Text": "Controls:\n- WASD to move\n- SPACE to jump\n- SHIFT to brake"
+        }
+      ]
+    },
+    {
       "Id": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
       "Name": "Sun",
       "Rotation": "-0.0729315,0.4822396,0.1305433,0.8631827",
@@ -46,49 +64,6 @@
           "TintColor": "1,1,1,1"
         }
       ]
-    },
-    {
-      "Id": "a596b920-3dbb-4aed-bed9-209318e6cdac",
-      "Name": "A FUCKING MARBLE",
-      "Position": "0,0,205.0967",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "__Prefab": "a fucking marble.prefab"
-    },
-    {
-      "Id": "db981f74-0597-4900-8804-aad06453158e",
-      "Name": "Object",
-      "Position": "-277.3488,312.2467,268.5769",
-      "Enabled": true,
-      "NetworkMode": 2
-    },
-    {
-      "Id": "c3ad2173-538b-4596-9615-b501f351171c",
-      "Name": "--CONTROLLS--",
-      "Position": "-277.3488,312.2467,268.5769",
-      "Enabled": true,
-      "NetworkMode": 2
-    },
-    {
-      "Id": "a1ceafcb-b7f6-4c50-a7a0-e30834deb21d",
-      "Name": "WASD MOVE",
-      "Position": "-277.3488,312.2467,268.5769",
-      "Enabled": true,
-      "NetworkMode": 2
-    },
-    {
-      "Id": "4fa8fee2-3622-4eff-9b12-e2b00906d4ae",
-      "Name": "SPACE JUMP",
-      "Position": "-277.3488,312.2467,268.5769",
-      "Enabled": true,
-      "NetworkMode": 2
-    },
-    {
-      "Id": "f94ef6a7-4f00-4e55-86a3-6be332a65d4a",
-      "Name": "SHIFT BRAKE",
-      "Position": "-277.3488,312.2467,268.5769",
-      "Enabled": true,
-      "NetworkMode": 2
     },
     {
       "Id": "0920c525-7373-4ac2-98ce-c48439d80e8c",
@@ -253,37 +228,16 @@
       ]
     },
     {
-      "Id": "a66d020d-dd12-4b83-ad98-aaff11159b37",
-      "Name": "FakeShadow",
-      "Position": "0,0,3.506355",
-      "Rotation": "0,0.7071067,0,0.7071068",
+      "Id": "eef57089-4fad-487f-860f-d68b7b56ddde",
+      "Name": "Player",
+      "Position": "0,0,32",
       "Enabled": true,
       "NetworkMode": 2,
-      "Components": [
-        {
-          "__type": "DecalRenderer",
-          "Id": "f0a6966f-35b9-4400-a9e6-da8c0fa832f1",
-          "CutoffAngle": 80,
-          "CutoffAngleSoftness": 16.97,
-          "Material": "materials/fakeshadow.vmat",
-          "Mod2XBlending": false,
-          "Size": "70,70,256",
-          "TintColor": "0,0,0,1",
-          "TriPlanar": false
-        },
-        {
-          "__type": "FollowMe",
-          "Id": "632335fd-16f3-4cb7-b646-4cad3d712fe7",
-          "target": {
-            "_type": "gameobject",
-            "go": "a596b920-3dbb-4aed-bed9-209318e6cdac"
-          }
-        }
-      ]
+      "__Prefab": "player.prefab"
     }
   ],
   "SceneProperties": {
-    "FixedUpdateFrequency": 70,
+    "FixedUpdateFrequency": 100,
     "Lerping": true,
     "MaxFixedUpdates": 5,
     "NetworkFrequency": 60,
@@ -305,6 +259,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-13T19:31:42.2394426\u002B01:00",
+  "LastSaved": "2024-03-13T19:58:13.1129809\u002B01:00",
   "__references": []
 }
