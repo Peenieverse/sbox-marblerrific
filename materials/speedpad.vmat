@@ -2,21 +2,14 @@
 
 Layer0
 {
-	shader "shaders/complex.shader"
+	shader "shaders/goback_material.shader"
 
-	//---- PBR ----
+	//---- Psx ----
 	F_SELF_ILLUM 1
-	F_SPECULAR 1
-
-	//---- Ambient Occlusion ----
-	g_flAmbientOcclusionDirectDiffuse "0.000"
-	g_flAmbientOcclusionDirectSpecular "0.000"
-	TextureAmbientOcclusion "materials/default/default_ao.tga"
 
 	//---- Color ----
 	g_flModelTintAmount "1.000"
 	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
-	TextureColor "materials/speedpad.png"
 
 	//---- Fade ----
 	g_flFadeExponent "1.000"
@@ -24,23 +17,24 @@ Layer0
 	//---- Fog ----
 	g_bFogEnabled "1"
 
-	//---- Metalness ----
-	g_flMetalness "0.000"
+	//---- Go Back Settings ----
+	g_flSnapScale "2.000"
+	g_RoundToDecimalPlace "0"
 
-	//---- Normal ----
+	//---- Material ----
+	g_flSelfIllumScale "1.600"
+	g_flTintColor "[1.000000 1.000000 1.000000 0.000000]"
+	TextureColor "materials/speedpad.png"
 	TextureNormal "materials/default/default_normal.tga"
-
-	//---- Roughness ----
-	g_flRoughnessScaleFactor "1.000"
-	TextureRoughness "materials/default/default_rough.tga"
+	TextureSelfIllumMask "[1.000000 1.000000 1.000000 0.000000]"
+	TextureTintMask "materials/default/default.tga"
+	TextureTranslucency "materials/default/default_trans.tga"
 
 	//---- Self Illum ----
 	g_flSelfIllumAlbedoFactor "1.000"
 	g_flSelfIllumBrightness "0.500"
-	g_flSelfIllumScale "1.600"
 	g_vSelfIllumScrollSpeed "[0.000 0.000]"
 	g_vSelfIllumTint "[1.000000 1.000000 1.000000 1.000000]"
-	TextureSelfIllumMask "[1.000000 1.000000 1.000000 0.000000]"
 
 	//---- Texture Coordinates ----
 	g_nScaleTexCoordUByModelScaleAxis "0"
@@ -48,4 +42,7 @@ Layer0
 	g_vTexCoordOffset "[0.000 0.000]"
 	g_vTexCoordScale "[1.000 1.000]"
 	g_vTexCoordScrollSpeed "[0.000 -1.000]"
+
+	//---- Translucent ----
+	g_vTranslucentScrollSpeed "[0.000 0.000]"
 }
