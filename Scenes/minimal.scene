@@ -11,6 +11,7 @@
       "Components": [
         {
           "__type": "DirectionalLight",
+          "Id": "71f75d9f-4a50-4c84-8c85-87b69b82f4e9",
           "FogMode": "Enabled",
           "FogStrength": 1,
           "LightColor": "0.94419,0.97767,1,1",
@@ -28,11 +29,13 @@
       "Components": [
         {
           "__type": "SkyBox2D",
+          "Id": "4ed70fe9-4ca3-4322-9ce9-aa35153a01bf",
           "SkyMaterial": "materials/skybox/light_test_sky_sunny03.vmat",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "EnvmapProbe",
+          "Id": "5888c203-5101-4442-9f92-71d11bc80f82",
           "Bounds": {
             "Mins": "-512,-512,-512",
             "Maxs": "512,512,512"
@@ -96,6 +99,7 @@
       "Components": [
         {
           "__type": "MapInstance",
+          "Id": "cd6c793e-55de-48fe-9e6c-24f743b6b31b",
           "MapName": "maps/testmap 2.vmap",
           "UseMapFromLaunch": false
         }
@@ -120,6 +124,7 @@
       "Components": [
         {
           "__type": "ModelRenderer",
+          "Id": "9ad78a28-2cf9-4771-ae8a-33b45eaa7485",
           "BodyGroups": 18446744073709551615,
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
@@ -127,6 +132,7 @@
         },
         {
           "__type": "BoxCollider",
+          "Id": "3bdd9959-79c2-4303-85bd-51a61e6fb058",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "50,50,50",
@@ -144,6 +150,7 @@
       "Components": [
         {
           "__type": "ModelRenderer",
+          "Id": "7828a889-33a2-47f6-909c-e512d31d9562",
           "BodyGroups": 18446744073709551615,
           "Model": "models/swagpad.vmdl",
           "RenderType": "On",
@@ -151,6 +158,7 @@
         },
         {
           "__type": "ModelCollider",
+          "Id": "d6434d48-f3de-4463-a723-034c234d4ffa",
           "IsTrigger": false,
           "Model": "models/swagpad.vmdl",
           "Static": false
@@ -167,12 +175,14 @@
           "Components": [
             {
               "__type": "ModelCollider",
+              "Id": "9eedcb87-9596-4110-8845-0954379f6b83",
               "IsTrigger": true,
               "Model": "models/swagpad.vmdl",
               "Static": false
             },
             {
               "__type": "ModelRenderer",
+              "Id": "54e81bc8-4070-42b0-acc1-8615aff20e9b",
               "BodyGroups": 18446744073709551615,
               "Model": "models/swagpadborder.vmdl",
               "RenderType": "On",
@@ -180,6 +190,7 @@
             },
             {
               "__type": "SpeedPadScript",
+              "Id": "75cbb7f4-3bf1-4aa7-9f3c-dc646baab642",
               "delayT": 1,
               "force": 1000
             }
@@ -196,6 +207,7 @@
       "Components": [
         {
           "__type": "ModelRenderer",
+          "Id": "21ba6a71-f282-4f87-a8b0-07532b142bd6",
           "BodyGroups": 18446744073709551615,
           "Model": "models/jumppad/jumppad.vmdl",
           "RenderType": "On",
@@ -203,6 +215,7 @@
         },
         {
           "__type": "ModelCollider",
+          "Id": "5643071a-7c8a-4cdf-b753-6db19078ea03",
           "IsTrigger": false,
           "Model": "models/jumppad/jumppad.vmdl",
           "Static": false
@@ -218,6 +231,7 @@
           "Components": [
             {
               "__type": "HullCollider",
+              "Id": "762e785e-e289-4da7-a3a3-706b25c7e4d1",
               "BoxSize": "50,50,50",
               "Center": "0,0,0",
               "Height": 58.99987,
@@ -230,16 +244,46 @@
             },
             {
               "__type": "JumpPadScript",
+              "Id": "6cb86cd8-0b81-4b2b-96e7-828a4c288337",
               "delayT": 0,
               "force": 300000000
             }
           ]
         }
       ]
+    },
+    {
+      "Id": "a66d020d-dd12-4b83-ad98-aaff11159b37",
+      "Name": "FakeShadow",
+      "Position": "0,0,3.506355",
+      "Rotation": "0,0.7071067,0,0.7071068",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "DecalRenderer",
+          "Id": "f0a6966f-35b9-4400-a9e6-da8c0fa832f1",
+          "CutoffAngle": 80,
+          "CutoffAngleSoftness": 16.97,
+          "Material": "materials/fakeshadow.vmat",
+          "Mod2XBlending": false,
+          "Size": "70,70,256",
+          "TintColor": "0,0,0,1",
+          "TriPlanar": false
+        },
+        {
+          "__type": "FollowMe",
+          "Id": "632335fd-16f3-4cb7-b646-4cad3d712fe7",
+          "target": {
+            "_type": "gameobject",
+            "go": "a596b920-3dbb-4aed-bed9-209318e6cdac"
+          }
+        }
+      ]
     }
   ],
   "SceneProperties": {
-    "FixedUpdateFrequency": 50,
+    "FixedUpdateFrequency": 70,
     "Lerping": true,
     "MaxFixedUpdates": 5,
     "NetworkFrequency": 60,
@@ -261,6 +305,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-13T15:36:30.6456881\u002B07:00",
+  "LastSaved": "2024-03-13T19:31:42.2394426\u002B01:00",
   "__references": []
 }
