@@ -1,21 +1,19 @@
 {
   "RootObject": {
-    "Id": "eef57089-4fad-487f-860f-d68b7b56ddde",
-    "Name": "Player",
-    "Position": "0,0,32",
+    "__guid": "eef57089-4fad-487f-860f-d68b7b56ddde",
+    "Name": "player",
     "Enabled": true,
     "NetworkMode": 2,
     "Children": [
       {
-        "Id": "f94d2e56-f7f4-49e0-8d76-4b2b55a254fd",
+        "__guid": "f94d2e56-f7f4-49e0-8d76-4b2b55a254fd",
         "Name": "Marble",
-        "Position": "0,0,0",
         "Enabled": true,
         "NetworkMode": 2,
         "Components": [
           {
             "__type": "SphereCollider",
-            "Id": "4f6a9163-576e-4963-939d-6c325a8eecbb",
+            "__guid": "4f6a9163-576e-4963-939d-6c325a8eecbb",
             "Center": "0,0,0",
             "IsTrigger": false,
             "Radius": 32,
@@ -23,7 +21,7 @@
           },
           {
             "__type": "Rigidbody",
-            "Id": "c49188ec-ab9c-4d07-9e7d-a244e041946b",
+            "__guid": "c49188ec-ab9c-4d07-9e7d-a244e041946b",
             "AngularDamping": 0,
             "Gravity": true,
             "LinearDamping": 0,
@@ -35,7 +33,7 @@
           },
           {
             "__type": "AFuckingmarbleScript",
-            "Id": "b4fd3ba9-ab85-4be9-8aa9-b92ce8c41159",
+            "__guid": "b4fd3ba9-ab85-4be9-8aa9-b92ce8c41159",
             "Acceleration": 100,
             "ActualCamera": {
               "_type": "gameobject",
@@ -51,8 +49,8 @@
             "cameraComponent": {
               "_type": "component",
               "component_id": "cb9377fc-5a29-468e-b54d-8d187bc7b081",
-              "go": "00000000-0000-0000-0000-000000000000",
-              "component_type": null
+              "go": "3aa26c33-c1f0-459c-a1a2-bffa0f96dd9a",
+              "component_type": "CameraComponent"
             },
             "cameraReturnLerp": 10,
             "forceMultForBetterConfig": 1000000,
@@ -69,29 +67,30 @@
             "rb": {
               "_type": "component",
               "component_id": "c49188ec-ab9c-4d07-9e7d-a244e041946b",
-              "go": "00000000-0000-0000-0000-000000000000",
-              "component_type": null
+              "go": "f94d2e56-f7f4-49e0-8d76-4b2b55a254fd",
+              "component_type": "Rigidbody"
             },
+            "wormMode": 0,
+            "wormSpeed": 1000,
+            "wormSpeedLerp": 100,
             "Zrespwawn": -1000
           }
         ],
         "Children": [
           {
-            "Id": "a9e103a8-fba5-49a6-b7f3-696e4dded394",
+            "__guid": "a9e103a8-fba5-49a6-b7f3-696e4dded394",
             "Name": "upAxis",
-            "Position": "0,0,0",
             "Enabled": true,
             "NetworkMode": 2
           },
           {
-            "Id": "ab8a0d30-ed36-4a44-8582-b885941f73c0",
+            "__guid": "ab8a0d30-ed36-4a44-8582-b885941f73c0",
             "Name": "CameraRotate",
-            "Position": "0,0,0",
             "Enabled": true,
             "NetworkMode": 2,
             "Children": [
               {
-                "Id": "3aa26c33-c1f0-459c-a1a2-bffa0f96dd9a",
+                "__guid": "3aa26c33-c1f0-459c-a1a2-bffa0f96dd9a",
                 "Name": "Camera",
                 "Position": "-624.9197,-0.00003516128,671.4487",
                 "Rotation": "0.00000003099143,0.3991939,-0.000000001282434,0.9168665",
@@ -100,7 +99,7 @@
                 "Components": [
                   {
                     "__type": "CameraComponent",
-                    "Id": "cb9377fc-5a29-468e-b54d-8d187bc7b081",
+                    "__guid": "cb9377fc-5a29-468e-b54d-8d187bc7b081",
                     "BackgroundColor": "0.33333,0.46275,0.52157,1",
                     "ClearFlags": "All",
                     "FieldOfView": 60,
@@ -117,7 +116,7 @@
                   },
                   {
                     "__type": "Bloom",
-                    "Id": "2ab8d236-166a-433e-b7f0-6e3ee8716144",
+                    "__guid": "2ab8d236-166a-433e-b7f0-6e3ee8716144",
                     "BloomColor": {
                       "color": [
                         {
@@ -146,7 +145,7 @@
                   },
                   {
                     "__type": "Tonemapping",
-                    "Id": "8c30af16-6f1b-40ea-9723-6a0c1eebe8bd",
+                    "__guid": "8c30af16-6f1b-40ea-9723-6a0c1eebe8bd",
                     "ExposureCompensation": 0,
                     "MaximumExposure": 2,
                     "MinimumExposure": 1,
@@ -154,7 +153,7 @@
                   },
                   {
                     "__type": "Sharpen",
-                    "Id": "4974f86d-5960-4cbb-8ed5-078997540f8d",
+                    "__guid": "4974f86d-5960-4cbb-8ed5-078997540f8d",
                     "Scale": 0.2
                   }
                 ]
@@ -162,15 +161,14 @@
             ]
           },
           {
-            "Id": "5bf6783d-dca6-4379-a719-27d1bdbad59f",
+            "__guid": "5bf6783d-dca6-4379-a719-27d1bdbad59f",
             "Name": "TerryMarble",
-            "Position": "0,0,0",
             "Enabled": true,
             "NetworkMode": 2,
             "Components": [
               {
                 "__type": "ModelRenderer",
-                "Id": "b751197b-35ca-430d-ae25-603dd8e43e23",
+                "__guid": "b751197b-35ca-430d-ae25-603dd8e43e23",
                 "BodyGroups": 18446744073709551615,
                 "Model": "models/terrymarble/terrymarble.vmdl",
                 "RenderType": "Off",
@@ -181,16 +179,15 @@
         ]
       },
       {
-        "Id": "a66d020d-dd12-4b83-ad98-aaff11159b37",
+        "__guid": "a66d020d-dd12-4b83-ad98-aaff11159b37",
         "Name": "FakeShadow",
-        "Position": "0,0,0",
         "Rotation": "0,0.7071067,0,0.7071068",
         "Enabled": true,
         "NetworkMode": 2,
         "Components": [
           {
             "__type": "DecalRenderer",
-            "Id": "f0a6966f-35b9-4400-a9e6-da8c0fa832f1",
+            "__guid": "f0a6966f-35b9-4400-a9e6-da8c0fa832f1",
             "CutoffAngle": 80,
             "CutoffAngleSoftness": 16.97,
             "Material": "materials/fakeshadow.vmat",
@@ -201,7 +198,7 @@
           },
           {
             "__type": "FollowMe",
-            "Id": "632335fd-16f3-4cb7-b646-4cad3d712fe7",
+            "__guid": "632335fd-16f3-4cb7-b646-4cad3d712fe7",
             "Offset": -10,
             "target": {
               "_type": "gameobject",

@@ -2,7 +2,7 @@
   "Id": "9f832399-4887-46b0-8f21-2ee284f538e2",
   "GameObjects": [
     {
-      "Id": "3b028326-345e-40fc-8fac-42445dd7d293",
+      "__guid": "3b028326-345e-40fc-8fac-42445dd7d293",
       "Name": "Controls",
       "Position": "160,224,96",
       "Enabled": true,
@@ -10,7 +10,7 @@
       "Components": [
         {
           "__type": "TextRenderer",
-          "Id": "fb543a8f-7b18-419a-a600-bc90ba5306d9",
+          "__guid": "fb543a8f-7b18-419a-a600-bc90ba5306d9",
           "Color": "1,1,1,1",
           "FontFamily": "Poppins",
           "FontSize": 43.18,
@@ -20,7 +20,7 @@
       ]
     },
     {
-      "Id": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
+      "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
       "Name": "Sun",
       "Rotation": "-0.0729315,0.4822396,0.1305433,0.8631827",
       "Tags": "light_directional,light",
@@ -29,7 +29,7 @@
       "Components": [
         {
           "__type": "DirectionalLight",
-          "Id": "71f75d9f-4a50-4c84-8c85-87b69b82f4e9",
+          "__guid": "71f75d9f-4a50-4c84-8c85-87b69b82f4e9",
           "FogMode": "Enabled",
           "FogStrength": 1,
           "LightColor": "0.94419,0.97767,1,1",
@@ -39,7 +39,7 @@
       ]
     },
     {
-      "Id": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
+      "__guid": "00344a8c-fa5e-45ae-b12a-10bb781a1dc3",
       "Name": "2D Skybox",
       "Tags": "skybox",
       "Enabled": true,
@@ -47,13 +47,13 @@
       "Components": [
         {
           "__type": "SkyBox2D",
-          "Id": "4ed70fe9-4ca3-4322-9ce9-aa35153a01bf",
+          "__guid": "4ed70fe9-4ca3-4322-9ce9-aa35153a01bf",
           "SkyMaterial": "materials/skybox/light_test_sky_sunny03.vmat",
           "Tint": "1,1,1,1"
         },
         {
           "__type": "EnvmapProbe",
-          "Id": "5888c203-5101-4442-9f92-71d11bc80f82",
+          "__guid": "5888c203-5101-4442-9f92-71d11bc80f82",
           "Bounds": {
             "Mins": "-512,-512,-512",
             "Maxs": "512,512,512"
@@ -66,7 +66,7 @@
       ]
     },
     {
-      "Id": "0920c525-7373-4ac2-98ce-c48439d80e8c",
+      "__guid": "0920c525-7373-4ac2-98ce-c48439d80e8c",
       "Name": "Map",
       "Position": "-159.0344,101.8652,116.6809",
       "Enabled": true,
@@ -74,7 +74,7 @@
       "Components": [
         {
           "__type": "MapInstance",
-          "Id": "cd6c793e-55de-48fe-9e6c-24f743b6b31b",
+          "__guid": "cd6c793e-55de-48fe-9e6c-24f743b6b31b",
           "MapName": "maps/testmap 2.vmap",
           "UseMapFromLaunch": false
         }
@@ -82,7 +82,7 @@
       "Children": []
     },
     {
-      "Id": "4bf36c5f-e50b-4d6f-b739-21e5f83b0f8e",
+      "__guid": "4bf36c5f-e50b-4d6f-b739-21e5f83b0f8e",
       "Name": "Object",
       "Position": "0,0,346.6632",
       "Tags": "respawnpoint",
@@ -90,7 +90,7 @@
       "NetworkMode": 2
     },
     {
-      "Id": "7de5ddb6-3737-453c-89e4-c72618b3dc98",
+      "__guid": "7de5ddb6-3737-453c-89e4-c72618b3dc98",
       "Name": "Cube",
       "Position": "0,592.1958,0",
       "Scale": "0.5,0.5,3.199999",
@@ -99,7 +99,7 @@
       "Components": [
         {
           "__type": "ModelRenderer",
-          "Id": "9ad78a28-2cf9-4771-ae8a-33b45eaa7485",
+          "__guid": "9ad78a28-2cf9-4771-ae8a-33b45eaa7485",
           "BodyGroups": 18446744073709551615,
           "Model": "models/dev/box.vmdl",
           "RenderType": "On",
@@ -107,7 +107,7 @@
         },
         {
           "__type": "BoxCollider",
-          "Id": "3bdd9959-79c2-4303-85bd-51a61e6fb058",
+          "__guid": "3bdd9959-79c2-4303-85bd-51a61e6fb058",
           "Center": "0,0,0",
           "IsTrigger": false,
           "Scale": "50,50,50",
@@ -116,7 +116,7 @@
       ]
     },
     {
-      "Id": "5afb0837-b886-411a-b04d-b7c0c96ab42e",
+      "__guid": "5afb0837-b886-411a-b04d-b7c0c96ab42e",
       "Name": "swagpad",
       "Position": "1248,1600,0",
       "Rotation": "0,-0,-0.7071068,0.7071068",
@@ -125,7 +125,7 @@
       "Components": [
         {
           "__type": "ModelRenderer",
-          "Id": "7828a889-33a2-47f6-909c-e512d31d9562",
+          "__guid": "7828a889-33a2-47f6-909c-e512d31d9562",
           "BodyGroups": 18446744073709551615,
           "Model": "models/swagpad.vmdl",
           "RenderType": "On",
@@ -133,7 +133,7 @@
         },
         {
           "__type": "ModelCollider",
-          "Id": "d6434d48-f3de-4463-a723-034c234d4ffa",
+          "__guid": "d6434d48-f3de-4463-a723-034c234d4ffa",
           "IsTrigger": false,
           "Model": "models/swagpad.vmdl",
           "Static": false
@@ -141,7 +141,7 @@
       ],
       "Children": [
         {
-          "Id": "c653baeb-5b59-44ba-b489-08bec02a11c9",
+          "__guid": "c653baeb-5b59-44ba-b489-08bec02a11c9",
           "Name": "Object",
           "Position": "0,0,0",
           "Scale": "1.02,1,1.2",
@@ -150,14 +150,14 @@
           "Components": [
             {
               "__type": "ModelCollider",
-              "Id": "9eedcb87-9596-4110-8845-0954379f6b83",
+              "__guid": "9eedcb87-9596-4110-8845-0954379f6b83",
               "IsTrigger": true,
               "Model": "models/swagpad.vmdl",
               "Static": false
             },
             {
               "__type": "ModelRenderer",
-              "Id": "54e81bc8-4070-42b0-acc1-8615aff20e9b",
+              "__guid": "54e81bc8-4070-42b0-acc1-8615aff20e9b",
               "BodyGroups": 18446744073709551615,
               "Model": "models/swagpadborder.vmdl",
               "RenderType": "On",
@@ -165,7 +165,7 @@
             },
             {
               "__type": "SpeedPadScript",
-              "Id": "75cbb7f4-3bf1-4aa7-9f3c-dc646baab642",
+              "__guid": "75cbb7f4-3bf1-4aa7-9f3c-dc646baab642",
               "delayT": 1,
               "force": 1000
             }
@@ -174,7 +174,7 @@
       ]
     },
     {
-      "Id": "ad234c66-aaed-4fa3-b174-03e60e3a1f80",
+      "__guid": "ad234c66-aaed-4fa3-b174-03e60e3a1f80",
       "Name": "JumpPad",
       "Position": "384,0,0",
       "Enabled": true,
@@ -182,7 +182,7 @@
       "Components": [
         {
           "__type": "ModelRenderer",
-          "Id": "21ba6a71-f282-4f87-a8b0-07532b142bd6",
+          "__guid": "21ba6a71-f282-4f87-a8b0-07532b142bd6",
           "BodyGroups": 18446744073709551615,
           "Model": "models/jumppad/jumppad.vmdl",
           "RenderType": "On",
@@ -190,7 +190,7 @@
         },
         {
           "__type": "ModelCollider",
-          "Id": "5643071a-7c8a-4cdf-b753-6db19078ea03",
+          "__guid": "5643071a-7c8a-4cdf-b753-6db19078ea03",
           "IsTrigger": false,
           "Model": "models/jumppad/jumppad.vmdl",
           "Static": false
@@ -198,7 +198,7 @@
       ],
       "Children": [
         {
-          "Id": "8c9baa22-d715-4185-9ee4-bbb5c9fc8542",
+          "__guid": "8c9baa22-d715-4185-9ee4-bbb5c9fc8542",
           "Name": "Trigger",
           "Position": "0,0,0",
           "Enabled": true,
@@ -206,7 +206,7 @@
           "Components": [
             {
               "__type": "HullCollider",
-              "Id": "762e785e-e289-4da7-a3a3-706b25c7e4d1",
+              "__guid": "762e785e-e289-4da7-a3a3-706b25c7e4d1",
               "BoxSize": "50,50,50",
               "Center": "0,0,0",
               "Height": 58.99987,
@@ -219,7 +219,7 @@
             },
             {
               "__type": "JumpPadScript",
-              "Id": "6cb86cd8-0b81-4b2b-96e7-828a4c288337",
+              "__guid": "6cb86cd8-0b81-4b2b-96e7-828a4c288337",
               "delayT": 0,
               "force": 300000000
             }
@@ -228,12 +228,70 @@
       ]
     },
     {
-      "Id": "eef57089-4fad-487f-860f-d68b7b56ddde",
+      "__guid": "eef57089-4fad-487f-860f-d68b7b56ddde",
       "Name": "Player",
       "Position": "0,0,32",
       "Enabled": true,
       "NetworkMode": 2,
       "__Prefab": "player.prefab"
+    },
+    {
+      "__guid": "b2e2e39e-a01a-45e1-9450-6fcf68808668",
+      "Name": "collection",
+      "Position": "65.7767,436.8049,1.069592",
+      "Scale": "1.8,1.8,1.8",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "__guid": "0e238d31-91ca-4419-b023-473099d2d421",
+          "AnimationGraph": "animgraphs/worm.vanmgrph",
+          "BodyGroups": 18446744073709551615,
+          "CreateBoneObjects": false,
+          "Model": "models/worm/collection.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "WormScript",
+          "__guid": "18373324-a6bd-4bef-be35-25cea21c18d0",
+          "wormModeTime": 10,
+          "animSpeedMult": 1,
+          "changeDirTime": 5,
+          "model": {
+            "_type": "component",
+            "component_id": "0e238d31-91ca-4419-b023-473099d2d421",
+            "go": "b2e2e39e-a01a-45e1-9450-6fcf68808668",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "navMeshAgent": {
+            "_type": "component",
+            "component_id": "16a99594-54e0-40df-b572-451a337636a6",
+            "go": "b2e2e39e-a01a-45e1-9450-6fcf68808668",
+            "component_type": "NavMeshAgent"
+          }
+        },
+        {
+          "__type": "NavMeshAgent",
+          "__guid": "16a99594-54e0-40df-b572-451a337636a6",
+          "Acceleration": 10,
+          "Height": 64,
+          "MaxSpeed": 10,
+          "Radius": 16,
+          "Separation": 0.25,
+          "UpdatePosition": true,
+          "UpdateRotation": true
+        },
+        {
+          "__type": "BoxCollider",
+          "__guid": "eb872d08-ec07-4db1-91ab-588226d7fdc3",
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "50,50,50",
+          "Static": false
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -245,7 +303,7 @@
     "TimeScale": 1,
     "UseFixedUpdate": true,
     "NavMesh": {
-      "Enabled": false,
+      "Enabled": true,
       "IncludeStaticBodies": true,
       "IncludeKeyframedBodies": true,
       "EditorAutoUpdate": true,
@@ -259,6 +317,6 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-13T19:58:13.1129809\u002B01:00",
+  "LastSaved": "2024-03-14T18:21:27.0890215\u002B07:00",
   "__references": []
 }

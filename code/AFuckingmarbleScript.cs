@@ -9,6 +9,7 @@ public sealed class AFuckingmarbleScript : Component
 	[Property] private GameObject ActualCamera {get;set;}
 	[Property] private Rigidbody rb {get;set;}
 	[Property] private float Acceleration {get;set;}
+	[Property] private float wormSpeed {get;set;}
 	[Property] private float BrakeAcceleration {get;set;}
 	[Property] private float JumpForce {get;set;}
 	[Property] private float rayDis {get;set;}
@@ -28,6 +29,8 @@ public sealed class AFuckingmarbleScript : Component
 	float CamRayDis;
 	GameObject respawnPoint;
 	float startFov;
+	[Property] public float wormMode {get;set;}
+	[Property] public float wormSpeedLerp {get;set;}
 	protected override void OnAwake()
 	{
 		cameraComponent.GameObject.Parent.SetParent(null);
@@ -50,21 +53,31 @@ public sealed class AFuckingmarbleScript : Component
 		Transform.Position = point;
 		rb.Velocity = Vector3.Zero;
 	}
+	Vector3 wormVel; 
 	protected override void OnUpdate()
 	{
 		//MOVEMENT SHIT
 		var tr = Scene.Trace.Ray(forwardAxis.Transform.Position,forwardAxis.Transform.Position+(Vector3.Down*rayDis)).IgnoreGameObject(GameObject).Radius(raySize).Run();
 		if(tr.Hit || AirControl)
 		{
-			if(Input.Pressed("Jump") && tr.Hit) rb.ApplyForce(forceMultForBetterConfig*Vector3.Up*JumpForce);
 			Vector3 cameraForwardFlat = Camera.Transform.World.Forward;
 			cameraForwardFlat.z = 0;
 			Angles newRotation = Rotation.LookAt(cameraForwardFlat);
 			forwardAxis.Transform.Rotation = newRotation;
-			rb.ApplyForce(forceMultForBetterConfig*Time.Delta*Acceleration*((cameraForwardFlat*Input.AnalogMove.x)+(forwardAxis.Transform.World.Right*-Input.AnalogMove.y)));
-			Vector3 velocityExludingZ = rb.Velocity;
-			velocityExludingZ.z = 0;
-			if(Input.Down("Run")) rb.ApplyForce(forceMultForBetterConfig * -velocityExludingZ * BrakeAcceleration * Time.Delta);
+			if(Input.Pressed("Jump") && tr.Hit) rb.ApplyForce(forceMultForBetterConfig*Vector3.Up*JumpForce);
+			if(wormMode <= 0)
+			{
+				rb.ApplyForce(forceMultForBetterConfig*Time.Delta*Acceleration*((cameraForwardFlat*Input.AnalogMove.x)+(forwardAxis.Transform.World.Right*-Input.AnalogMove.y)));
+				Vector3 velocityExludingZ = rb.Velocity;
+				velocityExludingZ.z = 0;
+				if(Input.Down("Run")) rb.ApplyForce(forceMultForBetterConfig * -velocityExludingZ * BrakeAcceleration * Time.Delta);
+			}
+			else
+			{
+				wormMode-=Time.Delta;
+				wormVel = Vector3.Lerp(wormVel,wormSpeed*((cameraForwardFlat*Input.AnalogMove.x)+(forwardAxis.Transform.World.Right*-Input.AnalogMove.y)),Time.Delta*wormSpeedLerp);
+				rb.Velocity = new Vector3(wormVel.x,wormVel.y,rb.Velocity.z);
+			}
 		}
 		if(Transform.Position.z <= Zrespwawn) Respawn(respawnPoint.Transform.Position);
 		
