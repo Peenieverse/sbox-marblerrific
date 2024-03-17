@@ -462,6 +462,26 @@
           "Tint": "1,1,1,1"
         },
         {
+          "__type": "SoundPointComponent",
+          "__guid": "5b6a9843-5236-4954-817a-cbb15f14ce53",
+          "DistanceAttenuation": false,
+          "DistanceAttenuationOverride": false,
+          "Force2d": false,
+          "MaxRepeatTime": 1,
+          "MinRepeatTime": 1,
+          "Occlusion": false,
+          "OcclusionOverride": false,
+          "OcclusionRadius": 32,
+          "Pitch": 1,
+          "PlayOnStart": false,
+          "ReflectionOverride": false,
+          "Reflections": false,
+          "Repeat": false,
+          "SoundOverride": false,
+          "StopOnNew": true,
+          "Volume": 1
+        },
+        {
           "__type": "WormScript",
           "__guid": "18373324-a6bd-4bef-be35-25cea21c18d0",
           "wormModeTime": 10,
@@ -478,6 +498,20 @@
             "component_id": "16a99594-54e0-40df-b572-451a337636a6",
             "go": "b2e2e39e-a01a-45e1-9450-6fcf68808668",
             "component_type": "NavMeshAgent"
+          },
+          "soundEventDelays": [
+            3,
+            5
+          ],
+          "soundEvents": [
+            "sounds/wormspeak.sound",
+            "sounds/wormmove.sound"
+          ],
+          "soundPoint": {
+            "_type": "component",
+            "component_id": "5b6a9843-5236-4954-817a-cbb15f14ce53",
+            "go": "b2e2e39e-a01a-45e1-9450-6fcf68808668",
+            "component_type": "SoundPointComponent"
           }
         },
         {
@@ -494,6 +528,374 @@
         {
           "__type": "BoxCollider",
           "__guid": "eb872d08-ec07-4db1-91ab-588226d7fdc3",
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "50,50,50",
+          "Static": false
+        }
+      ]
+    },
+    {
+      "__guid": "b497e171-00f1-43d7-89af-bce740849b76",
+      "Name": "collection (1)",
+      "Position": "-52.08451,541.7659,1.069585",
+      "Scale": "1.8,1.8,1.8",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "__guid": "b5fa2226-2dfa-44f6-99c6-2bdedd52fce2",
+          "AnimationGraph": "animgraphs/worm.vanmgrph",
+          "BodyGroups": 18446744073709551615,
+          "CreateBoneObjects": false,
+          "Model": "models/worm/collection.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "SoundPointComponent",
+          "__guid": "d37dcce7-149d-41b0-9c2a-ac361db0a170",
+          "DistanceAttenuation": false,
+          "DistanceAttenuationOverride": false,
+          "Force2d": false,
+          "MaxRepeatTime": 1,
+          "MinRepeatTime": 1,
+          "Occlusion": false,
+          "OcclusionOverride": false,
+          "OcclusionRadius": 32,
+          "Pitch": 1,
+          "PlayOnStart": false,
+          "ReflectionOverride": false,
+          "Reflections": false,
+          "Repeat": false,
+          "SoundOverride": false,
+          "StopOnNew": true,
+          "Volume": 1
+        },
+        {
+          "__type": "WormScript",
+          "__guid": "9952bdc4-c9fb-4190-b7ca-09e71fe8eb4c",
+          "wormModeTime": 10,
+          "animSpeedMult": 1,
+          "changeDirTime": 5,
+          "model": {
+            "_type": "component",
+            "component_id": "b5fa2226-2dfa-44f6-99c6-2bdedd52fce2",
+            "go": "b497e171-00f1-43d7-89af-bce740849b76",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "navMeshAgent": {
+            "_type": "component",
+            "component_id": "02c49acd-7909-4301-861d-c9dd88687519",
+            "go": "b497e171-00f1-43d7-89af-bce740849b76",
+            "component_type": "NavMeshAgent"
+          },
+          "soundEventDelays": [
+            3,
+            5
+          ],
+          "soundEvents": [
+            "sounds/wormspeak.sound",
+            "sounds/wormmove.sound"
+          ],
+          "soundPoint": {
+            "_type": "component",
+            "component_id": "d37dcce7-149d-41b0-9c2a-ac361db0a170",
+            "go": "b497e171-00f1-43d7-89af-bce740849b76",
+            "component_type": "SoundPointComponent"
+          }
+        },
+        {
+          "__type": "NavMeshAgent",
+          "__guid": "02c49acd-7909-4301-861d-c9dd88687519",
+          "Acceleration": 10,
+          "Height": 64,
+          "MaxSpeed": 10,
+          "Radius": 16,
+          "Separation": 0.25,
+          "UpdatePosition": true,
+          "UpdateRotation": true
+        },
+        {
+          "__type": "BoxCollider",
+          "__guid": "4eb52a13-83c5-4b23-aba0-d64475aae2d9",
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "50,50,50",
+          "Static": false
+        }
+      ]
+    },
+    {
+      "__guid": "d21afb5a-1ae3-410a-aa50-83546c538734",
+      "Name": "collection (2)",
+      "Position": "131.0967,637.6,1.069596",
+      "Scale": "1.8,1.8,1.8",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "__guid": "0eff1658-fc9e-4f43-bab0-ae75a5ec9f04",
+          "AnimationGraph": "animgraphs/worm.vanmgrph",
+          "BodyGroups": 18446744073709551615,
+          "CreateBoneObjects": false,
+          "Model": "models/worm/collection.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "SoundPointComponent",
+          "__guid": "998daac5-c0a2-4019-8d82-756e4aa7e5c4",
+          "DistanceAttenuation": false,
+          "DistanceAttenuationOverride": false,
+          "Force2d": false,
+          "MaxRepeatTime": 1,
+          "MinRepeatTime": 1,
+          "Occlusion": false,
+          "OcclusionOverride": false,
+          "OcclusionRadius": 32,
+          "Pitch": 1,
+          "PlayOnStart": false,
+          "ReflectionOverride": false,
+          "Reflections": false,
+          "Repeat": false,
+          "SoundOverride": false,
+          "StopOnNew": true,
+          "Volume": 1
+        },
+        {
+          "__type": "WormScript",
+          "__guid": "b504a075-79e6-4b12-bd10-92054cf395cf",
+          "wormModeTime": 10,
+          "animSpeedMult": 1,
+          "changeDirTime": 5,
+          "model": {
+            "_type": "component",
+            "component_id": "0eff1658-fc9e-4f43-bab0-ae75a5ec9f04",
+            "go": "d21afb5a-1ae3-410a-aa50-83546c538734",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "navMeshAgent": {
+            "_type": "component",
+            "component_id": "0283d74b-ecda-4946-9f3a-a4844d6b684c",
+            "go": "d21afb5a-1ae3-410a-aa50-83546c538734",
+            "component_type": "NavMeshAgent"
+          },
+          "soundEventDelays": [
+            3,
+            5
+          ],
+          "soundEvents": [
+            "sounds/wormspeak.sound",
+            "sounds/wormmove.sound"
+          ],
+          "soundPoint": {
+            "_type": "component",
+            "component_id": "998daac5-c0a2-4019-8d82-756e4aa7e5c4",
+            "go": "d21afb5a-1ae3-410a-aa50-83546c538734",
+            "component_type": "SoundPointComponent"
+          }
+        },
+        {
+          "__type": "NavMeshAgent",
+          "__guid": "0283d74b-ecda-4946-9f3a-a4844d6b684c",
+          "Acceleration": 10,
+          "Height": 64,
+          "MaxSpeed": 10,
+          "Radius": 16,
+          "Separation": 0.25,
+          "UpdatePosition": true,
+          "UpdateRotation": true
+        },
+        {
+          "__type": "BoxCollider",
+          "__guid": "fc9c09b6-5348-42fb-8aa8-5b8bea5bfbee",
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "50,50,50",
+          "Static": false
+        }
+      ]
+    },
+    {
+      "__guid": "dc8e54e7-970b-4963-9303-5710dbe7d521",
+      "Name": "collection (3)",
+      "Position": "250.6909,490.1784,1.069603",
+      "Scale": "1.8,1.8,1.8",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "__guid": "38a63312-87fd-41e7-b178-b91750329fcf",
+          "AnimationGraph": "animgraphs/worm.vanmgrph",
+          "BodyGroups": 18446744073709551615,
+          "CreateBoneObjects": false,
+          "Model": "models/worm/collection.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "SoundPointComponent",
+          "__guid": "2e8b6bcf-b0cd-4d6d-b55d-a366f475f23b",
+          "DistanceAttenuation": false,
+          "DistanceAttenuationOverride": false,
+          "Force2d": false,
+          "MaxRepeatTime": 1,
+          "MinRepeatTime": 1,
+          "Occlusion": false,
+          "OcclusionOverride": false,
+          "OcclusionRadius": 32,
+          "Pitch": 1,
+          "PlayOnStart": false,
+          "ReflectionOverride": false,
+          "Reflections": false,
+          "Repeat": false,
+          "SoundOverride": false,
+          "StopOnNew": true,
+          "Volume": 1
+        },
+        {
+          "__type": "WormScript",
+          "__guid": "4614d3ec-b4d1-4073-b19c-1fa75b89d127",
+          "wormModeTime": 10,
+          "animSpeedMult": 1,
+          "changeDirTime": 5,
+          "model": {
+            "_type": "component",
+            "component_id": "38a63312-87fd-41e7-b178-b91750329fcf",
+            "go": "dc8e54e7-970b-4963-9303-5710dbe7d521",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "navMeshAgent": {
+            "_type": "component",
+            "component_id": "aea2b2d8-2314-4345-b94f-9da90c46a63c",
+            "go": "dc8e54e7-970b-4963-9303-5710dbe7d521",
+            "component_type": "NavMeshAgent"
+          },
+          "soundEventDelays": [
+            3,
+            5
+          ],
+          "soundEvents": [
+            "sounds/wormspeak.sound",
+            "sounds/wormmove.sound"
+          ],
+          "soundPoint": {
+            "_type": "component",
+            "component_id": "2e8b6bcf-b0cd-4d6d-b55d-a366f475f23b",
+            "go": "dc8e54e7-970b-4963-9303-5710dbe7d521",
+            "component_type": "SoundPointComponent"
+          }
+        },
+        {
+          "__type": "NavMeshAgent",
+          "__guid": "aea2b2d8-2314-4345-b94f-9da90c46a63c",
+          "Acceleration": 10,
+          "Height": 64,
+          "MaxSpeed": 10,
+          "Radius": 16,
+          "Separation": 0.25,
+          "UpdatePosition": true,
+          "UpdateRotation": true
+        },
+        {
+          "__type": "BoxCollider",
+          "__guid": "3cb8d5c9-ec1a-4358-af0d-fedeb2ed61b0",
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "50,50,50",
+          "Static": false
+        }
+      ]
+    },
+    {
+      "__guid": "e0c80134-e654-48c0-9034-74c3dbef6a22",
+      "Name": "collection (4)",
+      "Position": "-178.256,410.6147,1.069637",
+      "Scale": "1.8,1.8,1.8",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SkinnedModelRenderer",
+          "__guid": "44750d6d-7960-4fbe-8c38-2f60b0f65322",
+          "AnimationGraph": "animgraphs/worm.vanmgrph",
+          "BodyGroups": 18446744073709551615,
+          "CreateBoneObjects": false,
+          "Model": "models/worm/collection.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "SoundPointComponent",
+          "__guid": "b1f5f891-e0a7-419c-b671-bb6ea512b10e",
+          "DistanceAttenuation": false,
+          "DistanceAttenuationOverride": false,
+          "Force2d": false,
+          "MaxRepeatTime": 1,
+          "MinRepeatTime": 1,
+          "Occlusion": false,
+          "OcclusionOverride": false,
+          "OcclusionRadius": 32,
+          "Pitch": 1,
+          "PlayOnStart": false,
+          "ReflectionOverride": false,
+          "Reflections": false,
+          "Repeat": false,
+          "SoundOverride": false,
+          "StopOnNew": true,
+          "Volume": 1
+        },
+        {
+          "__type": "WormScript",
+          "__guid": "cbea035b-3729-40d1-969d-a5bb05c4352f",
+          "wormModeTime": 10,
+          "animSpeedMult": 1,
+          "changeDirTime": 5,
+          "model": {
+            "_type": "component",
+            "component_id": "44750d6d-7960-4fbe-8c38-2f60b0f65322",
+            "go": "e0c80134-e654-48c0-9034-74c3dbef6a22",
+            "component_type": "SkinnedModelRenderer"
+          },
+          "navMeshAgent": {
+            "_type": "component",
+            "component_id": "6ff557ae-ce52-4a39-85ba-758e7179ef9f",
+            "go": "e0c80134-e654-48c0-9034-74c3dbef6a22",
+            "component_type": "NavMeshAgent"
+          },
+          "soundEventDelays": [
+            3,
+            5
+          ],
+          "soundEvents": [
+            "sounds/wormspeak.sound",
+            "sounds/wormmove.sound"
+          ],
+          "soundPoint": {
+            "_type": "component",
+            "component_id": "b1f5f891-e0a7-419c-b671-bb6ea512b10e",
+            "go": "e0c80134-e654-48c0-9034-74c3dbef6a22",
+            "component_type": "SoundPointComponent"
+          }
+        },
+        {
+          "__type": "NavMeshAgent",
+          "__guid": "6ff557ae-ce52-4a39-85ba-758e7179ef9f",
+          "Acceleration": 10,
+          "Height": 64,
+          "MaxSpeed": 10,
+          "Radius": 16,
+          "Separation": 0.25,
+          "UpdatePosition": true,
+          "UpdateRotation": true
+        },
+        {
+          "__type": "BoxCollider",
+          "__guid": "95436d6f-78ec-4347-8034-b0db49e2e88e",
           "Center": "0,0,0",
           "IsTrigger": true,
           "Scale": "50,50,50",
@@ -565,7 +967,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-15T18:36:08.458485\u002B01:00",
+  "LastSaved": "2024-03-17T12:06:49.0060588\u002B07:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

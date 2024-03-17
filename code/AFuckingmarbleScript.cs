@@ -74,11 +74,12 @@ public sealed class AFuckingmarbleScript : Component
 			}
 			else
 			{
-				wormMode-=Time.Delta;
+				
 				wormVel = Vector3.Lerp(wormVel,wormSpeed*((cameraForwardFlat*Input.AnalogMove.x)+(forwardAxis.Transform.World.Right*-Input.AnalogMove.y)),Time.Delta*wormSpeedLerp);
 				rb.Velocity = new Vector3(wormVel.x,wormVel.y,rb.Velocity.z);
 			}
 		}
+		wormMode-=Time.Delta;
 		if(Transform.Position.z <= Zrespwawn) Respawn(respawnPoint.Transform.Position);
 		
 

@@ -1,0 +1,30 @@
+{
+  "UI": false,
+  "Volume": "1.00,1.00,0",
+  "Pitch": "1.00,1.00,0",
+  "Decibels": 70,
+  "SelectionMode": "Random",
+  "Sounds": [
+    "sounds/please dont eat me.vsnd",
+    "sounds/look at me go, im a worm.vsnd",
+    "sounds/look at me go.vsnd",
+    "sounds/im really not that tasty.vsnd",
+    "sounds/im a god dahm worm.vsnd",
+    "sounds/hello im a worm.vsnd",
+    "sounds/hello im a little worm.vsnd",
+    "sounds/hello 5.vsnd",
+    "sounds/hello 4.vsnd",
+    "sounds/hello 3.vsnd",
+    "sounds/hello 2.vsnd",
+    "sounds/hello 1.vsnd"
+  ],
+  "Occlusion": true,
+  "Reflections": true,
+  "AirAbsorption": true,
+  "Transmission": true,
+  "OcclusionRadius": 64,
+  "DistanceAttenuation": true,
+  "ResourceVersion": 0,
+  "__version": 0,
+  "__references": []
+}

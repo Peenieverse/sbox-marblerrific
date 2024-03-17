@@ -1,4 +1,5 @@
 using Sandbox;
+using Sandbox.Utility;
 using System;
 using System.Diagnostics;
 using System.Net.Mail;
@@ -10,6 +11,9 @@ public sealed class WormScript : Component, Component.ITriggerListener
 	[Property] private SkinnedModelRenderer model {get; set;}
 	[Property] private float changeDirTime {get;set;} = 5;
 	[Property] private float wormModeTime = 10;
+	[Property] private List<SoundEvent> soundEvents {get;set;}
+	[Property] private List<float> soundEventDelays {get;set;}
+	[Property] private SoundPointComponent soundPoint {get;set;}
 	public float ConvertAngle360to180(float angle)
     {
         // Ensure the angle is within the 0-360 range
@@ -29,6 +33,7 @@ public sealed class WormScript : Component, Component.ITriggerListener
 	protected override void OnStart()
 	{
 		footLoop();
+		noies();
 	}
 	float magnitute(Vector3 inp)
 	{
@@ -43,6 +48,21 @@ public sealed class WormScript : Component, Component.ITriggerListener
 			dir.z = 0;
 			await Task.DelaySeconds(changeDirTime);
 		}
+	}
+	
+	async void noies()
+	{
+		await Task.DelaySeconds(new Random().Next(100)/10);
+		int soundI = 0;
+		while(true)
+		{
+			if(soundI >= soundEvents.Count) soundI = 0;
+			soundPoint.SoundEvent = soundEvents[soundI];
+			soundPoint.StartSound();
+			await Task.DelaySeconds(soundEventDelays[soundI]);
+			soundI++;
+		}
+		
 	}
 	protected override void OnUpdate()
 	{	

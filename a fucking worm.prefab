@@ -1,0 +1,100 @@
+{
+  "RootObject": {
+    "__guid": "b2e2e39e-a01a-45e1-9450-6fcf68808668",
+    "Name": "a fucking worm",
+    "Position": "65.7767,436.8049,1.069592",
+    "Scale": "1.8,1.8,1.8",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "Components": [
+      {
+        "__type": "SkinnedModelRenderer",
+        "__guid": "0e238d31-91ca-4419-b023-473099d2d421",
+        "AnimationGraph": "animgraphs/worm.vanmgrph",
+        "BodyGroups": 18446744073709551615,
+        "CreateBoneObjects": false,
+        "Model": "models/worm/collection.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "SoundPointComponent",
+        "__guid": "5b6a9843-5236-4954-817a-cbb15f14ce53",
+        "DistanceAttenuation": false,
+        "DistanceAttenuationOverride": false,
+        "Force2d": false,
+        "MaxRepeatTime": 1,
+        "MinRepeatTime": 1,
+        "Occlusion": false,
+        "OcclusionOverride": false,
+        "OcclusionRadius": 32,
+        "Pitch": 1,
+        "PlayOnStart": false,
+        "ReflectionOverride": false,
+        "Reflections": false,
+        "Repeat": false,
+        "SoundOverride": false,
+        "StopOnNew": true,
+        "Volume": 1
+      },
+      {
+        "__type": "WormScript",
+        "__guid": "18373324-a6bd-4bef-be35-25cea21c18d0",
+        "wormModeTime": 10,
+        "animSpeedMult": 1,
+        "changeDirTime": 5,
+        "model": {
+          "_type": "component",
+          "component_id": "0e238d31-91ca-4419-b023-473099d2d421",
+          "go": "b2e2e39e-a01a-45e1-9450-6fcf68808668",
+          "component_type": "SkinnedModelRenderer"
+        },
+        "navMeshAgent": {
+          "_type": "component",
+          "component_id": "16a99594-54e0-40df-b572-451a337636a6",
+          "go": "b2e2e39e-a01a-45e1-9450-6fcf68808668",
+          "component_type": "NavMeshAgent"
+        },
+        "soundEventDelays": [
+          3,
+          5
+        ],
+        "soundEvents": [
+          "sounds/wormspeak.sound",
+          "sounds/wormmove.sound"
+        ],
+        "soundPoint": {
+          "_type": "component",
+          "component_id": "5b6a9843-5236-4954-817a-cbb15f14ce53",
+          "go": "b2e2e39e-a01a-45e1-9450-6fcf68808668",
+          "component_type": "SoundPointComponent"
+        }
+      },
+      {
+        "__type": "NavMeshAgent",
+        "__guid": "16a99594-54e0-40df-b572-451a337636a6",
+        "Acceleration": 10,
+        "Height": 64,
+        "MaxSpeed": 10,
+        "Radius": 16,
+        "Separation": 0.25,
+        "UpdatePosition": true,
+        "UpdateRotation": true
+      },
+      {
+        "__type": "BoxCollider",
+        "__guid": "eb872d08-ec07-4db1-91ab-588226d7fdc3",
+        "Center": "0,0,0",
+        "IsTrigger": true,
+        "Scale": "50,50,50",
+        "Static": false
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}
