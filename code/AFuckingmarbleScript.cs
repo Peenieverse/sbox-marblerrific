@@ -79,7 +79,7 @@ public sealed class AFuckingmarbleScript : Component
 				rb.Velocity = new Vector3(wormVel.x,wormVel.y,rb.Velocity.z);
 			}
 		}
-		wormMode-=Time.Delta;
+		if (wormMode > 0) wormMode-=Time.Delta;
 		if(Transform.Position.z <= Zrespwawn) Respawn(respawnPoint.Transform.Position);
 		
 

@@ -8,6 +8,7 @@
       {
         "__guid": "f94d2e56-f7f4-49e0-8d76-4b2b55a254fd",
         "Name": "Marble",
+        "Tags": "player",
         "Enabled": true,
         "NetworkMode": 2,
         "Components": [
@@ -17,7 +18,8 @@
             "Center": "0,0,0",
             "IsTrigger": false,
             "Radius": 32,
-            "Static": false
+            "Static": false,
+            "Surface": "surfaces/glass.surface"
           },
           {
             "__type": "Rigidbody",
@@ -53,7 +55,7 @@
               "component_type": "CameraComponent"
             },
             "cameraReturnLerp": 10,
-            "forceMultForBetterConfig": 1000000,
+            "forceMultForBetterConfig": 500000,
             "forwardAxis": {
               "_type": "gameobject",
               "go": "a9e103a8-fba5-49a6-b7f3-696e4dded394"
@@ -212,5 +214,7 @@
   "ShowInMenu": false,
   "MenuPath": null,
   "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
   "__references": []
 }

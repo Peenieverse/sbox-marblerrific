@@ -149,13 +149,6 @@
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "ModelCollider",
-              "__guid": "9eedcb87-9596-4110-8845-0954379f6b83",
-              "IsTrigger": true,
-              "Model": "models/swagpad.vmdl",
-              "Static": false
-            },
-            {
               "__type": "ModelRenderer",
               "__guid": "54e81bc8-4070-42b0-acc1-8615aff20e9b",
               "BodyGroups": 18446744073709551615,
@@ -164,10 +157,19 @@
               "Tint": "1,1,1,1"
             },
             {
+              "__type": "BoxCollider",
+              "__guid": "bc34e3ff-4e5d-4554-8813-64a7bdaf2909",
+              "Center": "0,0,0",
+              "IsTrigger": true,
+              "Scale": "307.2,443.2002,34.4",
+              "Static": false
+            },
+            {
               "__type": "SpeedPadScript",
               "__guid": "75cbb7f4-3bf1-4aa7-9f3c-dc646baab642",
+              "delayed": [],
               "delayT": 1,
-              "force": 1000
+              "force": 60000000
             }
           ]
         }
@@ -228,680 +230,58 @@
       ]
     },
     {
-      "__guid": "eef57089-4fad-487f-860f-d68b7b56ddde",
-      "Name": "Player",
-      "Position": "0,0,32",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "Children": [
-        {
-          "__guid": "0ae8ae3e-d3d1-4fa5-b746-99aab4a39e5d",
-          "Name": "Marble",
-          "Position": "0,0,0",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "Components": [
-            {
-              "__type": "SphereCollider",
-              "__guid": "8973b270-6a9c-45a1-9ac6-21d09b04c8e2",
-              "Center": "0,0,0",
-              "IsTrigger": false,
-              "Radius": 32,
-              "Static": false
-            },
-            {
-              "__type": "Rigidbody",
-              "__guid": "e3b5f521-d6d1-4a60-be9d-832b1bee5220",
-              "AngularDamping": 0,
-              "Gravity": true,
-              "LinearDamping": 0,
-              "Locking": {},
-              "MassOverride": 0,
-              "MotionEnabled": true,
-              "RigidbodyFlags": 0,
-              "StartAsleep": false
-            },
-            {
-              "__type": "AFuckingmarbleScript",
-              "__guid": "fac1c5e8-a678-4231-9614-3fa7ea40a1c8",
-              "Acceleration": 100,
-              "ActualCamera": {
-                "_type": "gameobject",
-                "go": "37c851cd-df6b-4e8b-808d-8101e175269a"
-              },
-              "AirControl": false,
-              "BrakeAcceleration": 5,
-              "CamClamp": "-90,90",
-              "Camera": {
-                "_type": "gameobject",
-                "go": "56d9adde-f0b3-4f98-ae68-8219a4bf25fa"
-              },
-              "cameraComponent": {
-                "_type": "component",
-                "component_id": "59e890d2-23ea-43b9-930f-044b295f0e47",
-                "go": "37c851cd-df6b-4e8b-808d-8101e175269a",
-                "component_type": "CameraComponent"
-              },
-              "cameraReturnLerp": 10,
-              "forceMultForBetterConfig": 1000000,
-              "forwardAxis": {
-                "_type": "gameobject",
-                "go": "8ae60504-dfa5-4149-93b7-fe93eb3ea9ce"
-              },
-              "fovVelocityLerp": 0.5,
-              "fovVelocityMult": 0.05,
-              "JumpForce": 200,
-              "mouseSensitivity": 100,
-              "rayDis": 36.2,
-              "raySize": 20,
-              "rb": {
-                "_type": "component",
-                "component_id": "e3b5f521-d6d1-4a60-be9d-832b1bee5220",
-                "go": "0ae8ae3e-d3d1-4fa5-b746-99aab4a39e5d",
-                "component_type": "Rigidbody"
-              },
-              "wormMode": 0,
-              "wormSpeed": 1000,
-              "wormSpeedLerp": 100,
-              "Zrespwawn": -1000
-            }
-          ],
-          "Children": [
-            {
-              "__guid": "8ae60504-dfa5-4149-93b7-fe93eb3ea9ce",
-              "Name": "upAxis",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "NetworkMode": 2
-            },
-            {
-              "__guid": "56d9adde-f0b3-4f98-ae68-8219a4bf25fa",
-              "Name": "CameraRotate",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Children": [
-                {
-                  "__guid": "37c851cd-df6b-4e8b-808d-8101e175269a",
-                  "Name": "Camera",
-                  "Position": "-624.9197,-0.00003516128,671.4487",
-                  "Rotation": "0.00000003099143,0.3991939,-0.000000001282434,0.9168665",
-                  "Enabled": true,
-                  "NetworkMode": 2,
-                  "Components": [
-                    {
-                      "__type": "CameraComponent",
-                      "__guid": "59e890d2-23ea-43b9-930f-044b295f0e47",
-                      "BackgroundColor": "0.33333,0.46275,0.52157,1",
-                      "ClearFlags": "All",
-                      "FieldOfView": 60,
-                      "IsMainCamera": true,
-                      "Orthographic": false,
-                      "OrthographicHeight": 1204,
-                      "Priority": 1,
-                      "RenderExcludeTags": "",
-                      "RenderTags": "",
-                      "TargetEye": "None",
-                      "Viewport": "0,0,1,1",
-                      "ZFar": 10000,
-                      "ZNear": 0.1
-                    },
-                    {
-                      "__type": "Bloom",
-                      "__guid": "95022aba-1d27-4f6a-8fc3-1e8bdf150775",
-                      "BloomColor": {
-                        "color": [
-                          {
-                            "c": "1,1,1,1"
-                          },
-                          {
-                            "t": 1,
-                            "c": "1,1,1,1"
-                          }
-                        ],
-                        "alpha": []
-                      },
-                      "BloomCurve": [
-                        {
-                          "y": 0.5
-                        },
-                        {
-                          "x": 1,
-                          "y": 1
-                        }
-                      ],
-                      "Mode": "Additive",
-                      "Strength": 0.5,
-                      "Threshold": 0.5,
-                      "ThresholdWidth": 0.5
-                    },
-                    {
-                      "__type": "Tonemapping",
-                      "__guid": "20535c19-0030-47f2-9262-f6b0ab31887a",
-                      "ExposureCompensation": 0,
-                      "MaximumExposure": 2,
-                      "MinimumExposure": 1,
-                      "Rate": 1
-                    },
-                    {
-                      "__type": "Sharpen",
-                      "__guid": "b336263f-0097-4fe7-ba1e-5c2c97867685",
-                      "Scale": 0.2
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "__guid": "0b629a6b-b577-42f3-b3d4-dafc89a1129a",
-              "Name": "TerryMarble",
-              "Position": "0,0,0",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "3f16c44e-7618-42ae-9348-6644a4d5c9f7",
-                  "BodyGroups": 18446744073709551615,
-                  "Model": "models/terrymarble/terrymarble.vmdl",
-                  "RenderType": "Off",
-                  "Tint": "1,1,1,1"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "29fc9919-9ae6-4025-9359-cd1f3924cf58",
-          "Name": "FakeShadow",
-          "Position": "0,0,0",
-          "Rotation": "0,0.7071067,0,0.7071068",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "Components": [
-            {
-              "__type": "DecalRenderer",
-              "__guid": "b27e1d72-fc6a-46e2-bcc4-2f7212b00e32",
-              "CutoffAngle": 80,
-              "CutoffAngleSoftness": 16.97,
-              "Material": "materials/fakeshadow.vmat",
-              "Mod2XBlending": false,
-              "Size": "70,70,2000",
-              "TintColor": "0,0,0,1",
-              "TriPlanar": false
-            },
-            {
-              "__type": "FollowMe",
-              "__guid": "b14547f7-4caa-477e-bf47-8d4b0ce570a0",
-              "Offset": -10,
-              "target": {
-                "_type": "gameobject",
-                "go": "0ae8ae3e-d3d1-4fa5-b746-99aab4a39e5d"
-              }
-            }
-          ]
-        }
-      ]
-    },
-    {
       "__guid": "b2e2e39e-a01a-45e1-9450-6fcf68808668",
-      "Name": "collection",
+      "Name": "a fucking worm",
       "Position": "65.7767,436.8049,1.069592",
       "Scale": "1.8,1.8,1.8",
       "Enabled": true,
       "NetworkMode": 2,
-      "Components": [
-        {
-          "__type": "SkinnedModelRenderer",
-          "__guid": "0e238d31-91ca-4419-b023-473099d2d421",
-          "AnimationGraph": "animgraphs/worm.vanmgrph",
-          "BodyGroups": 18446744073709551615,
-          "CreateBoneObjects": false,
-          "Model": "models/worm/collection.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "SoundPointComponent",
-          "__guid": "5b6a9843-5236-4954-817a-cbb15f14ce53",
-          "DistanceAttenuation": false,
-          "DistanceAttenuationOverride": false,
-          "Force2d": false,
-          "MaxRepeatTime": 1,
-          "MinRepeatTime": 1,
-          "Occlusion": false,
-          "OcclusionOverride": false,
-          "OcclusionRadius": 32,
-          "Pitch": 1,
-          "PlayOnStart": false,
-          "ReflectionOverride": false,
-          "Reflections": false,
-          "Repeat": false,
-          "SoundOverride": false,
-          "StopOnNew": true,
-          "Volume": 1
-        },
-        {
-          "__type": "WormScript",
-          "__guid": "18373324-a6bd-4bef-be35-25cea21c18d0",
-          "wormModeTime": 10,
-          "animSpeedMult": 1,
-          "changeDirTime": 5,
-          "model": {
-            "_type": "component",
-            "component_id": "0e238d31-91ca-4419-b023-473099d2d421",
-            "go": "b2e2e39e-a01a-45e1-9450-6fcf68808668",
-            "component_type": "SkinnedModelRenderer"
-          },
-          "navMeshAgent": {
-            "_type": "component",
-            "component_id": "16a99594-54e0-40df-b572-451a337636a6",
-            "go": "b2e2e39e-a01a-45e1-9450-6fcf68808668",
-            "component_type": "NavMeshAgent"
-          },
-          "soundEventDelays": [
-            3,
-            5
-          ],
-          "soundEvents": [
-            "sounds/wormspeak.sound",
-            "sounds/wormmove.sound"
-          ],
-          "soundPoint": {
-            "_type": "component",
-            "component_id": "5b6a9843-5236-4954-817a-cbb15f14ce53",
-            "go": "b2e2e39e-a01a-45e1-9450-6fcf68808668",
-            "component_type": "SoundPointComponent"
-          }
-        },
-        {
-          "__type": "NavMeshAgent",
-          "__guid": "16a99594-54e0-40df-b572-451a337636a6",
-          "Acceleration": 10,
-          "Height": 64,
-          "MaxSpeed": 10,
-          "Radius": 16,
-          "Separation": 0.25,
-          "UpdatePosition": true,
-          "UpdateRotation": true
-        },
-        {
-          "__type": "BoxCollider",
-          "__guid": "eb872d08-ec07-4db1-91ab-588226d7fdc3",
-          "Center": "0,0,0",
-          "IsTrigger": true,
-          "Scale": "50,50,50",
-          "Static": false
-        }
-      ]
+      "__Prefab": "a fucking worm.prefab"
     },
     {
-      "__guid": "b497e171-00f1-43d7-89af-bce740849b76",
-      "Name": "collection (1)",
-      "Position": "-52.08451,541.7659,1.069585",
+      "__guid": "4a54205a-5e37-4cac-8979-28a1a4460f3a",
+      "Name": "a fucking worm (1)",
+      "Position": "-92.7776,541.9638,1.069631",
       "Scale": "1.8,1.8,1.8",
       "Enabled": true,
       "NetworkMode": 2,
-      "Components": [
-        {
-          "__type": "SkinnedModelRenderer",
-          "__guid": "b5fa2226-2dfa-44f6-99c6-2bdedd52fce2",
-          "AnimationGraph": "animgraphs/worm.vanmgrph",
-          "BodyGroups": 18446744073709551615,
-          "CreateBoneObjects": false,
-          "Model": "models/worm/collection.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "SoundPointComponent",
-          "__guid": "d37dcce7-149d-41b0-9c2a-ac361db0a170",
-          "DistanceAttenuation": false,
-          "DistanceAttenuationOverride": false,
-          "Force2d": false,
-          "MaxRepeatTime": 1,
-          "MinRepeatTime": 1,
-          "Occlusion": false,
-          "OcclusionOverride": false,
-          "OcclusionRadius": 32,
-          "Pitch": 1,
-          "PlayOnStart": false,
-          "ReflectionOverride": false,
-          "Reflections": false,
-          "Repeat": false,
-          "SoundOverride": false,
-          "StopOnNew": true,
-          "Volume": 1
-        },
-        {
-          "__type": "WormScript",
-          "__guid": "9952bdc4-c9fb-4190-b7ca-09e71fe8eb4c",
-          "wormModeTime": 10,
-          "animSpeedMult": 1,
-          "changeDirTime": 5,
-          "model": {
-            "_type": "component",
-            "component_id": "b5fa2226-2dfa-44f6-99c6-2bdedd52fce2",
-            "go": "b497e171-00f1-43d7-89af-bce740849b76",
-            "component_type": "SkinnedModelRenderer"
-          },
-          "navMeshAgent": {
-            "_type": "component",
-            "component_id": "02c49acd-7909-4301-861d-c9dd88687519",
-            "go": "b497e171-00f1-43d7-89af-bce740849b76",
-            "component_type": "NavMeshAgent"
-          },
-          "soundEventDelays": [
-            3,
-            5
-          ],
-          "soundEvents": [
-            "sounds/wormspeak.sound",
-            "sounds/wormmove.sound"
-          ],
-          "soundPoint": {
-            "_type": "component",
-            "component_id": "d37dcce7-149d-41b0-9c2a-ac361db0a170",
-            "go": "b497e171-00f1-43d7-89af-bce740849b76",
-            "component_type": "SoundPointComponent"
-          }
-        },
-        {
-          "__type": "NavMeshAgent",
-          "__guid": "02c49acd-7909-4301-861d-c9dd88687519",
-          "Acceleration": 10,
-          "Height": 64,
-          "MaxSpeed": 10,
-          "Radius": 16,
-          "Separation": 0.25,
-          "UpdatePosition": true,
-          "UpdateRotation": true
-        },
-        {
-          "__type": "BoxCollider",
-          "__guid": "4eb52a13-83c5-4b23-aba0-d64475aae2d9",
-          "Center": "0,0,0",
-          "IsTrigger": true,
-          "Scale": "50,50,50",
-          "Static": false
-        }
-      ]
+      "__Prefab": "a fucking worm.prefab"
     },
     {
-      "__guid": "d21afb5a-1ae3-410a-aa50-83546c538734",
-      "Name": "collection (2)",
-      "Position": "131.0967,637.6,1.069596",
+      "__guid": "4f7ce820-6d20-413b-a3e3-49a894b32bc2",
+      "Name": "a fucking worm (2)",
+      "Position": "88.54999,588.2297,1.069642",
       "Scale": "1.8,1.8,1.8",
       "Enabled": true,
       "NetworkMode": 2,
-      "Components": [
-        {
-          "__type": "SkinnedModelRenderer",
-          "__guid": "0eff1658-fc9e-4f43-bab0-ae75a5ec9f04",
-          "AnimationGraph": "animgraphs/worm.vanmgrph",
-          "BodyGroups": 18446744073709551615,
-          "CreateBoneObjects": false,
-          "Model": "models/worm/collection.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "SoundPointComponent",
-          "__guid": "998daac5-c0a2-4019-8d82-756e4aa7e5c4",
-          "DistanceAttenuation": false,
-          "DistanceAttenuationOverride": false,
-          "Force2d": false,
-          "MaxRepeatTime": 1,
-          "MinRepeatTime": 1,
-          "Occlusion": false,
-          "OcclusionOverride": false,
-          "OcclusionRadius": 32,
-          "Pitch": 1,
-          "PlayOnStart": false,
-          "ReflectionOverride": false,
-          "Reflections": false,
-          "Repeat": false,
-          "SoundOverride": false,
-          "StopOnNew": true,
-          "Volume": 1
-        },
-        {
-          "__type": "WormScript",
-          "__guid": "b504a075-79e6-4b12-bd10-92054cf395cf",
-          "wormModeTime": 10,
-          "animSpeedMult": 1,
-          "changeDirTime": 5,
-          "model": {
-            "_type": "component",
-            "component_id": "0eff1658-fc9e-4f43-bab0-ae75a5ec9f04",
-            "go": "d21afb5a-1ae3-410a-aa50-83546c538734",
-            "component_type": "SkinnedModelRenderer"
-          },
-          "navMeshAgent": {
-            "_type": "component",
-            "component_id": "0283d74b-ecda-4946-9f3a-a4844d6b684c",
-            "go": "d21afb5a-1ae3-410a-aa50-83546c538734",
-            "component_type": "NavMeshAgent"
-          },
-          "soundEventDelays": [
-            3,
-            5
-          ],
-          "soundEvents": [
-            "sounds/wormspeak.sound",
-            "sounds/wormmove.sound"
-          ],
-          "soundPoint": {
-            "_type": "component",
-            "component_id": "998daac5-c0a2-4019-8d82-756e4aa7e5c4",
-            "go": "d21afb5a-1ae3-410a-aa50-83546c538734",
-            "component_type": "SoundPointComponent"
-          }
-        },
-        {
-          "__type": "NavMeshAgent",
-          "__guid": "0283d74b-ecda-4946-9f3a-a4844d6b684c",
-          "Acceleration": 10,
-          "Height": 64,
-          "MaxSpeed": 10,
-          "Radius": 16,
-          "Separation": 0.25,
-          "UpdatePosition": true,
-          "UpdateRotation": true
-        },
-        {
-          "__type": "BoxCollider",
-          "__guid": "fc9c09b6-5348-42fb-8aa8-5b8bea5bfbee",
-          "Center": "0,0,0",
-          "IsTrigger": true,
-          "Scale": "50,50,50",
-          "Static": false
-        }
-      ]
+      "__Prefab": "a fucking worm.prefab"
     },
     {
-      "__guid": "dc8e54e7-970b-4963-9303-5710dbe7d521",
-      "Name": "collection (3)",
-      "Position": "250.6909,490.1784,1.069603",
+      "__guid": "536b7f8f-93d5-48ad-9538-143753934f06",
+      "Name": "a fucking worm (3)",
+      "Position": "16.66891,777.5813,1.069638",
       "Scale": "1.8,1.8,1.8",
       "Enabled": true,
       "NetworkMode": 2,
-      "Components": [
-        {
-          "__type": "SkinnedModelRenderer",
-          "__guid": "38a63312-87fd-41e7-b178-b91750329fcf",
-          "AnimationGraph": "animgraphs/worm.vanmgrph",
-          "BodyGroups": 18446744073709551615,
-          "CreateBoneObjects": false,
-          "Model": "models/worm/collection.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "SoundPointComponent",
-          "__guid": "2e8b6bcf-b0cd-4d6d-b55d-a366f475f23b",
-          "DistanceAttenuation": false,
-          "DistanceAttenuationOverride": false,
-          "Force2d": false,
-          "MaxRepeatTime": 1,
-          "MinRepeatTime": 1,
-          "Occlusion": false,
-          "OcclusionOverride": false,
-          "OcclusionRadius": 32,
-          "Pitch": 1,
-          "PlayOnStart": false,
-          "ReflectionOverride": false,
-          "Reflections": false,
-          "Repeat": false,
-          "SoundOverride": false,
-          "StopOnNew": true,
-          "Volume": 1
-        },
-        {
-          "__type": "WormScript",
-          "__guid": "4614d3ec-b4d1-4073-b19c-1fa75b89d127",
-          "wormModeTime": 10,
-          "animSpeedMult": 1,
-          "changeDirTime": 5,
-          "model": {
-            "_type": "component",
-            "component_id": "38a63312-87fd-41e7-b178-b91750329fcf",
-            "go": "dc8e54e7-970b-4963-9303-5710dbe7d521",
-            "component_type": "SkinnedModelRenderer"
-          },
-          "navMeshAgent": {
-            "_type": "component",
-            "component_id": "aea2b2d8-2314-4345-b94f-9da90c46a63c",
-            "go": "dc8e54e7-970b-4963-9303-5710dbe7d521",
-            "component_type": "NavMeshAgent"
-          },
-          "soundEventDelays": [
-            3,
-            5
-          ],
-          "soundEvents": [
-            "sounds/wormspeak.sound",
-            "sounds/wormmove.sound"
-          ],
-          "soundPoint": {
-            "_type": "component",
-            "component_id": "2e8b6bcf-b0cd-4d6d-b55d-a366f475f23b",
-            "go": "dc8e54e7-970b-4963-9303-5710dbe7d521",
-            "component_type": "SoundPointComponent"
-          }
-        },
-        {
-          "__type": "NavMeshAgent",
-          "__guid": "aea2b2d8-2314-4345-b94f-9da90c46a63c",
-          "Acceleration": 10,
-          "Height": 64,
-          "MaxSpeed": 10,
-          "Radius": 16,
-          "Separation": 0.25,
-          "UpdatePosition": true,
-          "UpdateRotation": true
-        },
-        {
-          "__type": "BoxCollider",
-          "__guid": "3cb8d5c9-ec1a-4358-af0d-fedeb2ed61b0",
-          "Center": "0,0,0",
-          "IsTrigger": true,
-          "Scale": "50,50,50",
-          "Static": false
-        }
-      ]
+      "__Prefab": "a fucking worm.prefab"
     },
     {
-      "__guid": "e0c80134-e654-48c0-9034-74c3dbef6a22",
-      "Name": "collection (4)",
-      "Position": "-178.256,410.6147,1.069637",
+      "__guid": "7c74ebce-ad6d-42c6-a97c-fca8c0f1161f",
+      "Name": "a fucking worm (4)",
+      "Position": "222.5621,619.9542,1.06965",
       "Scale": "1.8,1.8,1.8",
       "Enabled": true,
       "NetworkMode": 2,
-      "Components": [
-        {
-          "__type": "SkinnedModelRenderer",
-          "__guid": "44750d6d-7960-4fbe-8c38-2f60b0f65322",
-          "AnimationGraph": "animgraphs/worm.vanmgrph",
-          "BodyGroups": 18446744073709551615,
-          "CreateBoneObjects": false,
-          "Model": "models/worm/collection.vmdl",
-          "RenderType": "On",
-          "Tint": "1,1,1,1"
-        },
-        {
-          "__type": "SoundPointComponent",
-          "__guid": "b1f5f891-e0a7-419c-b671-bb6ea512b10e",
-          "DistanceAttenuation": false,
-          "DistanceAttenuationOverride": false,
-          "Force2d": false,
-          "MaxRepeatTime": 1,
-          "MinRepeatTime": 1,
-          "Occlusion": false,
-          "OcclusionOverride": false,
-          "OcclusionRadius": 32,
-          "Pitch": 1,
-          "PlayOnStart": false,
-          "ReflectionOverride": false,
-          "Reflections": false,
-          "Repeat": false,
-          "SoundOverride": false,
-          "StopOnNew": true,
-          "Volume": 1
-        },
-        {
-          "__type": "WormScript",
-          "__guid": "cbea035b-3729-40d1-969d-a5bb05c4352f",
-          "wormModeTime": 10,
-          "animSpeedMult": 1,
-          "changeDirTime": 5,
-          "model": {
-            "_type": "component",
-            "component_id": "44750d6d-7960-4fbe-8c38-2f60b0f65322",
-            "go": "e0c80134-e654-48c0-9034-74c3dbef6a22",
-            "component_type": "SkinnedModelRenderer"
-          },
-          "navMeshAgent": {
-            "_type": "component",
-            "component_id": "6ff557ae-ce52-4a39-85ba-758e7179ef9f",
-            "go": "e0c80134-e654-48c0-9034-74c3dbef6a22",
-            "component_type": "NavMeshAgent"
-          },
-          "soundEventDelays": [
-            3,
-            5
-          ],
-          "soundEvents": [
-            "sounds/wormspeak.sound",
-            "sounds/wormmove.sound"
-          ],
-          "soundPoint": {
-            "_type": "component",
-            "component_id": "b1f5f891-e0a7-419c-b671-bb6ea512b10e",
-            "go": "e0c80134-e654-48c0-9034-74c3dbef6a22",
-            "component_type": "SoundPointComponent"
-          }
-        },
-        {
-          "__type": "NavMeshAgent",
-          "__guid": "6ff557ae-ce52-4a39-85ba-758e7179ef9f",
-          "Acceleration": 10,
-          "Height": 64,
-          "MaxSpeed": 10,
-          "Radius": 16,
-          "Separation": 0.25,
-          "UpdatePosition": true,
-          "UpdateRotation": true
-        },
-        {
-          "__type": "BoxCollider",
-          "__guid": "95436d6f-78ec-4347-8034-b0db49e2e88e",
-          "Center": "0,0,0",
-          "IsTrigger": true,
-          "Scale": "50,50,50",
-          "Static": false
-        }
-      ]
+      "__Prefab": "a fucking worm.prefab"
+    },
+    {
+      "__guid": "0660b26c-431f-44e5-9b91-50918b230f6c",
+      "Name": "a fucking worm (5)",
+      "Position": "-125.2232,685.8251,1.069629",
+      "Scale": "1.8,1.8,1.8",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "__Prefab": "a fucking worm.prefab"
     },
     {
       "__guid": "3bd50974-232d-4b94-a18f-a35dc99213f3",
@@ -917,7 +297,7 @@
           "__guid": "7b0ccba1-1aae-46c4-94ec-c96c3963a907",
           "target": {
             "_type": "gameobject",
-            "go": "0ae8ae3e-d3d1-4fa5-b746-99aab4a39e5d"
+            "go": "ce1941f9-daeb-46d8-b2ee-822548413883"
           }
         },
         {
@@ -942,6 +322,14 @@
           "Type": "Cylinder"
         }
       ]
+    },
+    {
+      "__guid": "ce1941f9-daeb-46d8-b2ee-822548413883",
+      "Name": "player",
+      "Position": "-140.1488,203.2336,33",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "__Prefab": "player.prefab"
     }
   ],
   "SceneProperties": {
@@ -967,7 +355,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-17T12:06:49.0060588\u002B07:00",
+  "LastSaved": "2024-03-17T21:46:04.5592822\u002B07:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
