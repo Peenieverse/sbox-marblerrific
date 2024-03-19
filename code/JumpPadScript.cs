@@ -1,37 +1,28 @@
-using Sandbox;
-
 public sealed class JumpPadScript : Component, Component.ITriggerListener
 {
-	[Property] private float force { get; set; }
-	[Property] private float delayT { get; set; }
-	private List<Rigidbody> delayed;
-	protected override void OnAwake()
-	{
-		delayed = new List<Rigidbody>();
-	}
-	async void delay( Rigidbody delayedBody )
-	{
-		delayed.Add( delayedBody );
-		await Task.DelaySeconds( delayT );
-		if ( delayedBody != null ) delayed.Remove( delayedBody );
-	}
+	[Property] public float Force { get; set; }
+	[Property] public float Delay { get; set; }
 
-	void ITriggerListener.OnTriggerEnter( Collider other )
+	async void ITriggerListener.OnTriggerEnter( Collider other )
 	{
-		Rigidbody rb = other.Components.Get<Rigidbody>();
-		if ( rb != null )
+		Rigidbody rigidBody = other.Components.GetInChildrenOrSelf<Rigidbody>();
+		List<Rigidbody> delayedRigidbodies = new();
+
+		if ( rigidBody == null ) return;
+
+		if ( !delayedRigidbodies.Contains( rigidBody ) )
 		{
-			if ( !delayed.Contains( rb ) )
-			{
-				rb.ApplyForce( Transform.World.Up * force );
-				delay( rb );
-			}
-		}
+			rigidBody.ApplyForce( Transform.World.Up * Force );
 
+			delayedRigidbodies.Add( rigidBody );
+
+			await Task.DelaySeconds( Delay );
+
+			delayedRigidbodies.Remove( rigidBody );
+		}
 	}
 
 	void ITriggerListener.OnTriggerExit( Collider other )
 	{
-
 	}
 }

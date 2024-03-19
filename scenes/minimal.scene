@@ -166,9 +166,8 @@
             {
               "__type": "SpeedPadScript",
               "__guid": "75cbb7f4-3bf1-4aa7-9f3c-dc646baab642",
-              "delayed": [],
-              "delayT": 1,
-              "force": 60000000
+              "Delay": 0,
+              "Force": 60000000
             }
           ]
         }
@@ -221,8 +220,8 @@
             {
               "__type": "JumpPadScript",
               "__guid": "6cb86cd8-0b81-4b2b-96e7-828a4c288337",
-              "delayT": 0,
-              "force": 300000000
+              "Delay": 0,
+              "Force": 300000000
             }
           ]
         }
@@ -257,21 +256,13 @@
           "Slices": 16,
           "Static": false,
           "Type": "Cylinder"
-        },
-        {
-          "__type": "LookAt",
-          "__guid": "645f91a4-43c5-4613-9139-ee03c80b4b4d",
-          "target": {
-            "_type": "gameobject",
-            "go": "843f742b-3555-4509-b756-4a6e40e7ddec"
-          }
         }
       ]
     },
     {
       "__guid": "843f742b-3555-4509-b756-4a6e40e7ddec",
       "Name": "player",
-      "Position": "0,0,43.89165",
+      "Position": "0,0,45.89621",
       "Enabled": true,
       "NetworkMode": 2,
       "__Prefab": "prefabs/player.prefab"
@@ -309,7 +300,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-19T15:33:07.7867382\u002B08:00",
+  "LastSaved": "2024-03-19T21:46:40.0213697\u002B08:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

@@ -1,87 +1,61 @@
-using Sandbox;
-using Sandbox.Utility;
-using System;
-using System.Diagnostics;
-using System.Net.Mail;
-
 public sealed class WormScript : Component, Component.ITriggerListener
 {
-	[Property] private NavMeshAgent navMeshAgent {get; set;}
-	[Property] private float animSpeedMult {get;set;} = 1;
-	[Property] private SkinnedModelRenderer model {get; set;}
-	[Property] private float changeDirTime {get;set;} = 5;
-	[Property] private float wormModeTime = 10;
-	[Property] private List<SoundEvent> soundEvents {get;set;}
-	[Property] private List<float> soundEventDelays {get;set;}
-	[Property] private SoundPointComponent soundPoint {get;set;}
-	public float ConvertAngle360to180(float angle)
-    {
-        // Ensure the angle is within the 0-360 range
-        angle = angle % 360;
+	[Property] public float AnimationSpeed { get; set; } = 1f;
+	[Property] public float ChangeDirectionTime { get; set; } = 5f;
+	[Property] public List<SoundEvent> SoundEvents { get; set; }
+	[Property] public List<float> SoundEventDelays { get; set; }
 
-        // Convert angle
-        if (angle > 180)
-            angle -= 360;
-
-        return angle;
-    }
-
-	public double GetRandomNumberInRange(Random random,double minNumber, double maxNumber)
-	{
-		return random.NextDouble() * (maxNumber - minNumber) + minNumber;
-	}
 	protected override void OnStart()
 	{
-		footLoop();
-		noies();
+		PlayNoises();
 	}
-	float magnitute(Vector3 inp)
+
+	private async void PlayNoises()
 	{
-		return inp.Abs().x+inp.Abs().y+inp.Abs().z;
-	}
-	Vector3 dir;
-	async void footLoop()
-	{
-		while(true)
+		await Task.DelaySeconds( Game.Random.Next( 100 ) / 10 );
+
+		var soundPointComponent = Components.GetInChildrenOrSelf<SoundPointComponent>();
+
+		int soundIndex = 0;
+
+		while ( true )
 		{
-			dir = Vector3.Random;
-			dir.z = 0;
-			await Task.DelaySeconds(changeDirTime);
+			if ( soundIndex >= SoundEvents.Count ) soundIndex = 0;
+
+			soundPointComponent.SoundEvent = SoundEvents[soundIndex];
+			soundPointComponent.StartSound();
+
+			await Task.DelaySeconds( SoundEventDelays[soundIndex] );
+
+			soundIndex++;
 		}
 	}
-	
-	async void noies()
+
+	protected override async void OnUpdate()
 	{
-		await Task.DelaySeconds(new Random().Next(100)/10);
-		int soundI = 0;
-		while(true)
-		{
-			if(soundI >= soundEvents.Count) soundI = 0;
-			soundPoint.SoundEvent = soundEvents[soundI];
-			soundPoint.StartSound();
-			await Task.DelaySeconds(soundEventDelays[soundI]);
-			soundI++;
-		}
-		
+		var navMeshAgent = Components.GetInChildrenOrSelf<NavMeshAgent>();
+		var skinnedModelRenderer = Components.GetInChildrenOrSelf<SkinnedModelRenderer>();
+
+		Vector3 dir = Vector3.Random.WithZ( 0 );
+
+		await Task.DelaySeconds( ChangeDirectionTime );
+
+		navMeshAgent.MoveTo( Transform.Position + dir * 100 );
+		skinnedModelRenderer.Set( "Speed", navMeshAgent.Velocity.Length * AnimationSpeed );
 	}
-	protected override void OnUpdate()
-	{	
-		navMeshAgent.MoveTo(Transform.Position+dir*100);
-		model.Set("Speed", magnitute(navMeshAgent.Velocity)*animSpeedMult);
-	}
+
 	void ITriggerListener.OnTriggerEnter( Collider other )
 	{
-		AFuckingmarbleScript marbleScript = other.Components.Get<AFuckingmarbleScript>();
-		if(marbleScript!=null)
-		{
-			marbleScript.wormMode+=wormModeTime;
-			GameObject.Destroy();
-		}
-		
+		var marbleScript = other.Components.GetInChildrenOrSelf<MarbleScript>();
+
+		if ( marbleScript == null ) return;
+
+		// Figure out what the fuck worm mode is and why it's a float
+		// marbleScript.wormMode += 10;
+		GameObject.Destroy();
 	}
 
 	void ITriggerListener.OnTriggerExit( Collider other )
 	{
-
 	}
 }
