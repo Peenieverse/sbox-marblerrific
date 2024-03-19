@@ -1,0 +1,119 @@
+{
+  "__guid": "f30e4b6c-c72e-47ec-953e-02beb19ddadc",
+  "GameObjects": [
+    {
+      "__guid": "d823e586-0de2-4246-af71-78414a6f4090",
+      "Name": "Map",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "MapInstance",
+          "__guid": "5e24302e-d469-46dd-8d11-d50747776709",
+          "MapName": "maps/level1.vmap",
+          "UseMapFromLaunch": false
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "f7ac2576-e250-41d3-b9e9-1c1e8e63a264",
+      "Name": "Controls",
+      "Position": "160,224,96",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "TextRenderer",
+          "__guid": "3fe7ba1e-b06f-4f1a-a180-20ab88cd98df",
+          "Color": "1,1,1,1",
+          "FontFamily": "Poppins",
+          "FontSize": 43.18,
+          "Scale": 0.69,
+          "Text": "Controls:\n- WASD to move\n- SPACE to jump\n- SHIFT to brake"
+        }
+      ]
+    },
+    {
+      "__guid": "ed2e17b6-1da0-4f75-a83b-4402eeee9bd3",
+      "Name": "Sun",
+      "Rotation": "-0.0729315,0.4822396,0.1305433,0.8631827",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "DirectionalLight",
+          "__guid": "eb699207-fd89-43a6-a924-672f42c64af4",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.94419,0.97767,1,1",
+          "Shadows": true,
+          "SkyColor": "0.2532,0.32006,0.35349,1"
+        }
+      ]
+    },
+    {
+      "__guid": "b5754f66-822c-436e-84d8-65246a7b03bd",
+      "Name": "2D Skybox",
+      "Tags": "skybox",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SkyBox2D",
+          "__guid": "36b93265-e54a-452a-be97-682b284da92f",
+          "SkyMaterial": "materials/skybox/light_test_sky_sunny03.vmat",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "EnvmapProbe",
+          "__guid": "be3a6a98-b027-4eef-9418-8604f6429633",
+          "Bounds": {
+            "Mins": "-512,-512,-512",
+            "Maxs": "512,512,512"
+          },
+          "Feathering": 0.02,
+          "Projection": "Sphere",
+          "Texture": "textures/cubemaps/default2.vtex",
+          "TintColor": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "db10c9eb-3cfc-4205-87c8-90fd5178e6d3",
+      "Name": "player",
+      "Position": "0,0,45.89621",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "__Prefab": "prefabs/player.prefab"
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "level1",
+  "Description": "",
+  "LastSaved": "2024-03-19T18:46:34.4228528\u002B01:00",
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}

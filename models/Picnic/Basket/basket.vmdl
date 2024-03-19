@@ -50,7 +50,80 @@
 						collision_tags = "solid"
 						origin = [ 0.115313, 13.370332, 0.0 ]
 						angles = [ 0.0, 0.0, 0.0 ]
-						dimensions = [ 2.439225, 26.752111, 10.0 ]
+						dimensions = [ 2.43922, 26.7521, 40.0 ]
+					},
+					{
+						_class = "PhysicsHullFile"
+						name = "Urm"
+						parent_bone = "root"
+						surface_prop = "default"
+						collision_tags = "solid"
+						recenter_on_parent_bone = false
+						offset_origin = [ 0.0, 0.0, 0.0 ]
+						offset_angles = [ 0.0, 0.0, 0.0 ]
+						align_origin_x_type = "None"
+						align_origin_y_type = "None"
+						align_origin_z_type = "None"
+						filename = "models/Picnic/Basket/Urm.fbx"
+						import_scale = 1.0
+						faceMergeAngle = 10.0
+						maxHullVertices = 0
+						import_mode = "SingleHull"
+						optimization_algorithm = "QEM"
+						import_filter = 
+						{
+							exclude_by_default = false
+							exception_list = [  ]
+						}
+					},
+					{
+						_class = "PhysicsShapeBox"
+						parent_bone = "door_other"
+						surface_prop = "default"
+						collision_tags = "solid"
+						origin = [ 0.115313, 13.370332, 0.0 ]
+						angles = [ 97.0, 0.0, 0.0 ]
+						dimensions = [ 2.43922, 26.7521, 40.0 ]
+					},
+				]
+			},
+			{
+				_class = "PhysicsJointList"
+				children = 
+				[
+					{
+						_class = "PhysicsJointConical"
+						parent_body = "root"
+						child_body = "door"
+						anchor_origin = [ -3.062811, 31.245913, 0.000004 ]
+						anchor_angles = [ 0.0, 0.0, 0.0 ]
+						collision_enabled = true
+						linear_strength = 0.0
+						angular_strength = 0.0
+						friction = 0.1
+						enable_swing_limit = true
+						swing_limit = 0.1
+						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
+						enable_twist_limit = true
+						min_twist_angle = -80.0
+						max_twist_angle = 0.0
+					},
+					{
+						_class = "PhysicsJointConical"
+						parent_body = "root"
+						child_body = "door_other"
+						anchor_origin = [ 3.06284, 31.245899, 0.000004 ]
+						anchor_angles = [ 0.0, 0.0, 0.0 ]
+						collision_enabled = true
+						linear_strength = 0.0
+						angular_strength = 0.0
+						friction = 0.1
+						enable_swing_limit = true
+						swing_limit = 0.1
+						swing_offset_angle = [ 0.0, 0.0, 0.0 ]
+						enable_twist_limit = true
+						min_twist_angle = 0.0
+						max_twist_angle = 80.0
 					},
 				]
 			},
