@@ -1,7 +1,7 @@
 public sealed class WormScript : Component, Component.ITriggerListener
 {
 	[Property] public float AnimationSpeed { get; set; } = 1f;
-	[Property] public float ChangeDirectionTime { get; set; } = 5f;
+	[Property] public Vector2 ChangeDirectionTime { get; set; } = 5f;
 	[Property] public List<SoundEvent> SoundEvents { get; set; }
 	[Property] public List<float> SoundEventDelays { get; set; }
 
@@ -12,7 +12,7 @@ public sealed class WormScript : Component, Component.ITriggerListener
 
 	private async void PlayNoises()
 	{
-		await Task.DelaySeconds( Game.Random.Next( 100 ) / 10 );
+		await Task.DelaySeconds( Game.Random.Next( 0, 1000 ) / 1000 * (ChangeDirectionTime.y - ChangeDirectionTime.x) + ChangeDirectionTime.x );
 
 		var soundPointComponent = Components.GetInChildrenOrSelf<SoundPointComponent>();
 
@@ -38,7 +38,7 @@ public sealed class WormScript : Component, Component.ITriggerListener
 
 		Vector3 dir = Vector3.Random.WithZ( 0 );
 
-		await Task.DelaySeconds( ChangeDirectionTime );
+		await Task.DelaySeconds( ChangeDirectionTime.y - ChangeDirectionTime.x + ChangeDirectionTime.x );
 
 		navMeshAgent.MoveTo( Transform.Position + dir * 100 );
 		skinnedModelRenderer.Set( "Speed", navMeshAgent.Velocity.Length * AnimationSpeed );
