@@ -256,6 +256,14 @@
           "Slices": 16,
           "Static": false,
           "Type": "Cylinder"
+        },
+        {
+          "__type": "LookAt",
+          "__guid": "d68d7654-011f-474c-87ab-a496a49dd78b",
+          "target": {
+            "_type": "gameobject",
+            "go": "bfb7b34b-554e-4093-932c-c01c560ff3a2"
+          }
         }
       ]
     },
@@ -265,7 +273,217 @@
       "Position": "0,0,45.89621",
       "Enabled": true,
       "NetworkMode": 2,
-      "__Prefab": "prefabs/player.prefab"
+      "Children": [
+        {
+          "__guid": "bfb7b34b-554e-4093-932c-c01c560ff3a2",
+          "Name": "Marble",
+          "Position": "0,0,0",
+          "Tags": "player",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "SphereCollider",
+              "__guid": "79b09015-175e-4fc3-ad6e-47184056699c",
+              "Center": "0,0,0",
+              "IsTrigger": false,
+              "Radius": 32,
+              "Static": false,
+              "Surface": "surfaces/glass.surface"
+            },
+            {
+              "__type": "Rigidbody",
+              "__guid": "d7172572-1377-4133-8681-489e88542e1f",
+              "AngularDamping": 0,
+              "Gravity": true,
+              "LinearDamping": 0,
+              "Locking": {},
+              "MassOverride": 0,
+              "MotionEnabled": true,
+              "RigidbodyFlags": 0,
+              "StartAsleep": false
+            },
+            {
+              "__type": "MarbleScript",
+              "__guid": "465d2cb3-dedd-4f4b-8e61-978c1d3f4299",
+              "Acceleration": 100,
+              "ActualCamera": {
+                "_type": "gameobject",
+                "go": "6e59c40a-b967-4321-bc4b-4a14672a9639"
+              },
+              "AirControl": false,
+              "BrakeAcceleration": 5,
+              "CamClamp": "-90,90",
+              "Camera": {
+                "_type": "gameobject",
+                "go": "147a3474-7c23-4a65-a085-5785dbaace26"
+              },
+              "cameraComponent": {
+                "_type": "component",
+                "component_id": "e9d060f3-7708-442b-9f46-a9075633e7db",
+                "go": "6e59c40a-b967-4321-bc4b-4a14672a9639",
+                "component_type": "CameraComponent"
+              },
+              "cameraReturnLerp": 10,
+              "forceMultForBetterConfig": 500000,
+              "forwardAxis": {
+                "_type": "gameobject",
+                "go": "991011c1-0117-4d00-8f04-4dbe3fc2c465"
+              },
+              "fovVelocityLerp": 0.5,
+              "fovVelocityMult": 0.05,
+              "JumpForce": 200,
+              "mouseSensitivity": 100,
+              "rayDis": 36.2,
+              "raySize": 20,
+              "rb": {
+                "_type": "component",
+                "component_id": "d7172572-1377-4133-8681-489e88542e1f",
+                "go": "bfb7b34b-554e-4093-932c-c01c560ff3a2",
+                "component_type": "Rigidbody"
+              },
+              "wormMode": 0,
+              "wormSpeed": 1000,
+              "wormSpeedLerp": 100,
+              "Zrespwawn": -1000
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "991011c1-0117-4d00-8f04-4dbe3fc2c465",
+              "Name": "upAxis",
+              "Position": "0,0,0",
+              "Enabled": true,
+              "NetworkMode": 2
+            },
+            {
+              "__guid": "147a3474-7c23-4a65-a085-5785dbaace26",
+              "Name": "CameraRotate",
+              "Position": "0,0,0",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Children": [
+                {
+                  "__guid": "6e59c40a-b967-4321-bc4b-4a14672a9639",
+                  "Name": "Camera",
+                  "Position": "-624.9197,-0.00003516128,671.4487",
+                  "Rotation": "0.00000003099143,0.3991939,-0.000000001282434,0.9168665",
+                  "Enabled": true,
+                  "NetworkMode": 2,
+                  "Components": [
+                    {
+                      "__type": "CameraComponent",
+                      "__guid": "e9d060f3-7708-442b-9f46-a9075633e7db",
+                      "BackgroundColor": "0.33333,0.46275,0.52157,1",
+                      "ClearFlags": "All",
+                      "FieldOfView": 60,
+                      "IsMainCamera": true,
+                      "Orthographic": false,
+                      "OrthographicHeight": 1204,
+                      "Priority": 1,
+                      "RenderExcludeTags": "",
+                      "RenderTags": "",
+                      "TargetEye": "None",
+                      "Viewport": "0,0,1,1",
+                      "ZFar": 10000,
+                      "ZNear": 0.1
+                    },
+                    {
+                      "__type": "Bloom",
+                      "__guid": "22f22153-c409-4245-8f64-b91ab534c14a",
+                      "BloomColor": {
+                        "color": [
+                          {
+                            "c": "1,1,1,1"
+                          },
+                          {
+                            "t": 1,
+                            "c": "1,1,1,1"
+                          }
+                        ],
+                        "alpha": []
+                      },
+                      "BloomCurve": [
+                        {
+                          "y": 0.5
+                        },
+                        {
+                          "x": 1,
+                          "y": 1
+                        }
+                      ],
+                      "Mode": "Additive",
+                      "Strength": 0.5,
+                      "Threshold": 0.5,
+                      "ThresholdWidth": 0.5
+                    },
+                    {
+                      "__type": "Tonemapping",
+                      "__guid": "e2241e7c-ac00-45f4-b817-2c7982f8c22d",
+                      "ExposureCompensation": 0,
+                      "MaximumExposure": 2,
+                      "MinimumExposure": 1,
+                      "Rate": 1
+                    },
+                    {
+                      "__type": "Sharpen",
+                      "__guid": "cb45a8cf-02d9-42bb-a699-177c7a05cf67",
+                      "Scale": 0.2
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "__guid": "a9f1279c-01ab-4e0a-b3ad-ceab57849b8b",
+              "Name": "TerryMarble",
+              "Position": "0,0,0",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "a9b040f0-27aa-45b7-9af0-e255e6fe4dab",
+                  "BodyGroups": 18446744073709551615,
+                  "Model": "models/terrymarble/terrymarble.vmdl",
+                  "RenderType": "Off",
+                  "Tint": "1,1,1,1"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "__guid": "58a0fd30-6099-4245-be6a-8f02db97aba5",
+          "Name": "FakeShadow",
+          "Position": "0,0,0",
+          "Rotation": "0,0.7071067,0,0.7071068",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "DecalRenderer",
+              "__guid": "ae1372b2-26b0-4898-90f1-7f6bd51f4bc3",
+              "CutoffAngle": 80,
+              "CutoffAngleSoftness": 16.97,
+              "Material": "materials/fakeshadow.vmat",
+              "Mod2XBlending": false,
+              "Size": "70,70,2000",
+              "TintColor": "0,0,0,1",
+              "TriPlanar": false
+            },
+            {
+              "__type": "FollowMe",
+              "__guid": "e2f869d1-6ca5-4db7-b60b-28ef7ec50f04",
+              "Offset": 0,
+              "Target": {
+                "_type": "gameobject",
+                "go": "bfb7b34b-554e-4093-932c-c01c560ff3a2"
+              }
+            }
+          ]
+        }
+      ]
     },
     {
       "__guid": "bd63a83e-e9c2-4885-ae8b-5c45097295d2",
@@ -300,7 +518,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-19T21:46:40.0213697\u002B08:00",
+  "LastSaved": "2024-03-19T17:00:36.1939744\u002B01:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
