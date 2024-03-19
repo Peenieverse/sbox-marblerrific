@@ -1,3 +1,4 @@
+
 # This file describes files and paths that should not be tracked by Git version control
 # https://git-scm.com/docs/gitignore
 
@@ -9,7 +10,6 @@ obj/*
 Properties/*
 code/obj/*
 code/Properties/*
-*.sln
 
 # Editor Projects
 code/Editor/obj/*
@@ -24,4 +24,3 @@ code/Editor/.vscode/*
 *.los
 *.vpk
 *.sln
-code/marbleriffic.csproj

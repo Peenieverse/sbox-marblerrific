@@ -14,12 +14,16 @@
 						remaps = 
 						[
 							{
-								from = "base.vmat"
-								to = "materials/default/white.vmat"
+								from = "eyesanteef.vmat"
+								to = "materials/models/craigmarble/teeth.vmat"
 							},
 							{
-								from = "jumppad.vmat"
-								to = "materials/jumppad/jumppad.vmat"
+								from = "perfectboy.vmat"
+								to = "materials/models/craigmarble/craigmarble.vmat"
+							},
+							{
+								from = "material.003.vmat"
+								to = "materials/black_matte.vmat"
 							},
 						]
 						use_global_default = false
@@ -33,7 +37,7 @@
 				[
 					{
 						_class = "RenderMeshFile"
-						filename = "models/jumppad/jumppad.fbx"
+						filename = "models/craigmarble/craigmarble.fbx"
 						import_translation = [ 0.0, 0.0, 0.0 ]
 						import_rotation = [ 0.0, 0.0, 0.0 ]
 						import_scale = 1.0
@@ -54,12 +58,12 @@
 				children = 
 				[
 					{
-						_class = "PhysicsHullFromRender"
+						_class = "PhysicsShapeSphere"
 						parent_bone = ""
-						surface_prop = "default"
+						surface_prop = "flesh"
 						collision_tags = "solid"
-						faceMergeAngle = 20.0
-						maxHullVertices = 32
+						radius = 32.0
+						center = [ 0.0, 0.0, 0.0 ]
 					},
 				]
 			},

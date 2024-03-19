@@ -19,11 +19,11 @@
 							},
 							{
 								from = "eyesanteef.vmat"
-								to = "models/worm/eyesmteeth.vmat"
+								to = "materials/models/worm/eyesmteeth.vmat"
 							},
 							{
 								from = "material.vmat"
-								to = "models/worm/worm.vmat"
+								to = "materials/models/worm/worm.vmat"
 							},
 						]
 						use_global_default = false
@@ -74,6 +74,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						disable_interpolation = false
 						enable_scale = false
 						source_filename = "models/worm/anims/WormMoveMent.smd"
 						start_frame = -1
@@ -96,6 +97,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						disable_interpolation = false
 						enable_scale = false
 						source_filename = "models/worm/anims/WormLeft.smd"
 						start_frame = -1
@@ -118,6 +120,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						disable_interpolation = false
 						enable_scale = false
 						source_filename = "models/worm/anims/WormRight.smd"
 						start_frame = -1
@@ -140,6 +143,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						disable_interpolation = false
 						enable_scale = false
 						source_filename = "models/worm/anims/WormLeftMent.smd"
 						start_frame = -1
@@ -162,6 +166,7 @@
 						hidden = false
 						anim_markup_ordered = false
 						disable_compression = false
+						disable_interpolation = false
 						enable_scale = false
 						source_filename = "models/worm/anims/WormRightMent.smd"
 						start_frame = -1

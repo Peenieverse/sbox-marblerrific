@@ -24,7 +24,7 @@ Layer0
 	//---- Material ----
 	g_flSelfIllumScale "1.600"
 	g_flTintColor "[1.000000 1.000000 1.000000 0.000000]"
-	TextureColor "materials/speedpad.png"
+	TextureColor "materials/models/speedpad/speedpad_color.png"
 	TextureNormal "materials/default/default_normal.tga"
 	TextureSelfIllumMask "[1.000000 1.000000 1.000000 0.000000]"
 	TextureTintMask "materials/default/default.tga"
