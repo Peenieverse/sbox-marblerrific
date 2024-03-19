@@ -40,7 +40,7 @@
         "__type": "WormScript",
         "__guid": "18373324-a6bd-4bef-be35-25cea21c18d0",
         "AnimationSpeed": 1,
-        "ChangeDirectionTime": 5,
+        "ChangeDirectionTime": "1,5",
         "SoundEventDelays": [
           5,
           5
@@ -68,6 +68,15 @@
         "IsTrigger": true,
         "Scale": "50,50,50",
         "Static": false
+      },
+      {
+        "__type": "Pickup",
+        "__guid": "9741f9ca-cee3-4d13-8f13-ce9ef37215e2",
+        "itemData": {
+          "mode": "Worm",
+          "icon": "\uD83E\uDEB1",
+          "duration": 5
+        }
       }
     ],
     "Children": []

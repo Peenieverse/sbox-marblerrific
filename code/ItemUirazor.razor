@@ -1,0 +1,30 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+
+<root>
+	<table>
+		<tr>
+			@for (int i = 0; i < itemSystem.Items.Count; i++)
+			{
+				<td style="padding:5px; position: relative; text-align: center;">
+					
+
+					<div class="item" style=" position: relative;">
+						@itemSystem.Items[i].icon
+					</div>
+
+					<div style="position: absolute; top: 0; left: 0; font-size: 30px; font-color: #fff">
+						@(i+1)
+					</div>
+				</td>
+			}
+		</tr>
+	</table>
+</root>
+
+@code
+{
+	[Property] public ItemSystem itemSystem { get; set; }
+	protected override int BuildHash() => System.HashCode.Combine( itemSystem, itemSystem.Items.Count );
+}

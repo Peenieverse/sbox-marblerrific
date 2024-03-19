@@ -272,6 +272,37 @@
       "Name": "worm",
       "Position": "0,231.3987,0",
       "Scale": "1.8,1.8,1.8",
+      "Tags": "pickup",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "__Prefab": "prefabs/worm.prefab"
+    },
+    {
+      "__guid": "014bb269-fed5-43f0-8202-e23323973dd6",
+      "Name": "worm (1)",
+      "Position": "0,256,0",
+      "Scale": "1.8,1.8,1.8",
+      "Tags": "pickup",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "__Prefab": "prefabs/worm.prefab"
+    },
+    {
+      "__guid": "bd38d2f0-6495-41c5-9c11-91de5811c8d3",
+      "Name": "worm (2)",
+      "Position": "0,288,0",
+      "Scale": "1.8,1.8,1.8",
+      "Tags": "pickup",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "__Prefab": "prefabs/worm.prefab"
+    },
+    {
+      "__guid": "709c26de-047a-426f-8cd0-790d00923d23",
+      "Name": "worm (3)",
+      "Position": "0,320,0",
+      "Scale": "1.8,1.8,1.8",
+      "Tags": "pickup",
       "Enabled": true,
       "NetworkMode": 2,
       "__Prefab": "prefabs/worm.prefab"
@@ -294,13 +325,13 @@
       "AgentRadius": 16,
       "AgentStepSize": 18,
       "AgentMaxSlope": 40,
-      "ExcludedBodies": "",
+      "ExcludedBodies": "pickup",
       "IncludedBodies": ""
     }
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-19T21:46:40.0213697\u002B08:00",
+  "LastSaved": "2024-03-19T23:56:31.9122868\u002B07:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

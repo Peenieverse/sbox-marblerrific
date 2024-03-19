@@ -1,13 +1,20 @@
-public sealed class WormScript : Component, Component.ITriggerListener
+public sealed class WormScript : Component
 {
 	[Property] public float AnimationSpeed { get; set; } = 1f;
 	[Property] public Vector2 ChangeDirectionTime { get; set; } = 5f;
 	[Property] public List<SoundEvent> SoundEvents { get; set; }
 	[Property] public List<float> SoundEventDelays { get; set; }
 
+	NavMeshAgent navMeshAgent;
+	SkinnedModelRenderer skinnedModelRenderer;
+
+
 	protected override void OnStart()
 	{
+		navMeshAgent = Components.GetInChildrenOrSelf<NavMeshAgent>();
+		skinnedModelRenderer = Components.GetInChildrenOrSelf<SkinnedModelRenderer>();
 		PlayNoises();
+		directionChange();
 	}
 
 	private async void PlayNoises()
@@ -33,29 +40,18 @@ public sealed class WormScript : Component, Component.ITriggerListener
 
 	protected override async void OnUpdate()
 	{
-		var navMeshAgent = Components.GetInChildrenOrSelf<NavMeshAgent>();
-		var skinnedModelRenderer = Components.GetInChildrenOrSelf<SkinnedModelRenderer>();
-
-		Vector3 dir = Vector3.Random.WithZ( 0 );
-
-		await Task.DelaySeconds( ChangeDirectionTime.y - ChangeDirectionTime.x + ChangeDirectionTime.x );
-
-		navMeshAgent.MoveTo( Transform.Position + dir * 100 );
-		skinnedModelRenderer.Set( "Speed", navMeshAgent.Velocity.Length * AnimationSpeed );
+		//moved to directionchanged because i may want to add features to update in the future.
 	}
-
-	void ITriggerListener.OnTriggerEnter( Collider other )
+	async void directionChange()
 	{
-		var marbleScript = other.Components.GetInChildrenOrSelf<MarbleScript>();
+		while(true)
+		{
+			Vector3 dir = Vector3.Random.WithZ( 0 );
 
-		if ( marbleScript == null ) return;
+			navMeshAgent.MoveTo( Transform.Position + dir * 100 );
+			skinnedModelRenderer.Set( "Speed", navMeshAgent.Velocity.Length * AnimationSpeed );
 
-		// Figure out what the fuck worm mode is and why it's a float
-		// marbleScript.wormMode += 10;
-		GameObject.Destroy();
-	}
-
-	void ITriggerListener.OnTriggerExit( Collider other )
-	{
+			await Task.DelaySeconds( ChangeDirectionTime.y - ChangeDirectionTime.x + ChangeDirectionTime.x );
+		}
 	}
 }
