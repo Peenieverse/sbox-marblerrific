@@ -1,4 +1,4 @@
-ItemUirazor
+ItemUI
 {
 	position: absolute;
 	top: 0;
@@ -10,6 +10,7 @@ ItemUirazor
 	align-items: flex-end;
 	font-weight: bold;
 	border-radius: 20px;
+	
 
 	.title
 	{
@@ -17,6 +18,7 @@ ItemUirazor
 		font-family: Poppins;
 		color: #fff;
 	}
+
 	.item
 	{
 		border-radius: 25px;

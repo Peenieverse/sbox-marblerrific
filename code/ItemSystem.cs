@@ -1,60 +1,68 @@
-using Sandbox;
+namespace Marblerrific;
+
+public struct ItemData
+{
+	public MoveMode Mode { get; set; }
+	public string Icon { get; set; }
+	public float Duration { get; set; }
+}
 
 public sealed class ItemSystem : Component
 {
-	[Property] public List<itemData> Items {get;set;}
-	[Property] private int maxItems {get; set;}
-	MarbleScript marbleScript;
-	float effectDuration;
+	[Property] public List<ItemData> Items { get; set; } = new();
+	[Property] public int MaxItems { get; set; }
 
-	public class itemData
-	{
-		public MarbleScript.MoveMode mode {get;set;}
-		public string icon {get;set;} 
-		public float duration {get;set;}
-	}
+	private MarbleScript marbleScript;
+	private float effectDuration;
 
 	protected override void OnStart()
 	{
-		Items = new List<itemData>();
-		marbleScript = Components.Get<MarbleScript>();
+		marbleScript = Components.GetInChildrenOrSelf<MarbleScript>();
+
+		marbleScript.currentMode = MoveMode.Normal;
 	}
 
-	void SelectSlot(int slot)
+	private void SelectSlot( int slot )
 	{
-		if(slot < Items.Count)
+		if ( slot < Items.Count )
 		{
-			marbleScript.currentMode = Items[slot].mode;
-			effectDuration = Items[slot].duration;
-			Items.RemoveAt(slot);
+			marbleScript.currentMode = Items[slot].Mode;
+			effectDuration = Items[slot].Duration;
+			Items.RemoveAt( slot );
 		}
 	}
 
-	//bool so pickup doesn't delete if full inventory
-	public bool addItem(itemData iD)
+	// TROLLFACEINREALLIFE: bool so pickup doesn't delete if full inventory
+	public bool AddItem( ItemData id )
 	{
-		if(Items.Count < maxItems)
+		if ( Items.Count < MaxItems )
 		{
-			itemData newID = new itemData();
-			newID.mode = iD.mode;
-			newID.duration = iD.duration;
-			newID.icon = iD.icon;
-			Items.Add(newID);
+			ItemData newID = new()
+			{
+				Mode = id.Mode,
+				Duration = id.Duration,
+				Icon = id.Icon
+			};
+
+			Items.Add( newID );
+
 			return true;
 		}
+
 		return false;
 	}
-	
+
 	protected override void OnUpdate()
 	{
-		if(effectDuration <= 0)
+		if ( effectDuration <= 0 )
 		{
-			marbleScript.currentMode = MarbleScript.MoveMode.Normal;
-
-			//loop to avoid a long annoying else if chain, also means you can change the slot count in the inspector
-			for(int i = 0; i < maxItems; i++)
+			// TROLLFACEINREALLIFE: loop to avoid a long annoying else if chain, also means you can change the slot count in the inspector
+			for ( int i = 0; i < MaxItems; i++ )
 			{
-				if(Input.Pressed($"Slot{i+1}")) SelectSlot(i);
+				if ( Input.Pressed( $"Slot{i + 1}" ) )
+				{
+					SelectSlot( i );
+				}
 			}
 		}
 		else

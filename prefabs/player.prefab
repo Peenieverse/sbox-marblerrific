@@ -37,7 +37,7 @@
             "__type": "ItemSystem",
             "__guid": "505d5709-b4a2-4c05-b825-239848fc3d31",
             "Items": [],
-            "maxItems": 4
+            "MaxItems": 4
           },
           {
             "__type": "MarbleScript",
@@ -47,7 +47,6 @@
               "_type": "gameobject",
               "go": "7ca6661e-2b84-4a2c-aa38-0582e24794f5"
             },
-            "AirControl": false,
             "BrakeAcceleration": 5,
             "CamClamp": "-45,45",
             "Camera": {
@@ -70,6 +69,7 @@
             "fovVelocityLerp": 0.5,
             "fovVelocityMult": 0.05,
             "JumpForce": 200,
+            "maxFov": 200,
             "mouseSensitivity": 100,
             "rayDis": 36.2,
             "raySize": 20,
@@ -93,9 +93,9 @@
             "ZIndex": 100
           },
           {
-            "__type": "ItemUirazor",
-            "__guid": "a15277c3-9455-4a21-bd20-82c038f7014c",
-            "itemSystem": {
+            "__type": "ItemUI",
+            "__guid": "eaf1bf3c-6ac6-4bd9-94fa-25bd60020f4c",
+            "ItemSystem": {
               "_type": "component",
               "component_id": "505d5709-b4a2-4c05-b825-239848fc3d31",
               "go": "15989237-6196-4acd-bb1d-bc0ccdd9b9a5",
