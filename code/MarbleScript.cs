@@ -22,7 +22,6 @@ public sealed class MarbleScript : Component
 	[Category( "Movement Stats Normal" ), Property] private float BrakeAcceleration { get; set; }
 	[Category( "Movement Stats Normal" ), Property] private float JumpForce { get; set; }
 	[Category( "Movement Stats Normal" ), Property] private float rayDis { get; set; }
-	[Category( "Movement Stats Normal" ), Property] private bool AirControl { get; set; }
 	[Category( "Movement Stats Normal" ), Property] private float forceMultForBetterConfig { get; set; } = 10000000f;
 	[Category( "Movement Stats Normal" ), Property] private float Zrespwawn { get; set; } = -1000f;
 
@@ -65,6 +64,7 @@ public sealed class MarbleScript : Component
 
 		foreach ( GameObject go in balls )
 		{
+
 			if ( go.Tags.Has( "respawnpoint" ) )
 			{
 				respawnPoint = go;
@@ -91,7 +91,7 @@ public sealed class MarbleScript : Component
 	{
 		Vector3 dir = (ActualCamera.Transform.Position - Camera.Transform.Position).Normal;
 
-		//clip prevention
+		// clip prevention
 		var tr = Scene.Trace.Ray( Camera.Transform.Position, Camera.Transform.Position + (dir * CamRayDis) ).IgnoreGameObject( GameObject ).Run();
 
 		if ( tr.Hit )
@@ -99,7 +99,7 @@ public sealed class MarbleScript : Component
 		else
 			ActualCamera.Transform.LocalPosition = Vector3.Lerp( ActualCamera.Transform.LocalPosition, cameraPosStart, cameraReturnLerp * Time.Delta );
 
-		//Mouse Move Stuff
+		// Mouse Move Stuff
 		float mouseX = Input.AnalogLook.yaw * mouseSensitivity * Time.Delta;
 		float mouseY = Input.AnalogLook.pitch * mouseSensitivity * Time.Delta;
 
@@ -107,13 +107,12 @@ public sealed class MarbleScript : Component
 		xRotation = MathX.Clamp( xRotation, CamClamp.x, CamClamp.y );
 		yRotation += mouseX;
 
-		//SetRotation And Position
+		// SetRotation And Position
 		Camera.Transform.LocalRotation = new Angles( xRotation, yRotation, 0 );
 		Camera.Transform.Position = Transform.Position;
 
-		//FOV
-		cameraComponent.FieldOfView = MathX.Clamp(
-		MathX.Lerp( cameraComponent.FieldOfView, startFov + ((rb.Velocity.Abs().z + rb.Velocity.Abs().y + rb.Velocity.Abs().z) * fovVelocityMult), Time.Delta * fovVelocityLerp ), 0, maxFov );
+		// FOV
+		cameraComponent.FieldOfView = MathX.Clamp( MathX.Lerp( cameraComponent.FieldOfView, startFov + ((rb.Velocity.Abs().z + rb.Velocity.Abs().y + rb.Velocity.Abs().z) * fovVelocityMult), Time.Delta * fovVelocityLerp ), 0, maxFov );
 	}
 
 	void wormMovement( Vector3 cameraForwardFlat )
@@ -154,6 +153,7 @@ public sealed class MarbleScript : Component
 
 			normalMovement( cameraForwardFlat, false );
 		}
+
 		else if ( currentMode == MoveMode.Worm )
 		{
 			if ( Input.Pressed( "Jump" ) && IsOnGround )

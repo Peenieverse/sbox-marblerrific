@@ -34,6 +34,12 @@
             "StartAsleep": false
           },
           {
+            "__type": "ItemSystem",
+            "__guid": "505d5709-b4a2-4c05-b825-239848fc3d31",
+            "Items": [],
+            "MaxItems": 4
+          },
+          {
             "__type": "MarbleScript",
             "__guid": "b4fd3ba9-ab85-4be9-8aa9-b92ce8c41159",
             "Acceleration": 100,
@@ -42,7 +48,7 @@
               "go": "7ca6661e-2b84-4a2c-aa38-0582e24794f5"
             },
             "BrakeAcceleration": 5,
-            "CamClamp": "-90,90",
+            "CamClamp": "-45,45",
             "Camera": {
               "_type": "gameobject",
               "go": "3385be84-2dc3-4454-8165-3fadbd82931c"
@@ -87,11 +93,9 @@
             "ZIndex": 100
           },
           {
-            "__type": "ItemUi",
-            "__guid": "a15277c3-9455-4a21-bd20-82c038f7014c",
-            "duration": 3,
-            "durationSet": 5,
-            "itemSystem": {
+            "__type": "ItemUI",
+            "__guid": "eaf1bf3c-6ac6-4bd9-94fa-25bd60020f4c",
+            "ItemSystem": {
               "_type": "component",
               "component_id": "505d5709-b4a2-4c05-b825-239848fc3d31",
               "go": "15989237-6196-4acd-bb1d-bc0ccdd9b9a5",

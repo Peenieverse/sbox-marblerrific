@@ -18,6 +18,8 @@ public sealed class ItemSystem : Component
 	protected override void OnStart()
 	{
 		marbleScript = Components.GetInChildrenOrSelf<MarbleScript>();
+
+		marbleScript.currentMode = MoveMode.Normal;
 	}
 
 	private void SelectSlot( int slot )
@@ -54,13 +56,13 @@ public sealed class ItemSystem : Component
 	{
 		if ( effectDuration <= 0 )
 		{
-			marbleScript.currentMode = MoveMode.Normal;
-
 			// TROLLFACEINREALLIFE: loop to avoid a long annoying else if chain, also means you can change the slot count in the inspector
 			for ( int i = 0; i < MaxItems; i++ )
 			{
 				if ( Input.Pressed( $"Slot{i + 1}" ) )
+				{
 					SelectSlot( i );
+				}
 			}
 		}
 		else
