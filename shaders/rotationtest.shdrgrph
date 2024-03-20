@@ -22,7 +22,7 @@
     },
     {
       "_class": "TextureSampler",
-      "Image": "materials/jumppad/jumppad.png",
+      "Image": "materials/models/jumppad/jumppad_color.png",
       "Sampler": {},
       "UI": {
         "Name": "",
