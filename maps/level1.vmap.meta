@@ -1,0 +1,30 @@
+{
+  "publish": {
+    "Allowed": true,
+    "Enabled": false,
+    "ProjectConfig": {
+      "Title": "level1",
+      "Type": "map",
+      "Org": "local",
+      "Ident": "level1",
+      "Tags": null,
+      "Schema": 0,
+      "HasAssets": false,
+      "AssetsPath": null,
+      "Resources": null,
+      "HasCode": false,
+      "CodePath": null,
+      "PackageReferences": [],
+      "EditorReferences": [
+        "facepunch.floor_grass_dirt_weed_blend_a#18756",
+        "facepunch.tree_oak_small_a#33693",
+        "facepunch.pine_bush_regular_b#29109",
+        "facepunch.tree_oak_medium_a#33692",
+        "facepunch.tree_oak_big_a#38050"
+      ],
+      "Metadata": {
+        "SingleAssetSource": "maps/level1.vmap"
+      }
+    }
+  }
+}

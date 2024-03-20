@@ -16,6 +16,14 @@
           "FontSize": 43.18,
           "Scale": 0.69,
           "Text": "Controls:\n- WASD to move\n- SPACE to jump\n- SHIFT to brake"
+        },
+        {
+          "__type": "BounceAround",
+          "__guid": "860fb68d-f702-4477-88b0-a7c45190c992",
+          "bounceAmount": 14,
+          "horizontalSpeed": 4,
+          "rotationSpeed": 50,
+          "verticalSpeed": 3
         }
       ]
     },
@@ -302,10 +310,10 @@
         {
           "__type": "Pickup",
           "__guid": "2bd0ec69-e983-4aa8-849b-8e276b143bad",
-          "itemData": {
-            "mode": "Gravity",
-            "icon": "\uD83D\uDD04",
-            "duration": 10
+          "ItemData": {
+            "Mode": "Gravity",
+            "Icon": "\uD83D\uDD04",
+            "Duration": 10
           }
         }
       ]
@@ -334,7 +342,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-20T21:51:38.3267496\u002B08:00",
+  "LastSaved": "2024-03-20T20:27:04.0167312\u002B01:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

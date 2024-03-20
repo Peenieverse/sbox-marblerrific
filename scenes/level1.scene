@@ -31,6 +31,14 @@
           "FontSize": 43.18,
           "Scale": 0.69,
           "Text": "Controls:\n- WASD to move\n- SPACE to jump\n- SHIFT to brake"
+        },
+        {
+          "__type": "BounceAround",
+          "__guid": "637bc17c-1510-4610-8a95-b18d12f45bbe",
+          "bounceAmount": 14,
+          "horizontalSpeed": 4,
+          "rotationSpeed": 50,
+          "verticalSpeed": 3
         }
       ]
     },
@@ -112,7 +120,7 @@
   },
   "Title": "level1",
   "Description": "",
-  "LastSaved": "2024-03-20T19:37:40.2855196\u002B01:00",
+  "LastSaved": "2024-03-20T20:27:05.0646972\u002B01:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
