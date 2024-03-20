@@ -1,18 +1,19 @@
-using Sandbox;
+namespace Marblerrific;
 
 public sealed class Pickup : Component, Component.ITriggerListener
 {
-	[Property] private ItemSystem.itemData itemData {get;set;}
+	[Property] public ItemData ItemData { get; set; }
+
 	void ITriggerListener.OnTriggerEnter( Collider other )
 	{
+		var itemSystem = other.Components.GetInChildrenOrSelf<ItemSystem>();
 
-		if (other.Tags.Has("player"))
+		if ( other.Tags.Has( "player" ) )
 		{
-			var itemSystem = other.Components.GetInChildrenOrSelf<ItemSystem>();
-			//check ItemSystem for why i do this
-			if(itemSystem.addItem(itemData)) GameObject.Destroy();
+			// TROLLFACEINREALLIFE: check ItemSystem for why i do this
+			if ( itemSystem.AddItem( ItemData ) )
+				GameObject.Destroy();
 		}
-
 	}
 
 	void ITriggerListener.OnTriggerExit( Collider other )

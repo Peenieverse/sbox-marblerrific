@@ -1,3 +1,5 @@
+namespace Marblerrific;
+
 public sealed class SpeedPadScript : Component, Component.ITriggerListener
 {
 	[Property] public float Force { get; set; }

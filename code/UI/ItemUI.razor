@@ -1,17 +1,19 @@
 @using Sandbox;
 @using Sandbox.UI;
+@using Marblerrific
+@namespace Marblerrific.UI
 @inherits PanelComponent
 
 <root>
 	<table>
 		<tr>
-			@for (int i = 0; i < itemSystem.Items.Count; i++)
+			@for (int i = 0; i < ItemSystem.Items.Count; i++)
 			{
 				<td style="padding:5px; position: relative; text-align: center;">
 					
 
 					<div class="item" style=" position: relative;">
-						@itemSystem.Items[i].icon
+						@ItemSystem.Items[i].Icon
 					</div>
 
 					<div style="position: absolute; top: 0; left: 0; font-size: 30px; font-color: #fff">
@@ -25,6 +27,7 @@
 
 @code
 {
-	[Property] public ItemSystem itemSystem { get; set; }
-	protected override int BuildHash() => System.HashCode.Combine( itemSystem, itemSystem.Items.Count );
+	[Property] public ItemSystem ItemSystem { get; set; }
+
+	protected override int BuildHash() => System.HashCode.Combine( ItemSystem, ItemSystem.Items.Count );
 }

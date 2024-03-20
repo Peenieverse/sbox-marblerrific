@@ -1,3 +1,5 @@
+namespace Marblerrific;
+
 public sealed class FollowMe : Component
 {
 	[Property] public GameObject Target { get; set; }

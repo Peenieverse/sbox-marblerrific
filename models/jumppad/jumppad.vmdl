@@ -19,7 +19,7 @@
 							},
 							{
 								from = "jumppad.vmat"
-								to = "materials/jumppad/jumppad.vmat"
+								to = "materials/models/jumppad/jumppad.vmat"
 							},
 						]
 						use_global_default = false

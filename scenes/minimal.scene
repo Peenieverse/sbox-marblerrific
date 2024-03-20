@@ -165,9 +165,9 @@
             },
             {
               "__type": "SpeedPadScript",
-              "__guid": "75cbb7f4-3bf1-4aa7-9f3c-dc646baab642",
+              "__guid": "30b81e29-6366-4ec5-a246-4ae934fb254d",
               "Delay": 0,
-              "Force": 60000000
+              "Force": 10000000
             }
           ]
         }
@@ -219,9 +219,9 @@
             },
             {
               "__type": "JumpPadScript",
-              "__guid": "6cb86cd8-0b81-4b2b-96e7-828a4c288337",
+              "__guid": "8acb733a-259b-42ac-b7df-e48bbafd4694",
               "Delay": 0,
-              "Force": 300000000
+              "Force": 100000000
             }
           ]
         }
@@ -270,39 +270,8 @@
     {
       "__guid": "bd63a83e-e9c2-4885-ae8b-5c45097295d2",
       "Name": "worm",
-      "Position": "0,231.3987,0",
+      "Position": "0,231.3987,4.674527",
       "Scale": "1.8,1.8,1.8",
-      "Tags": "pickup",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "__Prefab": "prefabs/worm.prefab"
-    },
-    {
-      "__guid": "014bb269-fed5-43f0-8202-e23323973dd6",
-      "Name": "worm (1)",
-      "Position": "0,256,0",
-      "Scale": "1.8,1.8,1.8",
-      "Tags": "pickup",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "__Prefab": "prefabs/worm.prefab"
-    },
-    {
-      "__guid": "bd38d2f0-6495-41c5-9c11-91de5811c8d3",
-      "Name": "worm (2)",
-      "Position": "0,288,0",
-      "Scale": "1.8,1.8,1.8",
-      "Tags": "pickup",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "__Prefab": "prefabs/worm.prefab"
-    },
-    {
-      "__guid": "709c26de-047a-426f-8cd0-790d00923d23",
-      "Name": "worm (3)",
-      "Position": "0,320,0",
-      "Scale": "1.8,1.8,1.8",
-      "Tags": "pickup",
       "Enabled": true,
       "NetworkMode": 2,
       "__Prefab": "prefabs/worm.prefab"
@@ -325,13 +294,13 @@
       "AgentRadius": 16,
       "AgentStepSize": 18,
       "AgentMaxSlope": 40,
-      "ExcludedBodies": "pickup",
+      "ExcludedBodies": "",
       "IncludedBodies": ""
     }
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-19T23:56:31.9122868\u002B07:00",
+  "LastSaved": "2024-03-20T21:51:38.3267496\u002B08:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

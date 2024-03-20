@@ -1,3 +1,5 @@
+namespace Marblerrific;
+
 public sealed class WormScript : Component
 {
 	[Property] public float AnimationSpeed { get; set; } = 1f;
@@ -5,16 +7,15 @@ public sealed class WormScript : Component
 	[Property] public List<SoundEvent> SoundEvents { get; set; }
 	[Property] public List<float> SoundEventDelays { get; set; }
 
-	NavMeshAgent navMeshAgent;
-	SkinnedModelRenderer skinnedModelRenderer;
-
+	private NavMeshAgent navMeshAgent;
+	private SkinnedModelRenderer skinnedModelRenderer;
 
 	protected override void OnStart()
 	{
 		navMeshAgent = Components.GetInChildrenOrSelf<NavMeshAgent>();
 		skinnedModelRenderer = Components.GetInChildrenOrSelf<SkinnedModelRenderer>();
+
 		PlayNoises();
-		directionChange();
 	}
 
 	private async void PlayNoises()
@@ -40,18 +41,13 @@ public sealed class WormScript : Component
 
 	protected override async void OnUpdate()
 	{
-		//moved to directionchanged because i may want to add features to update in the future.
-	}
-	async void directionChange()
-	{
-		while(true)
-		{
-			Vector3 dir = Vector3.Random.WithZ( 0 );
+		// TROLLFACEINREALLIFE: moved to directionchanged because i may want to add features to update in the future.
+		// Asphaltian: This causes an infinite loop lol
+		Vector3 dir = Vector3.Random.WithZ( 0 );
 
-			navMeshAgent.MoveTo( Transform.Position + dir * 100 );
-			skinnedModelRenderer.Set( "Speed", navMeshAgent.Velocity.Length * AnimationSpeed );
+		navMeshAgent.MoveTo( Transform.Position + dir * 100 );
+		skinnedModelRenderer.Set( "Speed", navMeshAgent.Velocity.Length * AnimationSpeed );
 
-			await Task.DelaySeconds( ChangeDirectionTime.y - ChangeDirectionTime.x + ChangeDirectionTime.x );
-		}
+		await Task.DelaySeconds( ChangeDirectionTime.y - ChangeDirectionTime.x + ChangeDirectionTime.x );
 	}
 }
