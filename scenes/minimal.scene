@@ -1,5 +1,5 @@
 {
-  "__guid": "9f832399-4887-46b0-8f21-2ee284f538e2",
+  "__guid": "ea8a3414-ffeb-4240-90dd-8d2edd2f848b",
   "GameObjects": [
     {
       "__guid": "3b028326-345e-40fc-8fac-42445dd7d293",
@@ -275,6 +275,40 @@
       "Enabled": true,
       "NetworkMode": 2,
       "__Prefab": "prefabs/worm.prefab"
+    },
+    {
+      "__guid": "30be4caa-bfcb-45f5-a43d-8b2fcc732627",
+      "Name": "Cube",
+      "Position": "-91.12294,281.9203,33.41071",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__guid": "19d95d41-6bd0-4562-8d0b-0fab23257217",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "BoxCollider",
+          "__guid": "a2e4db5b-76e9-4d10-9dbc-dc466cc2e00d",
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "50,50,50",
+          "Static": false
+        },
+        {
+          "__type": "Pickup",
+          "__guid": "2bd0ec69-e983-4aa8-849b-8e276b143bad",
+          "itemData": {
+            "mode": "Gravity",
+            "icon": "\uD83D\uDD04",
+            "duration": 10
+          }
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -300,7 +334,11 @@
   },
   "Title": "minimal",
   "Description": "",
+<<<<<<< Updated upstream
   "LastSaved": "2024-03-20T21:51:38.3267496\u002B08:00",
+=======
+  "LastSaved": "2024-03-20T21:04:03.7414681\u002B07:00",
+>>>>>>> Stashed changes
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

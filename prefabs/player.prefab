@@ -41,7 +41,6 @@
               "_type": "gameobject",
               "go": "7ca6661e-2b84-4a2c-aa38-0582e24794f5"
             },
-            "AirControl": false,
             "BrakeAcceleration": 5,
             "CamClamp": "-90,90",
             "Camera": {
@@ -64,6 +63,7 @@
             "fovVelocityLerp": 0.5,
             "fovVelocityMult": 0.05,
             "JumpForce": 200,
+            "maxFov": 200,
             "mouseSensitivity": 100,
             "rayDis": 36.2,
             "raySize": 20,
@@ -77,6 +77,29 @@
             "wormSpeed": 1000,
             "wormSpeedLerp": 100,
             "Zrespwawn": -1000
+<<<<<<< Updated upstream
+=======
+          },
+          {
+            "__type": "ScreenPanel",
+            "__guid": "08412c3d-712e-4636-b4cd-27991204bd91",
+            "AutoScreenScale": true,
+            "Opacity": 1,
+            "Scale": 1,
+            "ZIndex": 100
+          },
+          {
+            "__type": "ItemUirazor",
+            "__guid": "a15277c3-9455-4a21-bd20-82c038f7014c",
+            "duration": 3,
+            "durationSet": 5,
+            "itemSystem": {
+              "_type": "component",
+              "component_id": "505d5709-b4a2-4c05-b825-239848fc3d31",
+              "go": "15989237-6196-4acd-bb1d-bc0ccdd9b9a5",
+              "component_type": "ItemSystem"
+            }
+>>>>>>> Stashed changes
           }
         ],
         "Children": [

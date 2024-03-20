@@ -27,7 +27,13 @@
 
 @code
 {
+<<<<<<< Updated upstream:code/UI/ItemUI.razor
 	[Property] public ItemSystem ItemSystem { get; set; }
 
 	protected override int BuildHash() => System.HashCode.Combine( ItemSystem, ItemSystem.Items.Count );
 }
+=======
+	[Property] public ItemSystem itemSystem { get; set; }
+	protected override int BuildHash() => System.HashCode.Combine( itemSystem, itemSystem.Items.Count);
+}
+>>>>>>> Stashed changes:code/ItemUirazor.razor

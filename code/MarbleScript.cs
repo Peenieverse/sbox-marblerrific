@@ -17,6 +17,7 @@ public sealed class MarbleScript : Component
 	[Category( "Component & Object References" ), Property] private GameObject ActualCamera { get; set; }
 	[Category( "Component & Object References" ), Property] private Rigidbody rb { get; set; }
 
+<<<<<<< Updated upstream
 	[Category( "Movement Stats Normal" ), Property] private float Acceleration { get; set; }
 	[Category( "Movement Stats Normal" ), Property] private float BrakeAcceleration { get; set; }
 	[Category( "Movement Stats Normal" ), Property] private float JumpForce { get; set; }
@@ -24,17 +25,36 @@ public sealed class MarbleScript : Component
 	[Category( "Movement Stats Normal" ), Property] private bool AirControl { get; set; }
 	[Category( "Movement Stats Normal" ), Property] private float forceMultForBetterConfig { get; set; } = 10000000f;
 	[Category( "Movement Stats Normal" ), Property] private float Zrespwawn { get; set; } = -1000f;
+=======
+	[Category ("Movement Stats Normal") ] [Property] private float Acceleration { get; set; }
+	[Category ("Movement Stats Normal") ] [Property] private float BrakeAcceleration { get; set; }
+	[Category ("Movement Stats Normal") ] [Property] private float JumpForce { get; set; }
+	[Category ("Movement Stats Normal") ] [Property] private float rayDis { get; set; }
+	[Category ("Movement Stats Normal") ] [Property] private float forceMultForBetterConfig { get; set; } = 10000000f;
+	[Category ("Movement Stats Normal") ] [Property] private float Zrespwawn { get; set; } = -1000f;
+>>>>>>> Stashed changes
 
 	[Category( "Movement Stats Worm" ), Property] private float wormSpeedLerp { get; set; }
 	[Category( "Movement Stats Worm" ), Property] private float wormSpeed { get; set; }
 
 
+<<<<<<< Updated upstream
 	[Category( "Camera Settings" ), Property] private float fovVelocityMult { get; set; } = 0.1f;
 	[Category( "Camera Settings" ), Property] private float fovVelocityLerp { get; set; } = 0.2f;
 	[Category( "Camera Settings" ), Property] private Vector2 CamClamp { get; set; }
 	[Category( "Camera Settings" ), Property] private float cameraReturnLerp { get; set; } = 100f;
 	[Category( "Camera Settings" ), Property] private float raySize { get; set; }
 	[Category( "Camera Settings" ), Property] private float mouseSensitivity { get; set; } = 100f;
+=======
+	[Category ("Camera Settings") ] [Property] private float fovVelocityMult { get; set; } = 0.1f;
+	[Category ("Camera Settings") ] [Property] private float fovVelocityLerp { get; set; } = 0.2f;
+	[Category ("Camera Settings") ] [Property] private float maxFov { get; set; } = 200f;
+	[Category ("Camera Settings") ] [Property] private Vector2 CamClamp { get; set; }
+	[Category ("Camera Settings") ] [Property] private float cameraReturnLerp { get; set; } = 100f;
+	[Category ("Camera Settings") ] [Property] private float raySize { get; set; }
+	
+	[Category ("Camera Settings") ] [Property] private float mouseSensitivity { get; set; } = 100f;
+>>>>>>> Stashed changes
 
 	[Property] public float wormMode { get; set; }
 
@@ -54,8 +74,19 @@ public sealed class MarbleScript : Component
 	float startFov;
 	Vector3 wormVel;
 
+<<<<<<< Updated upstream
+=======
+
+	public enum MoveMode{
+        Normal,
+		Worm,
+		Gravity
+    }
+	Vector3 grav;
+>>>>>>> Stashed changes
 	protected override void OnAwake()
 	{
+		grav = Scene.PhysicsWorld.Gravity;
 		cameraComponent.GameObject.Parent.SetParent( null );
 		startFov = cameraComponent.FieldOfView;
 		IEnumerable<GameObject> balls = Scene.GetAllObjects( true );
@@ -110,7 +141,25 @@ public sealed class MarbleScript : Component
 		Camera.Transform.Position = Transform.Position;
 
 		//FOV
-		cameraComponent.FieldOfView = MathX.Lerp( cameraComponent.FieldOfView, startFov + ((rb.Velocity.Abs().z + rb.Velocity.Abs().y + rb.Velocity.Abs().z) * fovVelocityMult), Time.Delta * fovVelocityLerp );
+		cameraComponent.FieldOfView = MathX.Clamp(
+		MathX.Lerp( cameraComponent.FieldOfView, startFov + ((rb.Velocity.Abs().z + rb.Velocity.Abs().y + rb.Velocity.Abs().z) * fovVelocityMult), Time.Delta * fovVelocityLerp ),
+		0,maxFov
+		);
+	}
+	void wormMovement(Vector3 cameraForwardFlat)
+	{
+		wormVel = Vector3.Lerp( wormVel, wormSpeed * ((cameraForwardFlat * Input.AnalogMove.x) + (forwardAxis.Transform.World.Right * -Input.AnalogMove.y)), Time.Delta * wormSpeedLerp );
+		rb.Velocity = new Vector3( wormVel.x, wormVel.y, rb.Velocity.z );
+	}
+	void normalMovement(Vector3 cameraForwardFlat, bool AirControl)
+	{
+		if(onGround() || AirControl)
+		{
+			rb.ApplyForce( forceMultForBetterConfig * Time.Delta * Acceleration * ((cameraForwardFlat * Input.AnalogMove.x) + (forwardAxis.Transform.World.Right * -Input.AnalogMove.y)) );
+			Vector3 velocityExludingZ = rb.Velocity;
+			velocityExludingZ.z = 0;
+			if ( Input.Down( "Run" ) ) rb.ApplyForce( forceMultForBetterConfig * -velocityExludingZ * BrakeAcceleration * Time.Delta );
+		}
 	}
 	protected override void OnUpdate()
 	{
@@ -120,6 +169,7 @@ public sealed class MarbleScript : Component
 		Vector3 cameraForwardFlat = Camera.Transform.World.Forward.WithZ( 0 );
 		Angles newRotation = Rotation.LookAt( cameraForwardFlat );
 		forwardAxis.Transform.Rotation = newRotation;
+<<<<<<< Updated upstream
 
 		if ( currentMode == MoveMode.Normal )
 		{
@@ -141,5 +191,33 @@ public sealed class MarbleScript : Component
 			wormVel = Vector3.Lerp( wormVel, wormSpeed * ((cameraForwardFlat * Input.AnalogMove.x) + (forwardAxis.Transform.World.Right * -Input.AnalogMove.y)), Time.Delta * wormSpeedLerp );
 			rb.Velocity = new Vector3( wormVel.x, wormVel.y, rb.Velocity.z );
 		}
+=======
+		if(currentMode != MoveMode.Gravity)
+		{
+			Scene.PhysicsWorld.Gravity = grav;
+		}
+		if(currentMode == MoveMode.Normal)
+		{
+			if ( Input.Pressed( "Jump" )) 
+				if(onGround()) Jump();
+			normalMovement(cameraForwardFlat,false);
+		}
+		else if (currentMode == MoveMode.Worm)
+		{
+
+			if ( Input.Pressed( "Jump" )) 
+				if(onGround()) Jump();
+			wormMovement(cameraForwardFlat);
+		}
+		else if (currentMode == MoveMode.Gravity)
+		{
+			if ( Input.Pressed( "Jump" )) 
+				Scene.PhysicsWorld.Gravity *= -1;
+			
+			normalMovement(cameraForwardFlat,true);
+
+		}
+		
+>>>>>>> Stashed changes
 	}
 }
