@@ -77,8 +77,6 @@
             "wormSpeed": 1000,
             "wormSpeedLerp": 100,
             "Zrespwawn": -1000
-<<<<<<< Updated upstream
-=======
           },
           {
             "__type": "ScreenPanel",
@@ -89,7 +87,7 @@
             "ZIndex": 100
           },
           {
-            "__type": "ItemUirazor",
+            "__type": "ItemUi",
             "__guid": "a15277c3-9455-4a21-bd20-82c038f7014c",
             "duration": 3,
             "durationSet": 5,
@@ -99,7 +97,6 @@
               "go": "15989237-6196-4acd-bb1d-bc0ccdd9b9a5",
               "component_type": "ItemSystem"
             }
->>>>>>> Stashed changes
           }
         ],
         "Children": [
