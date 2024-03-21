@@ -112,7 +112,7 @@ public sealed class MarbleScript : Component
 		Camera.Transform.Position = Transform.Position;
 
 		// FOV
-		cameraComponent.FieldOfView = MathX.Clamp( MathX.Lerp( cameraComponent.FieldOfView, startFov + ((rb.Velocity.Abs().z + rb.Velocity.Abs().y + rb.Velocity.Abs().z) * fovVelocityMult), Time.Delta * fovVelocityLerp ), 0, maxFov );
+		cameraComponent.FieldOfView = MathX.Lerp( cameraComponent.FieldOfView, MathX.Clamp(startFov + ((rb.Velocity.Abs().z + rb.Velocity.Abs().y + rb.Velocity.Abs().z)* fovVelocityMult), 0, maxFov ) , Time.Delta * fovVelocityLerp );
 	}
 
 	void wormMovement( Vector3 cameraForwardFlat )

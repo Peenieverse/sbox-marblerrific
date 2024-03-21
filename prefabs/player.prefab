@@ -36,6 +36,7 @@
           {
             "__type": "ItemSystem",
             "__guid": "505d5709-b4a2-4c05-b825-239848fc3d31",
+            "effectDuration": 0,
             "Items": [],
             "MaxItems": 4
           },
@@ -69,7 +70,7 @@
             "fovVelocityLerp": 0.5,
             "fovVelocityMult": 0.05,
             "JumpForce": 200,
-            "maxFov": 200,
+            "maxFov": 120,
             "mouseSensitivity": 100,
             "rayDis": 36.2,
             "raySize": 20,

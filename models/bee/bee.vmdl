@@ -29,6 +29,26 @@
 								from = "fur.001.vmat"
 								to = "models/bee/material/fuck.vmat"
 							},
+							{
+								from = "fur.002.vmat"
+								to = "models/bee/material/fuck2.vmat"
+							},
+							{
+								from = "fur.003.vmat"
+								to = "models/bee/material/fuck3.vmat"
+							},
+							{
+								from = "black.vmat"
+								to = "materials/black_matte.vmat"
+							},
+							{
+								from = "ouch!.001.vmat"
+								to = "materials/metal_grate_b/metal_grate_b.vmat"
+							},
+							{
+								from = "fur.vmat"
+								to = "models/bee/material/fuck.vmat"
+							},
 						]
 						use_global_default = false
 						global_default_material = "materials/default.vmat"

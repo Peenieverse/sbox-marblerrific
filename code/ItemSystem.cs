@@ -13,7 +13,7 @@ public sealed class ItemSystem : Component
 	[Property] public int MaxItems { get; set; }
 
 	private MarbleScript marbleScript;
-	private float effectDuration;
+	[Property] private float effectDuration { get; set; }
 
 	protected override void OnStart()
 	{
@@ -56,6 +56,7 @@ public sealed class ItemSystem : Component
 	{
 		if ( effectDuration <= 0 )
 		{
+			marbleScript.currentMode = MoveMode.Normal;
 			// TROLLFACEINREALLIFE: loop to avoid a long annoying else if chain, also means you can change the slot count in the inspector
 			for ( int i = 0; i < MaxItems; i++ )
 			{

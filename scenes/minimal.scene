@@ -264,6 +264,12 @@
           "Slices": 16,
           "Static": false,
           "Type": "Cylinder"
+        },
+        {
+          "__type": "FollowMe",
+          "__guid": "f0a74a49-f9c8-4da3-89eb-fa5020f04eb0",
+          "Offset": 0,
+          "tag": "player"
         }
       ]
     },
@@ -456,7 +462,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-21T19:43:11.9850494\u002B07:00",
+  "LastSaved": "2024-03-21T22:03:04.0978514\u002B07:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
