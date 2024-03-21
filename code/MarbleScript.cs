@@ -10,7 +10,7 @@ public enum MoveMode
 // Asphaltian: TODO, make this a bit more nicer
 public sealed class MarbleScript : Component
 {
-	[Property] public MoveMode currentMode { get; set; }
+	[Property] public MoveMode CurrentMode { get; set; }
 
 	[Category( "Component & Object References" ), Property] private CameraComponent cameraComponent { get; set; }
 	[Category( "Component & Object References" ), Property] private GameObject forwardAxis { get; set; }
@@ -141,12 +141,12 @@ public sealed class MarbleScript : Component
 		Angles newRotation = Rotation.LookAt( cameraForwardFlat );
 		forwardAxis.Transform.Rotation = newRotation;
 
-		if ( currentMode != MoveMode.Gravity )
+		if ( CurrentMode != MoveMode.Gravity )
 		{
 			Scene.PhysicsWorld.Gravity = grav;
 		}
 
-		if ( currentMode == MoveMode.Normal )
+		if ( CurrentMode == MoveMode.Normal )
 		{
 			if ( Input.Pressed( "Jump" ) && IsOnGround )
 				Jump();
@@ -154,14 +154,14 @@ public sealed class MarbleScript : Component
 			normalMovement( cameraForwardFlat, false );
 		}
 
-		else if ( currentMode == MoveMode.Worm )
+		else if ( CurrentMode == MoveMode.Worm )
 		{
 			if ( Input.Pressed( "Jump" ) && IsOnGround )
 				Jump();
 
 			wormMovement( cameraForwardFlat );
 		}
-		else if ( currentMode == MoveMode.Gravity )
+		else if ( CurrentMode == MoveMode.Gravity )
 		{
 			if ( Input.Pressed( "Jump" ) )
 				Scene.PhysicsWorld.Gravity *= -1;

@@ -55,7 +55,7 @@ public sealed class ItemSystem : Component
 	{
 		if ( effectDuration <= 0 )
 		{
-			marbleScript.currentMode = MoveMode.Normal;
+			marbleScript.CurrentMode = MoveMode.Normal;
 			// TROLLFACEINREALLIFE: loop to avoid a long annoying else if chain, also means you can change the slot count in the inspector
 			for ( int i = 0; i < MaxItems; i++ )
 			{
