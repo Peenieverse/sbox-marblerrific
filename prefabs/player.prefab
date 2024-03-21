@@ -54,26 +54,26 @@
               "_type": "gameobject",
               "go": "3385be84-2dc3-4454-8165-3fadbd82931c"
             },
-            "cameraComponent": {
+            "CameraComponent": {
               "_type": "component",
               "component_id": "b4056d6b-04c8-4941-a460-55f1506f59b5",
               "go": "7ca6661e-2b84-4a2c-aa38-0582e24794f5",
               "component_type": "CameraComponent"
             },
-            "cameraReturnLerp": 10,
-            "currentMode": "Normal",
+            "CameraReturnLerp": 100,
+            "CurrentMode": "Normal",
             "forceMultForBetterConfig": 500000,
-            "forwardAxis": {
+            "ForwardAxis": {
               "_type": "gameobject",
               "go": "40b885e6-aafa-4312-86ef-7e588c2e983a"
             },
-            "fovVelocityLerp": 0.5,
-            "fovVelocityMult": 0.05,
+            "FovVelocityLerp": 0.2,
+            "FovVelocityMult": 0.1,
             "JumpForce": 200,
             "maxFov": 120,
-            "mouseSensitivity": 100,
+            "MouseSensitivity": 100,
             "rayDis": 36.2,
-            "raySize": 20,
+            "RaySize": 0,
             "rb": {
               "_type": "component",
               "component_id": "dc542eeb-d10e-4a68-a0bf-94e6799f2974",
@@ -81,8 +81,8 @@
               "component_type": "Rigidbody"
             },
             "wormMode": 0,
-            "wormSpeed": 1000,
-            "wormSpeedLerp": 100,
+            "WormSpeed": 100,
+            "WormSpeedLerp": 10,
             "Zrespwawn": -1000
           },
           {
@@ -227,11 +227,7 @@
           {
             "__type": "FollowMe",
             "__guid": "b3af20c2-ac5b-40b6-916e-e505a8e9a381",
-            "Offset": -13,
-            "Target": {
-              "_type": "gameobject",
-              "go": "15989237-6196-4acd-bb1d-bc0ccdd9b9a5"
-            }
+            "Offset": -13
           }
         ]
       }

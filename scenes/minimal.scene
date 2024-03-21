@@ -1,5 +1,5 @@
 {
-  "__guid": "ea8a3414-ffeb-4240-90dd-8d2edd2f848b",
+  "__guid": "f43438fa-5801-407e-96f3-b292469f06bc",
   "GameObjects": [
     {
       "__guid": "3b028326-345e-40fc-8fac-42445dd7d293",
@@ -16,14 +16,6 @@
           "FontSize": 43.18,
           "Scale": 0.69,
           "Text": "Controls:\n- WASD to move\n- SPACE to jump\n- SHIFT to brake"
-        },
-        {
-          "__type": "BounceAround",
-          "__guid": "860fb68d-f702-4477-88b0-a7c45190c992",
-          "bounceAmount": 14,
-          "horizontalSpeed": 4,
-          "rotationSpeed": 50,
-          "verticalSpeed": 3
         }
       ]
     },
@@ -268,8 +260,7 @@
         {
           "__type": "FollowMe",
           "__guid": "f0a74a49-f9c8-4da3-89eb-fa5020f04eb0",
-          "Offset": 0,
-          "tag": "player"
+          "Offset": 0
         }
       ]
     },
@@ -462,7 +453,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-21T22:03:04.0978514\u002B07:00",
+  "LastSaved": "2024-03-21T22:32:27.5063717\u002B07:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
