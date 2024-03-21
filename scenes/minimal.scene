@@ -258,16 +258,16 @@
           "Type": "Cylinder"
         },
         {
-          "__type": "FollowMe",
-          "__guid": "f0a74a49-f9c8-4da3-89eb-fa5020f04eb0",
-          "Offset": 0
+          "__type": "LookAtTag",
+          "__guid": "8a4041d4-eb74-4d7c-b4c3-5ae54b605a44",
+          "tag": "player"
         }
       ]
     },
     {
-      "__guid": "843f742b-3555-4509-b756-4a6e40e7ddec",
+      "__guid": "44816772-3c5e-430f-b617-7157073e24e7",
       "Name": "player",
-      "Position": "0,0,45.89621",
+      "Position": "0,0,46",
       "Enabled": true,
       "NetworkMode": 2,
       "__Prefab": "prefabs/player.prefab"
@@ -278,6 +278,7 @@
       "Position": "0,231.3987,4.674527",
       "Scale": "1.8,1.8,1.8",
       "Tags": "pickup",
+      "Enabled": true,
       "NetworkMode": 2,
       "__Prefab": "prefabs/worm.prefab"
     },
@@ -453,7 +454,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-21T22:32:27.5063717\u002B07:00",
+  "LastSaved": "2024-03-21T16:58:17.7921998\u002B01:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

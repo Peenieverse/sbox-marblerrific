@@ -226,8 +226,12 @@
           },
           {
             "__type": "FollowMe",
-            "__guid": "b3af20c2-ac5b-40b6-916e-e505a8e9a381",
-            "Offset": -13
+            "__guid": "b57b845a-6ab1-4d35-8e74-0bb55739d6f9",
+            "Offset": 0,
+            "Target": {
+              "_type": "gameobject",
+              "go": "15989237-6196-4acd-bb1d-bc0ccdd9b9a5"
+            }
           }
         ]
       }
