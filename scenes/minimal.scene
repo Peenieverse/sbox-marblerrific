@@ -1,5 +1,5 @@
 {
-  "__guid": "ea8a3414-ffeb-4240-90dd-8d2edd2f848b",
+  "__guid": "b8fbf0fe-f385-490a-ac8c-e4786ae9ce4d",
   "GameObjects": [
     {
       "__guid": "3b028326-345e-40fc-8fac-42445dd7d293",
@@ -20,10 +20,10 @@
         {
           "__type": "BounceAround",
           "__guid": "860fb68d-f702-4477-88b0-a7c45190c992",
-          "bounceAmount": 14,
-          "horizontalSpeed": 4,
-          "rotationSpeed": 50,
-          "verticalSpeed": 3
+          "BounceAmount": 14,
+          "HorizontalSpeed": 4,
+          "RotationSpeed": 50,
+          "VerticalSpeed": 3
         }
       ]
     },
@@ -281,6 +281,7 @@
       "Position": "0,231.3987,4.674527",
       "Scale": "1.8,1.8,1.8",
       "Tags": "pickup",
+      "Enabled": true,
       "NetworkMode": 2,
       "__Prefab": "prefabs/worm.prefab"
     },
@@ -456,7 +457,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-21T19:43:11.9850494\u002B07:00",
+  "LastSaved": "2024-03-21T21:16:06.2759535\u002B08:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
