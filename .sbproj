@@ -13,7 +13,7 @@
   "PackageReferences": [],
   "EditorReferences": null,
   "Metadata": {
-    "MaxPlayers": 64,
+    "MaxPlayers": 1,
     "MinPlayers": 1,
     "TickRate": 50,
     "GameNetworkType": "Multiplayer",
@@ -25,7 +25,7 @@
     "PerMapRanking": false,
     "LeaderboardType": "None",
     "CsProjName": "",
-    "StartupScene": "scenes/minimal.scene",
+    "StartupScene": "scenes/menu.scene",
     "ProjectTemplate": null,
     "Compiler": {
       "RootNamespace": "Marblerrific",
@@ -39,6 +39,7 @@
         "unittest"
       ],
       "DistinctAssemblyReferences": []
-    }
+    },
+    "LaunchMode": "Normal"
   }
 }

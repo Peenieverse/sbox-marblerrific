@@ -1,0 +1,80 @@
+{
+  "__guid": "e8c1cda1-7f0c-4b34-8533-191d53ff56de",
+  "GameObjects": [
+    {
+      "__guid": "5e6cecb7-00ba-4e8d-b60a-d8a3923e142c",
+      "Name": "Camera",
+      "Position": "149.995,149.995,-212.125",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "__guid": "b849f3a3-c508-48ba-9979-128c34406af4",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
+      "__guid": "4c6c5f6b-c903-4d37-8a39-60da763ad6a8",
+      "Name": "Screen",
+      "Position": "149.995,149.995,-212.125",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ScreenPanel",
+          "__guid": "0df20fe6-7281-4634-973d-de6a93a74dca",
+          "AutoScreenScale": true,
+          "Opacity": 1,
+          "Scale": 1,
+          "ZIndex": 100
+        },
+        {
+          "__type": "MainMenu",
+          "__guid": "9444902b-a178-4046-b40a-7350fd9ce26e"
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "main-menu",
+  "Description": "",
+  "LastSaved": "2024-03-21T21:24:46.0279769\u002B08:00",
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}

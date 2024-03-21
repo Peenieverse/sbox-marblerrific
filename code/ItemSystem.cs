@@ -18,15 +18,14 @@ public sealed class ItemSystem : Component
 	protected override void OnStart()
 	{
 		marbleScript = Components.GetInChildrenOrSelf<MarbleScript>();
-
-		marbleScript.currentMode = MoveMode.Normal;
+		marbleScript.CurrentMode = MoveMode.Normal;
 	}
 
 	private void SelectSlot( int slot )
 	{
 		if ( slot < Items.Count )
 		{
-			marbleScript.currentMode = Items[slot].Mode;
+			marbleScript.CurrentMode = Items[slot].Mode;
 			effectDuration = Items[slot].Duration;
 			Items.RemoveAt( slot );
 		}
