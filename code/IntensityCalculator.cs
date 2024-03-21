@@ -4,7 +4,10 @@ public sealed class IntensityCalculator : Component
 {
 	Rigidbody playerBody;
 	[Property] private DynamicMusicPlayer MusicPlayer {get;set;}
+	[Property] private float SpeedIntense {get; set;}
 	[Property] private float SpeedIntenseMult {get; set;}
+	[Property] private float SpeedIntenseAdd {get; set;}
+	[Property] private float SpeedIntenseRemove {get; set;}
 	protected override void OnStart()
 	{
 		IEnumerable<GameObject> SceneObjects = Scene.GetAllObjects(true);
@@ -20,11 +23,15 @@ public sealed class IntensityCalculator : Component
 	protected override void OnUpdate()
 	{
 		//TROLLFACEINREALLIFE: structured like this for future additions to intensity calc
-		Log.Info((playerBody.Velocity.x+playerBody.Velocity.y+playerBody.Velocity.z));
+		Vector3 velAbs = playerBody.Velocity.Abs();
+		float speed = (velAbs.x+velAbs.y+velAbs.z);
+		//TROLLFACEINREALLIFE: have to divide by 100 because inspector cant go so low
+		SpeedIntense = MathX.Clamp(SpeedIntense+(SpeedIntenseAdd/100)*speed*Time.Delta,0,1);
+		SpeedIntense = MathX.Clamp(SpeedIntense-SpeedIntenseRemove*Time.Delta,0,1);
 		float Intensity = MathX.Clamp(
-		SpeedIntenseMult*(playerBody.Velocity.x+playerBody.Velocity.y+playerBody.Velocity.z)
+		SpeedIntense
 		,0,1);
 
-		MusicPlayer.Intensity = MathX.FloorToInt(MathX.Clamp(Intensity*MusicPlayer.MTransitionsSPC.Count,1,500))-1;
+		MusicPlayer.Intensity = (int)Math.Round((double)MathX.Clamp(Intensity*MusicPlayer.MTransitionsSPC.Count,1,500))-1;
 	}
 }
