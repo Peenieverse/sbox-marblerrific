@@ -8,6 +8,8 @@ public enum MoveMode
 }
 
 // Asphaltian: TODO, make this a bit more nicer
+// TROLLFACEINREALLIFE: please tell me what the fucking problem is, thank you.
+
 public sealed class MarbleScript : Component
 {
 	[Property] public MoveMode CurrentMode { get; set; }
