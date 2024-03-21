@@ -3,6 +3,7 @@
     "__guid": "b2e2e39e-a01a-45e1-9450-6fcf68808668",
     "Name": "worm",
     "Scale": "1.8,1.8,1.8",
+    "Tags": "pickup",
     "Enabled": true,
     "NetworkMode": 2,
     "Components": [
@@ -72,10 +73,10 @@
       {
         "__type": "Pickup",
         "__guid": "9741f9ca-cee3-4d13-8f13-ce9ef37215e2",
-        "itemData": {
-          "mode": "Worm",
-          "icon": "\uD83E\uDEB1",
-          "duration": 5
+        "ItemData": {
+          "Mode": "Worm",
+          "Icon": "\uD83E\uDEB1",
+          "Duration": 5
         }
       }
     ],
