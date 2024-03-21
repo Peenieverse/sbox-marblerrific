@@ -257,12 +257,12 @@
           "__guid": "dc0da8c2-7fee-4dd9-8d31-7cfac85fdbec",
           "BoxSize": "50,50,50",
           "Center": "0,0,0",
-          "Height": 69.99998,
+          "Height": 68,
           "IsTrigger": false,
-          "Radius": 41.2999,
+          "Radius": 40,
           "Radius2": 0,
           "Slices": 16,
-          "Static": false,
+          "Static": true,
           "Type": "Cylinder"
         },
         {
@@ -462,7 +462,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-21T17:46:39.310264\u002B01:00",
+  "LastSaved": "2024-03-21T18:30:23.0144976\u002B01:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

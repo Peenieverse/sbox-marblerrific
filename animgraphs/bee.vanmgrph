@@ -9,13 +9,45 @@
 			{
 				key = 
 				{
+					m_id = 488987205
+				}
+				value = 
+				{
+					_class = "CSpeedScaleAnimNode"
+					m_sName = "Unnamed"
+					m_vecPosition = [ -176.0, 64.0 ]
+					m_nNodeID = 
+					{
+						m_id = 488987205
+					}
+					m_sNote = ""
+					m_inputConnection = 
+					{
+						m_nodeID = 
+						{
+							m_id = 1230103287
+						}
+						m_outputID = 
+						{
+							m_id = 4294967295
+						}
+					}
+					m_param = 
+					{
+						m_id = 1193566957
+					}
+				}
+			},
+			{
+				key = 
+				{
 					m_id = 531603865
 				}
 				value = 
 				{
 					_class = "CRootAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ 13.0, 61.0 ]
+					m_vecPosition = [ 64.0, 64.0 ]
 					m_nNodeID = 
 					{
 						m_id = 531603865
@@ -25,7 +57,7 @@
 					{
 						m_nodeID = 
 						{
-							m_id = 1230103287
+							m_id = 488987205
 						}
 						m_outputID = 
 						{
@@ -43,7 +75,7 @@
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -257.0, 101.0 ]
+					m_vecPosition = [ -400.0, 64.0 ]
 					m_nNodeID = 
 					{
 						m_id = 1230103287
@@ -60,7 +92,23 @@
 	m_pParameterList = 
 	{
 		_class = "CAnimParameterList"
-		m_Parameters = [  ]
+		m_Parameters = 
+		[
+			{
+				_class = "CFloatAnimParameter"
+				m_name = "Speed"
+				m_id = 
+				{
+					m_id = 1193566957
+				}
+				m_previewButton = "ANIMPARAM_BUTTON_NONE"
+				m_bUseMostRecentValue = false
+				m_bAutoReset = false
+				m_fDefaultValue = 0.0
+				m_fMinValue = 0.0
+				m_fMaxValue = 1.0
+			},
+		]
 	}
 	m_pTagManager = 
 	{
