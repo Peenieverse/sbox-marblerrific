@@ -25,6 +25,14 @@
 								from = "material.003.vmat"
 								to = "materials/black_matte.vmat"
 							},
+							{
+								from = "fur1.vmat"
+								to = "materials/models/craigmarble/craigfur1.vmat"
+							},
+							{
+								from = "fur2.vmat"
+								to = "materials/models/craigmarble/craigfur2.vmat"
+							},
 						]
 						use_global_default = false
 						global_default_material = "materials/default.vmat"
