@@ -1,0 +1,188 @@
+{
+  "__guid": "969b6136-ffc1-442c-bf4d-ec1ff6676250",
+  "GameObjects": [
+    {
+      "__guid": "9230d93b-0eea-436e-bd8e-ba0ef622160f",
+      "Name": "Camera",
+      "Position": "149.995,149.995,-212.125",
+      "Tags": "maincamera",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "CameraComponent",
+          "__guid": "9aa815e0-5f65-410a-96d7-bac6416cfb31",
+          "BackgroundColor": "0.33333,0.46275,0.52157,1",
+          "ClearFlags": "All",
+          "FieldOfView": 60,
+          "IsMainCamera": true,
+          "Orthographic": false,
+          "OrthographicHeight": 1204,
+          "Priority": 1,
+          "RenderExcludeTags": "",
+          "RenderTags": "",
+          "TargetEye": "None",
+          "Viewport": "0,0,1,1",
+          "ZFar": 10000,
+          "ZNear": 10
+        }
+      ]
+    },
+    {
+      "__guid": "53bb33c7-7f4e-4d44-966f-b1ad79e0b58e",
+      "Name": "DynamicMusicPlayer",
+      "Position": "149.995,149.995,-212.125",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "DynamicMusicPlayer",
+          "__guid": "e7bec4d7-969a-4131-b958-7bf027253526",
+          "Intensity": 0,
+          "MTransitionsSPC": [
+            {
+              "_type": "component",
+              "component_id": "98321b00-3a9b-4b4c-9cee-2955f79302d1",
+              "go": "5efad5ae-9ce3-466d-bbe8-0c73b3ec5701",
+              "component_type": "SoundPointComponent"
+            },
+            {
+              "_type": "component",
+              "component_id": "f667e343-dcfe-4311-875f-3de2d410562e",
+              "go": "c5826a3b-d155-43fd-9973-467b5a7716fa",
+              "component_type": "SoundPointComponent"
+            },
+            {
+              "_type": "component",
+              "component_id": "1b84423d-ec8b-479e-bbd2-e8b20a3c88d2",
+              "go": "604a5b3e-a9fe-453f-8c79-1d8ff7abd279",
+              "component_type": "SoundPointComponent"
+            }
+          ]
+        },
+        {
+          "__type": "IntensityCalculator",
+          "__guid": "0c353514-0fd4-4984-b5da-68a687c750e8",
+          "SpeedIntenseMult": 0
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "5efad5ae-9ce3-466d-bbe8-0c73b3ec5701",
+          "Name": "SoundPointLow",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "SoundPointComponent",
+              "__guid": "98321b00-3a9b-4b4c-9cee-2955f79302d1",
+              "DistanceAttenuation": false,
+              "DistanceAttenuationOverride": false,
+              "Force2d": true,
+              "MaxRepeatTime": 1,
+              "MinRepeatTime": 1,
+              "Occlusion": false,
+              "OcclusionOverride": false,
+              "OcclusionRadius": 32,
+              "Pitch": 1,
+              "PlayOnStart": true,
+              "ReflectionOverride": false,
+              "Reflections": false,
+              "Repeat": false,
+              "SoundEvent": "sounds/music/germaphobes/low.sound",
+              "SoundOverride": true,
+              "StopOnNew": false,
+              "Volume": 0
+            }
+          ]
+        },
+        {
+          "__guid": "c5826a3b-d155-43fd-9973-467b5a7716fa",
+          "Name": "SoundPointMid",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "SoundPointComponent",
+              "__guid": "f667e343-dcfe-4311-875f-3de2d410562e",
+              "DistanceAttenuation": false,
+              "DistanceAttenuationOverride": false,
+              "Force2d": true,
+              "MaxRepeatTime": 1,
+              "MinRepeatTime": 1,
+              "Occlusion": false,
+              "OcclusionOverride": false,
+              "OcclusionRadius": 32,
+              "Pitch": 1,
+              "PlayOnStart": true,
+              "ReflectionOverride": false,
+              "Reflections": false,
+              "Repeat": false,
+              "SoundEvent": "sounds/music/germaphobes/mid.sound",
+              "SoundOverride": true,
+              "StopOnNew": false,
+              "Volume": 0
+            }
+          ]
+        },
+        {
+          "__guid": "604a5b3e-a9fe-453f-8c79-1d8ff7abd279",
+          "Name": "SoundPointHigh",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "SoundPointComponent",
+              "__guid": "1b84423d-ec8b-479e-bbd2-e8b20a3c88d2",
+              "DistanceAttenuation": false,
+              "DistanceAttenuationOverride": false,
+              "Force2d": true,
+              "MaxRepeatTime": 1,
+              "MinRepeatTime": 1,
+              "Occlusion": false,
+              "OcclusionOverride": false,
+              "OcclusionRadius": 32,
+              "Pitch": 1,
+              "PlayOnStart": true,
+              "ReflectionOverride": false,
+              "Reflections": false,
+              "Repeat": false,
+              "SoundEvent": "sounds/music/germaphobes/high.sound",
+              "SoundOverride": true,
+              "StopOnNew": false,
+              "Volume": 0
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "dynamic music test",
+  "Description": "",
+  "LastSaved": "2024-03-22T00:30:29.2095032\u002B07:00",
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}

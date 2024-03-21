@@ -1,0 +1,121 @@
+{
+  "RootObject": {
+    "__guid": "0ec2a0d8-a964-4968-8002-aa75778ee305",
+    "Name": "bee",
+    "Tags": "pickup",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "Components": [
+      {
+        "__type": "BoxCollider",
+        "__guid": "66aae6ff-7cac-49d4-aca6-1733ec48217e",
+        "Center": "0,0,49.90001",
+        "IsTrigger": true,
+        "Scale": "43.1,43.10003,36.2",
+        "Static": false
+      },
+      {
+        "__type": "Pickup",
+        "__guid": "4fa02b26-0e45-4d64-b470-3ce83e1e5bcc",
+        "ItemData": {
+          "Mode": "Gravity",
+          "Icon": "\uD83D\uDC1D",
+          "Duration": 5
+        }
+      },
+      {
+        "__type": "WormScript",
+        "__guid": "77f82a7a-92f9-4e2e-81f8-68b9d71c7c7b",
+        "AnimationSpeed": 1,
+        "ChangeDirectionTime": "0,3",
+        "SoundEventDelays": [
+          4
+        ],
+        "SoundEvents": [
+          "sounds/wormspeak.sound"
+        ]
+      },
+      {
+        "__type": "NavMeshAgent",
+        "__guid": "c58f17eb-e01b-4ec2-b17b-5a776c9a2f84",
+        "Acceleration": 50,
+        "Height": 64,
+        "MaxSpeed": 120,
+        "Radius": 16,
+        "Separation": 0.25,
+        "UpdatePosition": true,
+        "UpdateRotation": true
+      },
+      {
+        "__type": "SoundPointComponent",
+        "__guid": "1ac7d6e4-883b-4c43-a3eb-5b4a393203e3",
+        "DistanceAttenuation": false,
+        "DistanceAttenuationOverride": false,
+        "Force2d": false,
+        "MaxRepeatTime": 1,
+        "MinRepeatTime": 1,
+        "Occlusion": true,
+        "OcclusionOverride": true,
+        "OcclusionRadius": 32,
+        "Pitch": 1,
+        "PlayOnStart": true,
+        "ReflectionOverride": false,
+        "Reflections": false,
+        "Repeat": false,
+        "SoundOverride": false,
+        "StopOnNew": false,
+        "Volume": 1
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "6584511d-7abc-4482-9270-6d75f0b94b8d",
+        "Name": "bee",
+        "Position": "0,0,49.18849",
+        "Rotation": "0,0,1,-0.00000004371139",
+        "Scale": "0.07869227,0.07869227,0.07869227",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "SkinnedModelRenderer",
+            "__guid": "1fc2f0cf-d50b-4e9b-9229-094d0bac96f6",
+            "AnimationGraph": "animgraphs/bee.vanmgrph",
+            "BodyGroups": 18446744073709551615,
+            "CreateBoneObjects": false,
+            "Model": "models/bee/bee.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "SoundPointComponent",
+            "__guid": "2752ead2-3113-4ffa-91d8-7f65205501f2",
+            "DistanceAttenuation": false,
+            "DistanceAttenuationOverride": false,
+            "Force2d": false,
+            "MaxRepeatTime": 1,
+            "MinRepeatTime": 1,
+            "Occlusion": true,
+            "OcclusionOverride": true,
+            "OcclusionRadius": 20,
+            "Pitch": 1,
+            "PlayOnStart": true,
+            "ReflectionOverride": false,
+            "Reflections": false,
+            "Repeat": false,
+            "SoundEvent": "sounds/bee!/buzz.sound",
+            "SoundOverride": false,
+            "StopOnNew": false,
+            "Volume": 1
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}
