@@ -26,10 +26,6 @@
 								to = "materials/models/worm/eyesmteeth.vmat"
 							},
 							{
-								from = "fur.001.vmat"
-								to = "models/bee/material/fuck.vmat"
-							},
-							{
 								from = "fur.002.vmat"
 								to = "models/bee/material/fuck2.vmat"
 							},

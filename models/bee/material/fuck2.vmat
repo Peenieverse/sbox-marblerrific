@@ -41,7 +41,7 @@ Layer0
 	g_vTexCoordScrollSpeed "[0.000 0.000]"
 
 	//---- Translucent ----
-	g_flAlphaTestReference "0.445"
+	g_flAlphaTestReference "0.513"
 	g_flAntiAliasedEdgeStrength "1.000"
-	TextureTranslucency "models/bee/material/fucking Heightmap.png"
+	TextureTranslucency "models/bee/material/fucking fur.png"
 }
