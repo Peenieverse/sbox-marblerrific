@@ -355,10 +355,10 @@
           "AnimationSpeed": 1,
           "ChangeDirectionTime": "0,3",
           "SoundEventDelays": [
-            4
+            12
           ],
           "SoundEvents": [
-            "sounds/wormspeak.sound"
+            "sounds/bee!/voices/beevoice.sound"
           ]
         },
         {
@@ -497,6 +497,7 @@
         {
           "__guid": "e1ea6d34-31a1-47b9-90eb-c0c94e1e028c",
           "Name": "SoundPointNothing",
+          "Position": "0,0,0",
           "Enabled": true,
           "NetworkMode": 2,
           "Components": [
@@ -638,7 +639,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-22T16:09:03.5331258\u002B07:00",
+  "LastSaved": "2024-03-22T17:16:54.4038198\u002B07:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
