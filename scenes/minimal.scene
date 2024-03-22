@@ -452,6 +452,12 @@
           "MTransitionsSPC": [
             {
               "_type": "component",
+              "component_id": "1cb9abdd-c376-417d-aed8-a5ee71d97af9",
+              "go": "e1ea6d34-31a1-47b9-90eb-c0c94e1e028c",
+              "component_type": "SoundPointComponent"
+            },
+            {
+              "_type": "component",
               "component_id": "f38fc169-4c6a-471a-a52e-4313dfb5d91d",
               "go": "74fd7efd-ae03-44f3-a66b-ad67abbee9f2",
               "component_type": "SoundPointComponent"
@@ -468,11 +474,13 @@
               "go": "5634fa71-f072-494f-bc09-8958f527e2bf",
               "component_type": "SoundPointComponent"
             }
-          ]
+          ],
+          "Volume": 0.3
         },
         {
           "__type": "IntensityCalculator",
           "__guid": "56a8a3e9-43fa-4cf6-8711-70ad33197e81",
+          "FinalIntensityLevel": 0,
           "MusicPlayer": {
             "_type": "component",
             "component_id": "cf5a16d4-23cd-4e47-9d53-840254f271f7",
@@ -480,12 +488,40 @@
             "component_type": "DynamicMusicPlayer"
           },
           "SpeedIntense": 0,
-          "SpeedIntenseAdd": 0.1,
-          "SpeedIntenseMult": 1,
-          "SpeedIntenseRemove": 0.01
+          "SpeedIntenseAdd": 0.005,
+          "SpeedIntenseRemove": 0.2,
+          "SpeedLevel": 200
         }
       ],
       "Children": [
+        {
+          "__guid": "e1ea6d34-31a1-47b9-90eb-c0c94e1e028c",
+          "Name": "SoundPointNothing",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "SoundPointComponent",
+              "__guid": "1cb9abdd-c376-417d-aed8-a5ee71d97af9",
+              "DistanceAttenuation": false,
+              "DistanceAttenuationOverride": false,
+              "Force2d": true,
+              "MaxRepeatTime": 1,
+              "MinRepeatTime": 1,
+              "Occlusion": false,
+              "OcclusionOverride": false,
+              "OcclusionRadius": 32,
+              "Pitch": 1,
+              "PlayOnStart": false,
+              "ReflectionOverride": false,
+              "Reflections": false,
+              "Repeat": false,
+              "SoundOverride": true,
+              "StopOnNew": false,
+              "Volume": 0
+            }
+          ]
+        },
         {
           "__guid": "74fd7efd-ae03-44f3-a66b-ad67abbee9f2",
           "Name": "SoundPointLow",
@@ -602,7 +638,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-22T00:47:13.9825148\u002B07:00",
+  "LastSaved": "2024-03-22T16:09:03.5331258\u002B07:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
