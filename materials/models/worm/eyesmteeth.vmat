@@ -11,8 +11,8 @@ Layer0
 
 	//---- Color ----
 	g_flModelTintAmount "1.000"
-	g_vColorTint "[1.000000 1.000000 1.000000 0.000000]"
-	TextureColor "[0.992157 0.725490 0.725490 0.000000]"
+	g_vColorTint "[1.000000 0.611765 0.611765 0.000000]"
+	TextureColor "models/bee/bloodeye.png"
 
 	//---- Fade ----
 	g_flFadeExponent "1.000"
