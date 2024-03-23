@@ -4,11 +4,9 @@ public enum MoveMode
 {
 	Normal,
 	Worm,
-	Gravity
+	Gravity,
+	Horse
 }
-
-// Asphaltian: TODO, make this a bit more nicer
-// TROLLFACEINREALLIFE: please tell me what the fucking problem is, thank you.
 
 public sealed class MarbleScript : Component
 {
@@ -29,6 +27,8 @@ public sealed class MarbleScript : Component
 
 	[Category( "Movement Stats Worm" ), Property] private float WormSpeedLerp { get; set; }
 	[Category( "Movement Stats Worm" ), Property] private float WormSpeed { get; set; }
+	[Category( "Movement Stats Horse" ), Property] private float JumpMarkiplier { get; set; }
+	[Category( "Movement Stats Horse" ), Property] private float SpeedMarkiplier { get; set; }
 
 	[Category( "Camera Settings" ), Property] private float FovVelocityMult { get; set; } = 0.1f;
 	[Category( "Camera Settings" ), Property] private float FovVelocityLerp { get; set; } = 0.2f;
@@ -84,9 +84,9 @@ public sealed class MarbleScript : Component
 		rb.Velocity = Vector3.Zero;
 	}
 
-	void Jump()
+	void Jump(float mult = 1f)
 	{
-		rb.ApplyForce( forceMultForBetterConfig * Vector3.Up * JumpForce );
+		rb.ApplyForce( forceMultForBetterConfig * Vector3.Up * JumpForce * mult);
 	}
 
 	void CameraControl()
@@ -123,11 +123,11 @@ public sealed class MarbleScript : Component
 		rb.Velocity = new Vector3( wormVel.x, wormVel.y, rb.Velocity.z );
 	}
 
-	void NormalMovement( Vector3 cameraForwardFlat, bool AirControl )
+	void NormalMovement( Vector3 cameraForwardFlat, bool AirControl = false, float mult = 1)
 	{
 		if ( IsOnGround || AirControl )
 		{
-			rb.ApplyForce( forceMultForBetterConfig * Time.Delta * Acceleration * ((cameraForwardFlat * Input.AnalogMove.x) + (ForwardAxis.Transform.World.Right * -Input.AnalogMove.y)) );
+			rb.ApplyForce( mult * forceMultForBetterConfig * Time.Delta * Acceleration * ((cameraForwardFlat * Input.AnalogMove.x) + (ForwardAxis.Transform.World.Right * -Input.AnalogMove.y)) );
 			Vector3 velocityExludingZ = rb.Velocity;
 			velocityExludingZ.z = 0;
 			if ( Input.Down( "Run" ) ) rb.ApplyForce( forceMultForBetterConfig * -velocityExludingZ * BrakeAcceleration * Time.Delta );
@@ -153,7 +153,7 @@ public sealed class MarbleScript : Component
 			if ( Input.Pressed( "Jump" ) && IsOnGround )
 				Jump();
 
-			NormalMovement( cameraForwardFlat, false );
+			NormalMovement( cameraForwardFlat);
 		}
 
 		else if ( CurrentMode == MoveMode.Worm )
@@ -169,6 +169,13 @@ public sealed class MarbleScript : Component
 				Scene.PhysicsWorld.Gravity *= -1;
 
 			NormalMovement( cameraForwardFlat, true );
+		}
+		else if ( CurrentMode == MoveMode.Horse )
+		{
+			if ( Input.Pressed( "Jump" ) )
+				Jump(JumpMarkiplier);
+
+			NormalMovement( cameraForwardFlat);
 		}
 	}
 }

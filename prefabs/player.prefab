@@ -95,7 +95,8 @@
             },
             "FovVelocityLerp": 0.2,
             "FovVelocityMult": 0.1,
-            "JumpForce": 200,
+            "JumpForce": 80,
+            "JumpMarkiplier": 2.5,
             "maxFov": 120,
             "MouseSensitivity": 100,
             "rayDis": 36.2,
@@ -106,6 +107,7 @@
               "go": "15989237-6196-4acd-bb1d-bc0ccdd9b9a5",
               "component_type": "Rigidbody"
             },
+            "SpeedMarkiplier": 1.2,
             "wormMode": 0,
             "WormSpeed": 100,
             "WormSpeedLerp": 10,

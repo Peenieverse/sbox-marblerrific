@@ -59,7 +59,24 @@
           "component_type": "SkinnedModelRenderer"
         },
         "WalkParameter": "walk",
-        "WalkVelocity": 0
+        "WalkVelocity": 20
+      },
+      {
+        "__type": "Pickup",
+        "__guid": "08960144-72f4-4cc0-bc0e-ab6513293fac",
+        "ItemData": {
+          "Mode": "Horse",
+          "Icon": "\uD83D\uDC34",
+          "Duration": 10
+        }
+      },
+      {
+        "__type": "BoxCollider",
+        "__guid": "734c4e7f-9264-444c-8d0c-ff0e8b64f26e",
+        "Center": "7.1,0,53.69999",
+        "IsTrigger": true,
+        "Scale": "123.5,50,100.9",
+        "Static": false
       }
     ],
     "Children": [
