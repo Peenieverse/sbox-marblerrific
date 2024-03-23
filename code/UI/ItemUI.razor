@@ -4,11 +4,15 @@
 @inherits PanelComponent
 
 <root>
-	<table>
-		<tr>
+	<div class="iconDes" style="opacity: @iconDesOpacity;">
+		<div style="position: absolute; font-size: 80px; ">@this.getMMIconDescription(Marble.CurrentMode.ToString())[0]</div>
+		<div style="position: absolute; top: 100px; font-size: 30px;">@this.getMMIconDescription(Marble.CurrentMode.ToString())[1]</div>
+	</div>
+	<div class="itemTable">
+		<div>
 			@for (int i = 0; i < ItemSystem.Items.Count; i++)
 			{
-				<td style="padding:5px; position: relative; text-align: center;">
+				<div style="padding:5px; position: relative; text-align: center;">
 					
 
 					<div class="item" style=" position: relative;">
@@ -18,22 +22,51 @@
 					<div style="position: absolute; top: 0; left: 0; width: 40px; height: 40px; font-size: 30px; font-color: #fff">
 						<img src="@(uiInputImages.getKey($"Slot{i+1}"))">
 					</div>
-				</td>
+				</div>
 			}
-		</tr>
-	</table>
+		</div>
+	</div>
+	
+	
 </root>
 
 
 @code
 {
+	//this.getMMIconDescription(Marble.CurrentMode.ToString())
 	[Property] public ItemSystem ItemSystem { get; set; }
 	[Property] public UiInputImages uiInputImages { get; set; }
+	[Property] private MarbleScript Marble {get;set;}
+	[Property] private List<movementModeDetail> MovementModeDetails {get;set;}
+	float iconDesOpacity;
+	public List<string> getMMIconDescription(string name)
+	{
+		List<string> nameDes = new List<string>();
+		foreach(movementModeDetail mMD in MovementModeDetails)
+		{
+			if(mMD.name == name)
+			{
+				nameDes.Add(mMD.icon);
+				nameDes.Add(mMD.description);
+				return nameDes;
+			}
+		}
+		nameDes.Add("");
+		nameDes.Add("");
+		return nameDes;
+	}
+
+	class movementModeDetail
+	{
+		public string name {get;set;}
+		public string icon {get; set;}
+		[TextArea] public string description {get;set;}
+	}
 
 	protected override void OnUpdate()
 	{
-		
+		iconDesOpacity = MathX.Lerp(iconDesOpacity,Marble.CurrentMode != MoveMode.Normal ? 1 : 0, 2*Time.Delta);
 	}
 
-	protected override int BuildHash() => System.HashCode.Combine( ItemSystem, ItemSystem.Items.Count, uiInputImages, Input.UsingController);
+	protected override int BuildHash() => System.HashCode.Combine( iconDesOpacity, ItemSystem, ItemSystem.Items.Count, uiInputImages, Input.UsingController, Marble, this);
 }

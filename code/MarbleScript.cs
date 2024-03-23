@@ -172,7 +172,7 @@ public sealed class MarbleScript : Component
 		}
 		else if ( CurrentMode == MoveMode.Horse )
 		{
-			if ( Input.Pressed( "Jump" ) )
+			if ( Input.Pressed( "Jump" ) && IsOnGround)
 				Jump(JumpMarkiplier);
 
 			NormalMovement( cameraForwardFlat);

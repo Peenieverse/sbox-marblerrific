@@ -509,6 +509,15 @@
       "Enabled": true,
       "NetworkMode": 2,
       "__Prefab": "prefabs/horse.prefab"
+    },
+    {
+      "__guid": "df328bc7-09de-4721-80c1-0489be99119f",
+      "Name": "bee",
+      "Position": "-245.7227,142.4775,0",
+      "Tags": "pickup",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "__Prefab": "prefabs/bee.prefab"
     }
   ],
   "SceneProperties": {
@@ -534,7 +543,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-24T00:28:24.4832018\u002B07:00",
+  "LastSaved": "2024-03-24T00:49:47.1562269\u002B07:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

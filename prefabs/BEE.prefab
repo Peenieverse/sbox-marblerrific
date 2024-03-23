@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "__guid": "0ec2a0d8-a964-4968-8002-aa75778ee305",
+    "__guid": "df328bc7-09de-4721-80c1-0489be99119f",
     "Name": "bee",
     "Tags": "pickup",
     "Enabled": true,
@@ -8,7 +8,7 @@
     "Components": [
       {
         "__type": "BoxCollider",
-        "__guid": "66aae6ff-7cac-49d4-aca6-1733ec48217e",
+        "__guid": "cb868792-06fa-4a92-8de6-40dcbf93e3ef",
         "Center": "0,0,49.90001",
         "IsTrigger": true,
         "Scale": "43.1,43.10003,36.2",
@@ -16,7 +16,7 @@
       },
       {
         "__type": "Pickup",
-        "__guid": "4fa02b26-0e45-4d64-b470-3ce83e1e5bcc",
+        "__guid": "902f1def-cba9-494c-a4d6-b9121f72b5d7",
         "ItemData": {
           "Mode": "Gravity",
           "Icon": "\uD83D\uDC1D",
@@ -25,19 +25,19 @@
       },
       {
         "__type": "WormScript",
-        "__guid": "77f82a7a-92f9-4e2e-81f8-68b9d71c7c7b",
+        "__guid": "9bbb138b-e586-4246-8bc0-57fcd2193400",
         "AnimationSpeed": 1,
         "ChangeDirectionTime": "0,3",
         "SoundEventDelays": [
           4
         ],
         "SoundEvents": [
-          "sounds/wormspeak.sound"
+          "sounds/bee!/voices/beevoice.sound"
         ]
       },
       {
         "__type": "NavMeshAgent",
-        "__guid": "c58f17eb-e01b-4ec2-b17b-5a776c9a2f84",
+        "__guid": "fdb76f95-a0bd-4645-9bf9-bf7b48cac5b2",
         "Acceleration": 50,
         "Height": 64,
         "MaxSpeed": 120,
@@ -48,7 +48,7 @@
       },
       {
         "__type": "SoundPointComponent",
-        "__guid": "1ac7d6e4-883b-4c43-a3eb-5b4a393203e3",
+        "__guid": "a032771a-ae19-4d32-aba5-bbfd011fa1ca",
         "DistanceAttenuation": false,
         "DistanceAttenuationOverride": false,
         "Force2d": false,
@@ -69,7 +69,7 @@
     ],
     "Children": [
       {
-        "__guid": "6584511d-7abc-4482-9270-6d75f0b94b8d",
+        "__guid": "08ab63f0-b9d1-4db3-96c9-436bc9f6ac3f",
         "Name": "bee",
         "Position": "0,0,49.18849",
         "Rotation": "0,0,1,-0.00000004371139",
@@ -79,7 +79,7 @@
         "Components": [
           {
             "__type": "SkinnedModelRenderer",
-            "__guid": "1fc2f0cf-d50b-4e9b-9229-094d0bac96f6",
+            "__guid": "2f7714f8-d358-479f-b353-2eb4a06362fa",
             "AnimationGraph": "animgraphs/bee.vanmgrph",
             "BodyGroups": 18446744073709551615,
             "CreateBoneObjects": false,
@@ -89,7 +89,7 @@
           },
           {
             "__type": "SoundPointComponent",
-            "__guid": "2752ead2-3113-4ffa-91d8-7f65205501f2",
+            "__guid": "e91e616f-0ec3-40c5-87cc-c2dab6080688",
             "DistanceAttenuation": false,
             "DistanceAttenuationOverride": false,
             "Force2d": false,

@@ -47,22 +47,22 @@
               {
                 "name": "Slot1",
                 "controllerPath": "icons/xbox series/xboxseriesx_dpad_up.png",
-                "keyboardPath": "icons/keyboard \u0026 mouse/dark/1_key_dark.png"
+                "keyboardPath": "icons/keyboard \u0026 mouse/light/1_key_light.png"
               },
               {
                 "name": "Slot2",
                 "controllerPath": "icons/xbox series/xboxseriesx_dpad_right.png",
-                "keyboardPath": "icons/keyboard \u0026 mouse/dark/2_key_dark.png"
+                "keyboardPath": "icons/keyboard \u0026 mouse/light/2_key_light.png"
               },
               {
                 "name": "Slot3",
                 "controllerPath": "icons/xbox series/xboxseriesx_dpad_down.png",
-                "keyboardPath": "icons/keyboard \u0026 mouse/dark/3_key_dark.png"
+                "keyboardPath": "icons/keyboard \u0026 mouse/light/3_key_light.png"
               },
               {
                 "name": "Slot4",
                 "controllerPath": "icons/xbox series/xboxseriesx_dpad_left.png",
-                "keyboardPath": "icons/keyboard \u0026 mouse/dark/4_key_dark.png"
+                "keyboardPath": "icons/keyboard \u0026 mouse/light/4_key_light.png"
               }
             ]
           },
@@ -130,6 +130,33 @@
               "go": "15989237-6196-4acd-bb1d-bc0ccdd9b9a5",
               "component_type": "ItemSystem"
             },
+            "Marble": {
+              "_type": "component",
+              "component_id": "b4fd3ba9-ab85-4be9-8aa9-b92ce8c41159",
+              "go": "15989237-6196-4acd-bb1d-bc0ccdd9b9a5",
+              "component_type": "MarbleScript"
+            },
+            "MovementModeDetails": [
+              {
+                "name": "Normal",
+                "description": ""
+              },
+              {
+                "name": "Worm",
+                "icon": "\uD83E\uDEB1",
+                "description": "Slow Movement - Higher Control"
+              },
+              {
+                "name": "Gravity",
+                "icon": "\uD83D\uDC1D",
+                "description": "Change the Direction of Gravity by Jumping"
+              },
+              {
+                "name": "Horse",
+                "icon": "\uD83D\uDC0E",
+                "description": "High Jump Boost - Small Speed Boost"
+              }
+            ],
             "uiInputImages": {
               "_type": "component",
               "component_id": "abd4d8c3-beb5-4f09-bef6-4ace4c294bc2",
