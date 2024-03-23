@@ -1,5 +1,5 @@
 {
-  "__guid": "f43438fa-5801-407e-96f3-b292469f06bc",
+  "__guid": "9f762741-f059-4dfb-8748-33fe98520fb1",
   "GameObjects": [
     {
       "__guid": "3b028326-345e-40fc-8fac-42445dd7d293",
@@ -325,100 +325,103 @@
       ]
     },
     {
-      "__guid": "0ec2a0d8-a964-4968-8002-aa75778ee305",
-      "Name": "BEE",
-      "Position": "-38.06307,89.22352,0",
-      "Tags": "pickup",
+      "__guid": "139b27c5-1b97-48b1-a3da-d6ae58da7ab3",
+      "Name": "DynamicMusicPlayer",
+      "Position": "149.995,149.995,-212.125",
       "Enabled": true,
       "NetworkMode": 2,
       "Components": [
         {
-          "__type": "BoxCollider",
-          "__guid": "66aae6ff-7cac-49d4-aca6-1733ec48217e",
-          "Center": "0,0,49.90001",
-          "IsTrigger": true,
-          "Scale": "43.1,43.10003,36.2",
-          "Static": false
-        },
-        {
-          "__type": "Pickup",
-          "__guid": "4fa02b26-0e45-4d64-b470-3ce83e1e5bcc",
-          "ItemData": {
-            "Mode": "Gravity",
-            "Icon": "\uD83D\uDC1D",
-            "Duration": 5
-          }
-        },
-        {
-          "__type": "WormScript",
-          "__guid": "77f82a7a-92f9-4e2e-81f8-68b9d71c7c7b",
-          "AnimationSpeed": 1,
-          "ChangeDirectionTime": "0,3",
-          "SoundEventDelays": [
-            4
+          "__type": "DynamicMusicPlayer",
+          "__guid": "cf5a16d4-23cd-4e47-9d53-840254f271f7",
+          "Intensity": 0,
+          "MTransitionsSPC": [
+            {
+              "_type": "component",
+              "component_id": "1cb9abdd-c376-417d-aed8-a5ee71d97af9",
+              "go": "e1ea6d34-31a1-47b9-90eb-c0c94e1e028c",
+              "component_type": "SoundPointComponent"
+            },
+            {
+              "_type": "component",
+              "component_id": "f38fc169-4c6a-471a-a52e-4313dfb5d91d",
+              "go": "74fd7efd-ae03-44f3-a66b-ad67abbee9f2",
+              "component_type": "SoundPointComponent"
+            },
+            {
+              "_type": "component",
+              "component_id": "736ee104-6fe4-47ba-a1ff-725baf35d1b3",
+              "go": "4c3761e2-4f88-42ed-ae76-4e54ac634351",
+              "component_type": "SoundPointComponent"
+            },
+            {
+              "_type": "component",
+              "component_id": "e70e3870-405f-4ec9-be24-2c43ebd3bde7",
+              "go": "5634fa71-f072-494f-bc09-8958f527e2bf",
+              "component_type": "SoundPointComponent"
+            }
           ],
-          "SoundEvents": [
-            "sounds/wormspeak.sound"
-          ]
+          "Volume": 0.3
         },
         {
-          "__type": "NavMeshAgent",
-          "__guid": "c58f17eb-e01b-4ec2-b17b-5a776c9a2f84",
-          "Acceleration": 50,
-          "Height": 64,
-          "MaxSpeed": 120,
-          "Radius": 16,
-          "Separation": 0.25,
-          "UpdatePosition": true,
-          "UpdateRotation": true
-        },
-        {
-          "__type": "SoundPointComponent",
-          "__guid": "1ac7d6e4-883b-4c43-a3eb-5b4a393203e3",
-          "DistanceAttenuation": false,
-          "DistanceAttenuationOverride": false,
-          "Force2d": false,
-          "MaxRepeatTime": 1,
-          "MinRepeatTime": 1,
-          "Occlusion": false,
-          "OcclusionOverride": false,
-          "OcclusionRadius": 32,
-          "Pitch": 1,
-          "PlayOnStart": true,
-          "ReflectionOverride": false,
-          "Reflections": false,
-          "Repeat": false,
-          "SoundOverride": false,
-          "StopOnNew": false,
-          "Volume": 1
+          "__type": "IntensityCalculator",
+          "__guid": "56a8a3e9-43fa-4cf6-8711-70ad33197e81",
+          "FinalIntensityLevel": 0,
+          "MusicPlayer": {
+            "_type": "component",
+            "component_id": "cf5a16d4-23cd-4e47-9d53-840254f271f7",
+            "go": "139b27c5-1b97-48b1-a3da-d6ae58da7ab3",
+            "component_type": "DynamicMusicPlayer"
+          },
+          "SpeedIntense": 0,
+          "SpeedIntenseAdd": 0.005,
+          "SpeedIntenseRemove": 0.2,
+          "SpeedLevel": 200
         }
       ],
       "Children": [
         {
-          "__guid": "6584511d-7abc-4482-9270-6d75f0b94b8d",
-          "Name": "bee",
-          "Position": "0,0,49.18849",
-          "Rotation": "0,0,1,-0.00000004371139",
-          "Scale": "0.07869227,0.07869227,0.07869227",
+          "__guid": "e1ea6d34-31a1-47b9-90eb-c0c94e1e028c",
+          "Name": "SoundPointNothing",
+          "Position": "0,0,0",
           "Enabled": true,
           "NetworkMode": 2,
           "Components": [
             {
-              "__type": "SkinnedModelRenderer",
-              "__guid": "1fc2f0cf-d50b-4e9b-9229-094d0bac96f6",
-              "AnimationGraph": "animgraphs/bee.vanmgrph",
-              "BodyGroups": 18446744073709551615,
-              "CreateBoneObjects": false,
-              "Model": "models/bee/bee.vmdl",
-              "RenderType": "On",
-              "Tint": "1,1,1,1"
-            },
-            {
               "__type": "SoundPointComponent",
-              "__guid": "2752ead2-3113-4ffa-91d8-7f65205501f2",
+              "__guid": "1cb9abdd-c376-417d-aed8-a5ee71d97af9",
               "DistanceAttenuation": false,
               "DistanceAttenuationOverride": false,
-              "Force2d": false,
+              "Force2d": true,
+              "MaxRepeatTime": 1,
+              "MinRepeatTime": 1,
+              "Occlusion": false,
+              "OcclusionOverride": false,
+              "OcclusionRadius": 32,
+              "Pitch": 1,
+              "PlayOnStart": false,
+              "ReflectionOverride": false,
+              "Reflections": false,
+              "Repeat": false,
+              "SoundOverride": true,
+              "StopOnNew": false,
+              "Volume": 0
+            }
+          ]
+        },
+        {
+          "__guid": "74fd7efd-ae03-44f3-a66b-ad67abbee9f2",
+          "Name": "SoundPointLow",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "SoundPointComponent",
+              "__guid": "f38fc169-4c6a-471a-a52e-4313dfb5d91d",
+              "DistanceAttenuation": false,
+              "DistanceAttenuationOverride": false,
+              "Force2d": true,
               "MaxRepeatTime": 1,
               "MinRepeatTime": 1,
               "Occlusion": false,
@@ -429,60 +432,83 @@
               "ReflectionOverride": false,
               "Reflections": false,
               "Repeat": false,
-              "SoundEvent": "sounds/bee!/buzz.sound",
-              "SoundOverride": false,
+              "SoundEvent": "sounds/music/germaphobes/low.sound",
+              "SoundOverride": true,
               "StopOnNew": false,
-              "Volume": 1
+              "Volume": 0
+            }
+          ]
+        },
+        {
+          "__guid": "4c3761e2-4f88-42ed-ae76-4e54ac634351",
+          "Name": "SoundPointMid",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "SoundPointComponent",
+              "__guid": "736ee104-6fe4-47ba-a1ff-725baf35d1b3",
+              "DistanceAttenuation": false,
+              "DistanceAttenuationOverride": false,
+              "Force2d": true,
+              "MaxRepeatTime": 1,
+              "MinRepeatTime": 1,
+              "Occlusion": false,
+              "OcclusionOverride": false,
+              "OcclusionRadius": 32,
+              "Pitch": 1,
+              "PlayOnStart": true,
+              "ReflectionOverride": false,
+              "Reflections": false,
+              "Repeat": false,
+              "SoundEvent": "sounds/music/germaphobes/mid.sound",
+              "SoundOverride": true,
+              "StopOnNew": false,
+              "Volume": 0
+            }
+          ]
+        },
+        {
+          "__guid": "5634fa71-f072-494f-bc09-8958f527e2bf",
+          "Name": "SoundPointHigh",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "SoundPointComponent",
+              "__guid": "e70e3870-405f-4ec9-be24-2c43ebd3bde7",
+              "DistanceAttenuation": false,
+              "DistanceAttenuationOverride": false,
+              "Force2d": true,
+              "MaxRepeatTime": 1,
+              "MinRepeatTime": 1,
+              "Occlusion": false,
+              "OcclusionOverride": false,
+              "OcclusionRadius": 32,
+              "Pitch": 1,
+              "PlayOnStart": true,
+              "ReflectionOverride": false,
+              "Reflections": false,
+              "Repeat": false,
+              "SoundEvent": "sounds/music/germaphobes/high.sound",
+              "SoundOverride": true,
+              "StopOnNew": false,
+              "Volume": 0
             }
           ]
         }
       ]
     },
     {
-      "__guid": "a4795878-78a3-487f-8f79-b47e4d8c5280",
-      "Name": "fan",
-      "Position": "-288,7104,-176",
+      "__guid": "f2321190-430b-40e5-95cb-bba732656a7d",
+      "Name": "HORSE",
+      "Position": "32.0884,328.4984,1.038139",
+      "Tags": "pickup",
       "Enabled": true,
       "NetworkMode": 2,
-      "Components": [
-        {
-          "__type": "Prop",
-          "__guid": "6deb7995-81e5-420e-bcb4-61f5c3b13c41",
-          "Health": 0,
-          "IsStatic": false,
-          "Model": "models/fan/fan.vmdl"
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "f92e43d4-0493-43e3-a6c2-f9028fd2e7f7",
-          "Name": "Cube",
-          "Position": "0,0,0",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "Components": [
-            {
-              "__type": "HullCollider",
-              "__guid": "177e94f8-665d-4a12-9f3f-f3f589964dcb",
-              "BoxSize": "50,50,50",
-              "Center": "0,0,143.6989",
-              "Height": 284.20038,
-              "IsTrigger": true,
-              "Radius": 88.500114,
-              "Radius2": 0,
-              "Slices": 16,
-              "Static": false,
-              "Type": "Cylinder"
-            },
-            {
-              "__type": "JumpPadScript",
-              "__guid": "01e13934-2664-45b6-aacd-b0c7e3b27ba1",
-              "Delay": 0.1,
-              "Force": 100000000
-            }
-          ]
-        }
-      ]
+      "__Prefab": "prefabs/horse.prefab"
     }
   ],
   "SceneProperties": {
@@ -508,7 +534,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-22T20:34:09.6040393\u002B01:00",
+  "LastSaved": "2024-03-23T23:09:41.4879965\u002B07:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

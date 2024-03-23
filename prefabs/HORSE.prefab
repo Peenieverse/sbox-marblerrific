@@ -1,0 +1,93 @@
+{
+  "RootObject": {
+    "__guid": "f2321190-430b-40e5-95cb-bba732656a7d",
+    "Name": "horse",
+    "Tags": "pickup",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "Components": [
+      {
+        "__type": "NavMeshAgent",
+        "__guid": "ba869908-11d1-43fd-a877-a59c26f8d6a2",
+        "Acceleration": 100,
+        "Height": 92.39999,
+        "MaxSpeed": 50,
+        "Radius": 37.499973,
+        "Separation": 0.25,
+        "UpdatePosition": true,
+        "UpdateRotation": true
+      },
+      {
+        "__type": "WormScript",
+        "__guid": "234d11ba-bb18-4707-aa7e-52c10bcbdd35",
+        "AnimationSpeed": 1,
+        "ChangeDirectionTime": "5,10",
+        "SoundEventDelays": [
+          10
+        ],
+        "SoundEvents": [
+          "sounds/wormspeak.sound"
+        ]
+      },
+      {
+        "__type": "SoundPointComponent",
+        "__guid": "ecd31b7c-2d15-4c54-9aad-37ff0fef372b",
+        "DistanceAttenuation": false,
+        "DistanceAttenuationOverride": false,
+        "Force2d": false,
+        "MaxRepeatTime": 1,
+        "MinRepeatTime": 1,
+        "Occlusion": false,
+        "OcclusionOverride": false,
+        "OcclusionRadius": 32,
+        "Pitch": 1,
+        "PlayOnStart": true,
+        "ReflectionOverride": false,
+        "Reflections": false,
+        "Repeat": false,
+        "SoundOverride": false,
+        "StopOnNew": false,
+        "Volume": 1
+      },
+      {
+        "__type": "HorseAnimator",
+        "__guid": "08b70ae7-cc37-4dff-a701-ea51f504f78e",
+        "Model": {
+          "_type": "component",
+          "component_id": "4a3c73bb-7aa2-4829-8ab8-53aaa9084391",
+          "go": "0fa05bc5-02f9-4280-b2b1-013c13fc559a",
+          "component_type": "SkinnedModelRenderer"
+        },
+        "WalkParameter": "walk",
+        "WalkVelocity": 0
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "0fa05bc5-02f9-4280-b2b1-013c13fc559a",
+        "Name": "horse",
+        "Scale": "0.5333537,0.5333537,0.5333537",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "SkinnedModelRenderer",
+            "__guid": "4a3c73bb-7aa2-4829-8ab8-53aaa9084391",
+            "AnimationGraph": "animgraphs/horse.vanmgrph",
+            "BodyGroups": 18446744073709551615,
+            "CreateBoneObjects": false,
+            "Model": "models/horse/horse.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          }
+        ]
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}
