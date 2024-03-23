@@ -41,6 +41,32 @@
             "MaxItems": 4
           },
           {
+            "__type": "UiInputImages",
+            "__guid": "abd4d8c3-beb5-4f09-bef6-4ace4c294bc2",
+            "Icons": [
+              {
+                "name": "Slot1",
+                "controllerPath": "icons/xbox series/xboxseriesx_dpad_up.png",
+                "keyboardPath": "icons/keyboard \u0026 mouse/dark/1_key_dark.png"
+              },
+              {
+                "name": "Slot2",
+                "controllerPath": "icons/xbox series/xboxseriesx_dpad_right.png",
+                "keyboardPath": "icons/keyboard \u0026 mouse/dark/2_key_dark.png"
+              },
+              {
+                "name": "Slot3",
+                "controllerPath": "icons/xbox series/xboxseriesx_dpad_down.png",
+                "keyboardPath": "icons/keyboard \u0026 mouse/dark/3_key_dark.png"
+              },
+              {
+                "name": "Slot4",
+                "controllerPath": "icons/xbox series/xboxseriesx_dpad_left.png",
+                "keyboardPath": "icons/keyboard \u0026 mouse/dark/4_key_dark.png"
+              }
+            ]
+          },
+          {
             "__type": "MarbleScript",
             "__guid": "b4fd3ba9-ab85-4be9-8aa9-b92ce8c41159",
             "Acceleration": 100,
@@ -101,6 +127,12 @@
               "component_id": "505d5709-b4a2-4c05-b825-239848fc3d31",
               "go": "15989237-6196-4acd-bb1d-bc0ccdd9b9a5",
               "component_type": "ItemSystem"
+            },
+            "uiInputImages": {
+              "_type": "component",
+              "component_id": "abd4d8c3-beb5-4f09-bef6-4ace4c294bc2",
+              "go": "15989237-6196-4acd-bb1d-bc0ccdd9b9a5",
+              "component_type": "UiInputImages"
             }
           }
         ],

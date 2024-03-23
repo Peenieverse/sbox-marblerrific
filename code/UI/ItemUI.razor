@@ -15,8 +15,8 @@
 						@ItemSystem.Items[i].Icon
 					</div>
 
-					<div style="position: absolute; top: 0; left: 0; font-size: 30px; font-color: #fff">
-						@(i+1)
+					<div style="position: absolute; top: 0; left: 0; width: 40px; height: 40px; font-size: 30px; font-color: #fff">
+						<img src="@(uiInputImages.getKey($"Slot{i+1}"))">
 					</div>
 				</td>
 			}
@@ -24,9 +24,16 @@
 	</table>
 </root>
 
+
 @code
 {
 	[Property] public ItemSystem ItemSystem { get; set; }
+	[Property] public UiInputImages uiInputImages { get; set; }
 
-	protected override int BuildHash() => System.HashCode.Combine( ItemSystem, ItemSystem.Items.Count );
+	protected override void OnUpdate()
+	{
+		
+	}
+
+	protected override int BuildHash() => System.HashCode.Combine( ItemSystem, ItemSystem.Items.Count, uiInputImages, Input.UsingController);
 }
