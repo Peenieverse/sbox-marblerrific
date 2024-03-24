@@ -9,21 +9,154 @@
       "NetworkMode": 2,
       "Components": [
         {
-          "__type": "TextRenderer",
-          "__guid": "fb543a8f-7b18-419a-a600-bc90ba5306d9",
-          "Color": "1,1,1,1",
-          "FontFamily": "Poppins",
-          "FontSize": 43.18,
-          "Scale": 0.69,
-          "Text": "Controls:\n- WASD to move\n- SPACE to jump\n- SHIFT to brake"
-        },
-        {
           "__type": "BounceAround",
           "__guid": "13894cf3-c3e0-4451-9091-3e405867208b",
           "BounceAmount": 14,
           "HorizontalSpeed": 4,
           "RotationSpeed": 50,
           "VerticalSpeed": 3
+        },
+        {
+          "__type": "ControlsSwitch",
+          "__guid": "4fb21d22-6bcb-4c57-ba2a-5c6f0215799d",
+          "Controller": {
+            "_type": "gameobject",
+            "go": "9f46abdf-eadc-4fc3-8054-491329400434"
+          },
+          "Keyboard": {
+            "_type": "gameobject",
+            "go": "ea0fbb75-2baa-407d-adcf-8c4bf79f9b36"
+          }
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "ea0fbb75-2baa-407d-adcf-8c4bf79f9b36",
+          "Name": "Object",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "TextRenderer",
+              "__guid": "a488ed72-ea23-457b-a5ec-8ab4910b2493",
+              "Color": "1,1,1,1",
+              "FontFamily": "Poppins",
+              "FontSize": 43.18,
+              "Scale": 0.69,
+              "Text": "Controls:\n- WASD to move\n- SPACE to jump\n- SHIFT to brake"
+            }
+          ]
+        },
+        {
+          "__guid": "9f46abdf-eadc-4fc3-8054-491329400434",
+          "Name": "Controller",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "TextRenderer",
+              "__guid": "8ef2f618-1bbd-4331-8a16-959ad83a170b",
+              "Color": "1,1,1,1",
+              "FontFamily": "Poppins",
+              "FontSize": 43.18,
+              "Scale": 0.69,
+              "Text": "Controls:\n-       to move\n-      to jump\n-      to brake"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "af1bddc5-efd0-4778-9672-ebbb596e47ca",
+              "Name": "Plane",
+              "Position": "0.00004577637,54.94946,24.46532",
+              "Rotation": "-0.7071068,-0.00000003090862,0.7071068,-0.00000003090862",
+              "Scale": "0.3290388,0.3290388,0.3290388",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "cbd81979-c0f5-463a-b105-f8596228d594",
+                  "BodyGroups": 18446744073709551615,
+                  "MaterialOverride": "icons/xbox series/left stick.vmat",
+                  "Model": "models/dev/plane.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "FixTransparency",
+                  "__guid": "123bb675-d10a-4c6a-bab1-1e8bfe93e3aa",
+                  "modelRenderer": {
+                    "_type": "component",
+                    "component_id": "cbd81979-c0f5-463a-b105-f8596228d594",
+                    "go": "af1bddc5-efd0-4778-9672-ebbb596e47ca",
+                    "component_type": "ModelRenderer"
+                  }
+                }
+              ]
+            },
+            {
+              "__guid": "469c00b2-d596-45ab-a1d5-f4e2b659f50c",
+              "Name": "Plane (1)",
+              "Position": "0,52.882,-23.437",
+              "Rotation": "-0.7071068,-0.00000003090862,0.7071068,-0.00000003090862",
+              "Scale": "0.3290388,0.3290388,0.3290388",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "e91f9e3a-6b6c-4bdf-9301-0570a0709260",
+                  "BodyGroups": 18446744073709551615,
+                  "MaterialOverride": "icons/xbox series/abutton.vmat",
+                  "Model": "models/dev/plane.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "FixTransparency",
+                  "__guid": "77b6bce0-9d0f-4a9e-8b08-79adbe982550",
+                  "modelRenderer": {
+                    "_type": "component",
+                    "component_id": "e91f9e3a-6b6c-4bdf-9301-0570a0709260",
+                    "go": "469c00b2-d596-45ab-a1d5-f4e2b659f50c",
+                    "component_type": "ModelRenderer"
+                  }
+                }
+              ]
+            },
+            {
+              "__guid": "1a020022-0f91-4e33-812c-fd54804e9764",
+              "Name": "Plane (2)",
+              "Position": "0.00006103516,56.31583,-67.89764",
+              "Rotation": "-0.7071068,-0.00000003090862,0.7071068,-0.00000003090862",
+              "Scale": "0.3290388,0.3290388,0.3290388",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "36410fb3-078d-4a4b-a601-8b52d4fb2da0",
+                  "BodyGroups": 18446744073709551615,
+                  "MaterialOverride": "icons/xbox series/xboxseriesx_left_stick_click.vmat",
+                  "Model": "models/dev/plane.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "FixTransparency",
+                  "__guid": "16b96f63-2088-4f5b-9e06-f142679163aa",
+                  "modelRenderer": {
+                    "_type": "component",
+                    "component_id": "36410fb3-078d-4a4b-a601-8b52d4fb2da0",
+                    "go": "1a020022-0f91-4e33-812c-fd54804e9764",
+                    "component_type": "ModelRenderer"
+                  }
+                }
+              ]
+            }
+          ]
         }
       ]
     },
@@ -281,16 +414,6 @@
       "__Prefab": "prefabs/player.prefab"
     },
     {
-      "__guid": "bd63a83e-e9c2-4885-ae8b-5c45097295d2",
-      "Name": "worm",
-      "Position": "0,231.3987,4.674527",
-      "Scale": "1.8,1.8,1.8",
-      "Tags": "pickup",
-      "Enabled": true,
-      "NetworkMode": 2,
-      "__Prefab": "prefabs/worm.prefab"
-    },
-    {
       "__guid": "30be4caa-bfcb-45f5-a43d-8b2fcc732627",
       "Name": "Cube",
       "Position": "-91.12294,281.9203,33.41071",
@@ -502,22 +625,79 @@
       ]
     },
     {
-      "__guid": "f2321190-430b-40e5-95cb-bba732656a7d",
-      "Name": "HORSE",
-      "Position": "32.0884,328.4984,1.038139",
-      "Tags": "pickup",
+      "__guid": "10f6020b-c748-4f5c-bd43-d0a3b85b762f",
+      "Name": "Worm Spawn",
+      "Position": "424.0993,412.2133,-1.175394",
       "Enabled": true,
       "NetworkMode": 2,
-      "__Prefab": "prefabs/horse.prefab"
+      "__Prefab": "prefabs/worm spawn.prefab"
     },
     {
-      "__guid": "df328bc7-09de-4721-80c1-0489be99119f",
-      "Name": "bee",
-      "Position": "-245.7227,142.4775,0",
-      "Tags": "pickup",
+      "__guid": "0fe4b21a-b3e9-46cf-b61a-b3252fc56b85",
+      "Name": "Horse Spawn",
+      "Position": "748.4617,-58.02844,0.00003051758",
       "Enabled": true,
       "NetworkMode": 2,
-      "__Prefab": "prefabs/bee.prefab"
+      "__Prefab": "prefabs/horse spawn.prefab"
+    },
+    {
+      "__guid": "e16e6523-a6cf-45ed-9cf7-eb4cc4787577",
+      "Name": "Bee Spawn",
+      "Position": "-264.2054,127.3733,0",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "PickupSpawner",
+          "__guid": "e637de13-4626-48e8-a740-3f32432ee976",
+          "Pickup": {
+            "_type": "gameobject",
+            "prefab": "prefabs/bee.prefab"
+          },
+          "RespawnTime": 5,
+          "spawnBox": [
+            "18,15,0",
+            "18,15,0"
+          ]
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "d27fc5e1-c617-4f2a-8874-35b9e46c69ef",
+          "Name": "hive",
+          "Position": "0,0,58.52583",
+          "Rotation": "0,0,0.7071068,0.7071068",
+          "Scale": "0.2188753,0.2188753,0.2188753",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "Components": [
+            {
+              "__type": "ModelRenderer",
+              "__guid": "bd9378d3-2c67-4603-a97b-fd8c7e3b1976",
+              "BodyGroups": 18446744073709551615,
+              "Model": "models/hive.vmdl",
+              "RenderType": "On",
+              "Tint": "1,1,1,1"
+            },
+            {
+              "__type": "ModelCollider",
+              "__guid": "6355fbb4-0b5d-4d72-8af8-149bdc9726b8",
+              "IsTrigger": false,
+              "Model": "models/hive.vmdl",
+              "Static": false
+            }
+          ]
+        },
+        {
+          "__guid": "df328bc7-09de-4721-80c1-0489be99119f",
+          "Name": "bee",
+          "Position": "18,15,0",
+          "Tags": "pickup",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "__Prefab": "prefabs/bee.prefab"
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -543,7 +723,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-24T00:49:47.1562269\u002B07:00",
+  "LastSaved": "2024-03-24T23:20:37.7680593\u002B07:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

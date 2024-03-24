@@ -25,7 +25,7 @@
 					{
 						m_nodeID = 
 						{
-							m_id = 1195853354
+							m_id = 1382804590
 						}
 						m_outputID = 
 						{
@@ -37,13 +37,34 @@
 			{
 				key = 
 				{
+					m_id = 426277829
+				}
+				value = 
+				{
+					_class = "CSequenceAnimNode"
+					m_sName = "Unnamed"
+					m_vecPosition = [ -384.0, -128.0 ]
+					m_nNodeID = 
+					{
+						m_id = 426277829
+					}
+					m_sNote = ""
+					m_tagSpans = [  ]
+					m_sequenceName = "WormSPAWN"
+					m_playbackSpeed = 1.0
+					m_bLoop = false
+				}
+			},
+			{
+				key = 
+				{
 					m_id = 699836032
 				}
 				value = 
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -517.108765, -184.289093 ]
+					m_vecPosition = [ -613.108765, -312.289093 ]
 					m_nNodeID = 
 					{
 						m_id = 699836032
@@ -64,7 +85,7 @@
 				{
 					_class = "CBlendAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -288.0, -144.0 ]
+					m_vecPosition = [ -384.0, -272.0 ]
 					m_nNodeID = 
 					{
 						m_id = 869115642
@@ -149,7 +170,7 @@
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -560.0, -128.0 ]
+					m_vecPosition = [ -656.0, -256.0 ]
 					m_nNodeID = 
 					{
 						m_id = 1104819093
@@ -202,7 +223,7 @@
 				{
 					_class = "CSequenceAnimNode"
 					m_sName = "Unnamed"
-					m_vecPosition = [ -550.512573, 33.561672 ]
+					m_vecPosition = [ -662.512573, -94.438324 ]
 					m_nNodeID = 
 					{
 						m_id = 1281126037
@@ -212,6 +233,116 @@
 					m_sequenceName = "WormRightMent"
 					m_playbackSpeed = 1.0
 					m_bLoop = true
+				}
+			},
+			{
+				key = 
+				{
+					m_id = 1382804590
+				}
+				value = 
+				{
+					_class = "CStateMachineAnimNode"
+					m_sName = "Unnamed"
+					m_vecPosition = [ -205.362335, -99.343758 ]
+					m_nNodeID = 
+					{
+						m_id = 1382804590
+					}
+					m_sNote = ""
+					m_states = 
+					[
+						{
+							_class = "CAnimState"
+							m_transitions = 
+							[
+								{
+									_class = "CAnimStateTransition"
+									m_conditions = 
+									[
+										{
+											_class = "CFinishedCondition"
+											m_comparisonOp = 0
+											m_option = "FinishedConditionOption_OnFinished"
+											m_bIsFinished = true
+										},
+									]
+									m_blendDuration = 0.2
+									m_destState = 
+									{
+										m_id = 621214547
+									}
+									m_bReset = true
+									m_resetCycleOption = "Beginning"
+									m_flFixedCycleValue = 0.0
+									m_blendCurve = 
+									{
+										m_vControlPoint1 = [ 0.5, 0.0 ]
+										m_vControlPoint2 = [ 0.5, 1.0 ]
+									}
+									m_bForceFootPlant = false
+									m_bDisabled = false
+									m_bRandomTimeBetween = false
+									m_flRandomTimeStart = 0.0
+									m_flRandomTimeEnd = 0.0
+								},
+							]
+							m_tags = [  ]
+							m_tagBehaviors = [  ]
+							m_name = "Spawn"
+							m_inputConnection = 
+							{
+								m_nodeID = 
+								{
+									m_id = 426277829
+								}
+								m_outputID = 
+								{
+									m_id = 4294967295
+								}
+							}
+							m_stateID = 
+							{
+								m_id = 1683703512
+							}
+							m_position = [ -112.0, -80.0 ]
+							m_bIsStartState = true
+							m_bIsEndtState = false
+							m_bIsPassthrough = false
+							m_bIsRootMotionExclusive = false
+							m_bAlwaysEvaluate = false
+						},
+						{
+							_class = "CAnimState"
+							m_transitions = [  ]
+							m_tags = [  ]
+							m_tagBehaviors = [  ]
+							m_name = "Active"
+							m_inputConnection = 
+							{
+								m_nodeID = 
+								{
+									m_id = 1195853354
+								}
+								m_outputID = 
+								{
+									m_id = 4294967295
+								}
+							}
+							m_stateID = 
+							{
+								m_id = 621214547
+							}
+							m_position = [ 16.0, -112.0 ]
+							m_bIsStartState = false
+							m_bIsEndtState = false
+							m_bIsPassthrough = false
+							m_bIsRootMotionExclusive = false
+							m_bAlwaysEvaluate = false
+						},
+					]
+					m_bBlockWaningTags = false
+					m_bLockStateWhenWaning = false
 				}
 			},
 		]

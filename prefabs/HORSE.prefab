@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "__guid": "f2321190-430b-40e5-95cb-bba732656a7d",
+    "__guid": "896d8f65-03a6-43dc-9697-f47324590cae",
     "Name": "horse",
     "Tags": "pickup",
     "Enabled": true,
@@ -8,18 +8,18 @@
     "Components": [
       {
         "__type": "NavMeshAgent",
-        "__guid": "ba869908-11d1-43fd-a877-a59c26f8d6a2",
+        "__guid": "20f01bd4-61dc-4bbc-8d52-59d36e83d32e",
         "Acceleration": 100,
         "Height": 92.39999,
-        "MaxSpeed": 50,
-        "Radius": 37.499973,
+        "MaxSpeed": 60,
+        "Radius": 65.70003,
         "Separation": 0.25,
         "UpdatePosition": true,
         "UpdateRotation": true
       },
       {
         "__type": "WormScript",
-        "__guid": "234d11ba-bb18-4707-aa7e-52c10bcbdd35",
+        "__guid": "5864f77f-7ac2-4dc0-a997-949a7c1c5287",
         "AnimationSpeed": 1,
         "ChangeDirectionTime": "5,10",
         "SoundEventDelays": [
@@ -31,7 +31,7 @@
       },
       {
         "__type": "SoundPointComponent",
-        "__guid": "ecd31b7c-2d15-4c54-9aad-37ff0fef372b",
+        "__guid": "f0f4e0ed-26f4-4db8-b4e6-1fe759702f3d",
         "DistanceAttenuation": false,
         "DistanceAttenuationOverride": false,
         "Force2d": false,
@@ -51,19 +51,19 @@
       },
       {
         "__type": "HorseAnimator",
-        "__guid": "08b70ae7-cc37-4dff-a701-ea51f504f78e",
+        "__guid": "7f6eaa61-6050-4ef0-9b58-d994a06b3021",
         "Model": {
           "_type": "component",
-          "component_id": "4a3c73bb-7aa2-4829-8ab8-53aaa9084391",
-          "go": "0fa05bc5-02f9-4280-b2b1-013c13fc559a",
+          "component_id": "804d151e-6a55-4ee8-b2c0-70e245d2f13e",
+          "go": "d8159680-b356-41a1-ae9d-eb7f3b9c0147",
           "component_type": "SkinnedModelRenderer"
         },
         "WalkParameter": "walk",
-        "WalkVelocity": 20
+        "WalkVelocity": 10
       },
       {
         "__type": "Pickup",
-        "__guid": "08960144-72f4-4cc0-bc0e-ab6513293fac",
+        "__guid": "91b96a7f-db0a-43ea-a91c-09cca01e82d5",
         "ItemData": {
           "Mode": "Horse",
           "Icon": "\uD83D\uDC34",
@@ -72,7 +72,7 @@
       },
       {
         "__type": "BoxCollider",
-        "__guid": "734c4e7f-9264-444c-8d0c-ff0e8b64f26e",
+        "__guid": "3f60d8e3-75f7-48be-a389-11d26bc604c4",
         "Center": "7.1,0,53.69999",
         "IsTrigger": true,
         "Scale": "123.5,50,100.9",
@@ -81,7 +81,7 @@
     ],
     "Children": [
       {
-        "__guid": "0fa05bc5-02f9-4280-b2b1-013c13fc559a",
+        "__guid": "d8159680-b356-41a1-ae9d-eb7f3b9c0147",
         "Name": "horse",
         "Scale": "0.5333537,0.5333537,0.5333537",
         "Enabled": true,
@@ -89,7 +89,7 @@
         "Components": [
           {
             "__type": "SkinnedModelRenderer",
-            "__guid": "4a3c73bb-7aa2-4829-8ab8-53aaa9084391",
+            "__guid": "804d151e-6a55-4ee8-b2c0-70e245d2f13e",
             "AnimationGraph": "animgraphs/horse.vanmgrph",
             "BodyGroups": 18446744073709551615,
             "CreateBoneObjects": false,

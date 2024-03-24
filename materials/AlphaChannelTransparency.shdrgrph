@@ -1,0 +1,173 @@
+{
+  "Model": null,
+  "Description": "",
+  "BlendMode": "Masked",
+  "nodes": [
+    {
+      "_class": "TextureCoord",
+      "UseSecondaryCoord": false,
+      "Tiling": "1,1",
+      "Identifier": "0",
+      "Position": "-592,-144"
+    },
+    {
+      "_class": "TileAndOffset",
+      "DefaultTile": "1,1",
+      "DefaultOffset": "0,0",
+      "WrapTo01": false,
+      "Identifier": "1",
+      "Position": "-368,-128",
+      "Coords": {
+        "Identifier": "0",
+        "Output": "Result"
+      },
+      "Tile": {
+        "Identifier": "2",
+        "Output": "Result"
+      },
+      "Offset": {
+        "Identifier": "5",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Float2",
+      "Value": "1,1",
+      "Name": "TexCoordScale",
+      "IsAttribute": false,
+      "UI": {
+        "PrimaryGroup": {
+          "Name": "Texture Coordinates",
+          "Priority": 5
+        }
+      },
+      "Identifier": "2",
+      "Position": "-592,-64"
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "icons/xbox series/xboxseriesx_left_stick_click.png",
+      "Sampler": {
+        "Filter": "Bilinear"
+      },
+      "UI": {
+        "Name": "Color",
+        "Default": "1,1,1,1",
+        "ImageFormat": "BC7",
+        "SrgbRead": true,
+        "PrimaryGroup": {
+          "Name": "Color"
+        },
+        "CreateInput": "CreateInputTexture2D"
+      },
+      "Identifier": "3",
+      "Position": "-128,-128",
+      "Coords": {
+        "Identifier": "1",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "VertexColor",
+      "Identifier": "4",
+      "Position": "16,-272"
+    },
+    {
+      "_class": "Float2",
+      "Value": "1,1",
+      "Name": "TexCoordOffset",
+      "IsAttribute": false,
+      "UI": {
+        "PrimaryGroup": {
+          "Name": "Texture Coordinates",
+          "Priority": 5
+        }
+      },
+      "Identifier": "5",
+      "Position": "-592,48"
+    },
+    {
+      "_class": "Branch",
+      "Name": "Alpha from Colour",
+      "Operator": "Equal",
+      "Enabled": true,
+      "UI": {},
+      "Identifier": "6",
+      "Position": "144,48",
+      "True": {
+        "Identifier": "3",
+        "Output": "A"
+      },
+      "False": {
+        "Identifier": "8",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Branch",
+      "Name": "Solid Color",
+      "Operator": "Equal",
+      "Enabled": false,
+      "UI": {
+        "PrimaryGroup": {
+          "Name": "ColorSettings"
+        },
+        "SecondaryGroup": {
+          "Name": ""
+        }
+      },
+      "Identifier": "7",
+      "Position": "240,-240",
+      "True": {
+        "Identifier": "4",
+        "Output": "RGB"
+      },
+      "False": {
+        "Identifier": "3",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "TextureSampler",
+      "Image": "icons/xbox series/xboxseriesx_left_stick_click.png",
+      "Sampler": {
+        "Filter": "Bilinear"
+      },
+      "UI": {
+        "Name": "Translucency",
+        "Default": "1,1,1,1",
+        "Extension": "Trans",
+        "ColorSpace": "Linear",
+        "ImageFormat": "BC7",
+        "PrimaryGroup": {
+          "Name": "Translucent",
+          "Priority": 1
+        },
+        "CreateInput": "CreateInputTexture2D"
+      },
+      "Identifier": "8",
+      "Position": "-144,144",
+      "Coords": {
+        "Identifier": "1",
+        "Output": "Result"
+      }
+    },
+    {
+      "_class": "Result",
+      "DefaultOpacity": 1,
+      "DefaultRoughness": 1,
+      "DefaultMetalness": 0,
+      "DefaultAmbientOcclusion": 1,
+      "Identifier": "9",
+      "Position": "480,-144",
+      "Albedo": {
+        "Identifier": "7",
+        "Output": "Result"
+      },
+      "Opacity": {
+        "Identifier": "6",
+        "Output": "Result"
+      }
+    }
+  ]
+}

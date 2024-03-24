@@ -1,0 +1,29 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "materials/alphachanneltransparency.shader"
+
+	//---- Rendering ----
+	F_RENDER_BACKFACES 1
+
+	g_bAlphafromColour "1"
+
+	//---- Color ----
+	Color "icons/xbox series/xboxseriesx_left_stick_click.png"
+
+	//---- ColorSettings ----
+	g_bSolidColor "0"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Texture Coordinates ----
+	g_vTexCoordOffset "[0.000 0.000]"
+	g_vTexCoordScale "[1.000 1.000]"
+
+	//---- Translucent ----
+	g_flAlphaTestReference "0.010"
+	g_flAntiAliasedEdgeStrength "1.000"
+	Translucency "materials/default/default_trans.tga"
+}

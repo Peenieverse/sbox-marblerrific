@@ -1,0 +1,67 @@
+{
+  "RootObject": {
+    "__guid": "0fe4b21a-b3e9-46cf-b61a-b3252fc56b85",
+    "Name": "Horse Spawn",
+    "Position": "748.4617,-58.02844,0.00003051758",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "Components": [
+      {
+        "__type": "PickupSpawner",
+        "__guid": "28c759ae-1931-4b16-bb1b-cf1e5e926a7c",
+        "Pickup": {
+          "_type": "gameobject",
+          "prefab": "prefabs/horse.prefab"
+        },
+        "RespawnTime": 5,
+        "spawnBox": [
+          "-54,-100,0",
+          "-54,-100,0"
+        ]
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "fe1cb273-fb2c-4185-bdfc-a5ab55665345",
+        "Name": "barn",
+        "Position": "0,0,0",
+        "Scale": "1.441586,1.441586,1.441586",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "Components": [
+          {
+            "__type": "ModelRenderer",
+            "__guid": "02bd628b-d015-4802-9cff-3718ef0d0a3e",
+            "BodyGroups": 18446744073709551615,
+            "Model": "models/barn.vmdl",
+            "RenderType": "On",
+            "Tint": "1,1,1,1"
+          },
+          {
+            "__type": "ModelCollider",
+            "__guid": "fc04d06e-c8bf-45c9-bf83-a3f4ed551949",
+            "IsTrigger": false,
+            "Model": "models/barn.vmdl",
+            "Static": true
+          }
+        ]
+      },
+      {
+        "__guid": "f2321190-430b-40e5-95cb-bba732656a7d",
+        "Name": "HORSE",
+        "Position": "-54.36444,-92.00806,1.038195",
+        "Rotation": "0,0,0.7071068,0.7071068",
+        "Tags": "pickup",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "__Prefab": "prefabs/horse.prefab"
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}

@@ -17,6 +17,7 @@ public sealed class MarbleScript : Component
 	[Category( "Component & Object References" ), Property] private GameObject Camera { get; set; }
 	[Category( "Component & Object References" ), Property] private GameObject ActualCamera { get; set; }
 	[Category( "Component & Object References" ), Property] private Rigidbody rb { get; set; }
+	[Category( "Component & Object References" ), Property] public Vector3 RespawnPoint { get; set; }
 
 	[Category( "Movement Stats Normal" ), Property] private float Acceleration { get; set; }
 	[Category( "Movement Stats Normal" ), Property] private float BrakeAcceleration { get; set; }
@@ -78,9 +79,9 @@ public sealed class MarbleScript : Component
 		CamRayDis = Vector3.DistanceBetween( ActualCamera.Transform.Position, Camera.Transform.Position );
 	}
 
-	public void Respawn( Vector3 point )
+	public void Respawn( )
 	{
-		Transform.Position = point;
+		Transform.Position = RespawnPoint;
 		rb.Velocity = Vector3.Zero;
 	}
 
@@ -146,6 +147,11 @@ public sealed class MarbleScript : Component
 		if ( CurrentMode != MoveMode.Gravity )
 		{
 			Scene.PhysicsWorld.Gravity = grav;
+		}
+
+		if(Transform.Position.z < Zrespwawn)
+		{
+			Respawn();
 		}
 
 		if ( CurrentMode == MoveMode.Normal )

@@ -1,0 +1,77 @@
+{
+  "RootObject": {
+    "__guid": "10f6020b-c748-4f5c-bd43-d0a3b85b762f",
+    "Name": "Worm Spawn",
+    "Position": "424.0993,412.2133,-1.175394",
+    "Enabled": true,
+    "NetworkMode": 2,
+    "Components": [
+      {
+        "__type": "ModelRenderer",
+        "__guid": "5d2a109e-7abe-4470-8c01-a5f456cff775",
+        "BodyGroups": 18446744073709551615,
+        "Model": "models/models/mudpile.vmdl",
+        "RenderType": "On",
+        "Tint": "1,1,1,1"
+      },
+      {
+        "__type": "ModelCollider",
+        "__guid": "b5b2caca-1217-4e1c-a687-19d02c121fa4",
+        "IsTrigger": false,
+        "Model": "models/models/mudpile.vmdl",
+        "Static": true
+      },
+      {
+        "__type": "PickupSpawner",
+        "__guid": "ce223d76-43b1-4bce-84c9-f37aeac4de5b",
+        "Pickup": {
+          "_type": "gameobject",
+          "prefab": "prefabs/worm.prefab"
+        },
+        "RespawnTime": 5,
+        "spawnBox": [
+          "76,-76,0",
+          "-76,76,0"
+        ]
+      }
+    ],
+    "Children": [
+      {
+        "__guid": "bd63a83e-e9c2-4885-ae8b-5c45097295d2",
+        "Name": "worm",
+        "Position": "11.20059,-58.11127,17.03275",
+        "Scale": "1.8,1.8,1.8",
+        "Tags": "pickup",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "__Prefab": "prefabs/worm.prefab"
+      },
+      {
+        "__guid": "306655c8-7f5c-4278-a5d7-606905b4245c",
+        "Name": "worm (1)",
+        "Position": "41.96225,13.58096,15.46785",
+        "Scale": "1.8,1.8,1.8",
+        "Tags": "pickup",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "__Prefab": "prefabs/worm.prefab"
+      },
+      {
+        "__guid": "64754037-74ad-4626-9702-3d163adcb360",
+        "Name": "worm (2)",
+        "Position": "-40.48532,29.57501,16.6433",
+        "Scale": "1.8,1.8,1.8",
+        "Tags": "pickup",
+        "Enabled": true,
+        "NetworkMode": 2,
+        "__Prefab": "prefabs/worm.prefab"
+      }
+    ]
+  },
+  "ShowInMenu": false,
+  "MenuPath": null,
+  "MenuIcon": null,
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}
