@@ -1,6 +1,6 @@
 {
   "RootObject": {
-    "__guid": "b2e2e39e-a01a-45e1-9450-6fcf68808668",
+    "__guid": "b75f68cb-4251-4b14-a216-f3817871aea7",
     "Name": "worm",
     "Scale": "1.8,1.8,1.8",
     "Tags": "pickup",
@@ -9,7 +9,7 @@
     "Components": [
       {
         "__type": "SkinnedModelRenderer",
-        "__guid": "0e238d31-91ca-4419-b023-473099d2d421",
+        "__guid": "ad87cf28-c181-473a-a714-f425b0708dec",
         "AnimationGraph": "animgraphs/worm.vanmgrph",
         "BodyGroups": 18446744073709551615,
         "CreateBoneObjects": false,
@@ -19,7 +19,7 @@
       },
       {
         "__type": "SoundPointComponent",
-        "__guid": "5b6a9843-5236-4954-817a-cbb15f14ce53",
+        "__guid": "8c2809d1-3600-4d87-af5a-4fb62b46668b",
         "DistanceAttenuation": false,
         "DistanceAttenuationOverride": false,
         "Force2d": false,
@@ -39,7 +39,7 @@
       },
       {
         "__type": "WormScript",
-        "__guid": "18373324-a6bd-4bef-be35-25cea21c18d0",
+        "__guid": "f04ab724-5b9d-4b1d-969e-31f8913103e0",
         "AnimationSpeed": 1,
         "ChangeDirectionTime": "1,5",
         "SoundEventDelays": [
@@ -53,7 +53,7 @@
       },
       {
         "__type": "NavMeshAgent",
-        "__guid": "16a99594-54e0-40df-b572-451a337636a6",
+        "__guid": "45e6e53d-99fd-43be-a91e-a5fb89884318",
         "Acceleration": 10,
         "Height": 64,
         "MaxSpeed": 10,
@@ -64,7 +64,7 @@
       },
       {
         "__type": "BoxCollider",
-        "__guid": "eb872d08-ec07-4db1-91ab-588226d7fdc3",
+        "__guid": "a3ff91a0-885e-42f9-899b-f6c7ae69fbc3",
         "Center": "0,0,0",
         "IsTrigger": true,
         "Scale": "50,50,50",
@@ -72,11 +72,11 @@
       },
       {
         "__type": "Pickup",
-        "__guid": "9741f9ca-cee3-4d13-8f13-ce9ef37215e2",
+        "__guid": "8dd142a3-c397-4a0b-8031-7ba487759e53",
         "ItemData": {
           "Mode": "Worm",
           "Icon": "\uD83E\uDEB1",
-          "Duration": 5
+          "Duration": 20
         }
       }
     ],

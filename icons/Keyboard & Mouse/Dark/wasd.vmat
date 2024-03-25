@@ -1,0 +1,26 @@
+// THIS FILE IS AUTO-GENERATED
+
+Layer0
+{
+	shader "materials/alphachanneltransparency.shader"
+
+	g_bAlphafromColour "1"
+
+	//---- Color ----
+	Color "icons/keyboard & mouse/dark/wasd.png"
+
+	//---- ColorSettings ----
+	g_bSolidColor "0"
+
+	//---- Fog ----
+	g_bFogEnabled "1"
+
+	//---- Texture Coordinates ----
+	g_vTexCoordOffset "[0.000 0.000]"
+	g_vTexCoordScale "[1.000 1.000]"
+
+	//---- Translucent ----
+	g_flAlphaTestReference "0.500"
+	g_flAntiAliasedEdgeStrength "1.000"
+	Translucency "materials/default/default_trans.tga"
+}

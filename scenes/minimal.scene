@@ -44,7 +44,99 @@
               "FontFamily": "Poppins",
               "FontSize": 43.18,
               "Scale": 0.69,
-              "Text": "Controls:\n- WASD to move\n- SPACE to jump\n- SHIFT to brake"
+              "Text": "Controls:\n-               to move\n-      to jump\n-      to brake"
+            }
+          ],
+          "Children": [
+            {
+              "__guid": "2df4e05d-af2f-47c5-9f2a-419074043272",
+              "Name": "Plane (3)",
+              "Position": "0.00003051758,54.79309,26.02779",
+              "Rotation": "-0.7071068,-0.00000003090862,0.7071068,-0.00000003090862",
+              "Scale": "0.658,1.316,0.329",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "d0a16f5e-2cc9-41c4-8403-a6bb63236835",
+                  "BodyGroups": 18446744073709551615,
+                  "MaterialOverride": "icons/keyboard \u0026 mouse/dark/wasd.vmat",
+                  "Model": "models/dev/plane.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "FixTransparency",
+                  "__guid": "959e10a0-d478-4950-b57f-f3ab2188ac9e",
+                  "modelRenderer": {
+                    "_type": "component",
+                    "component_id": "d0a16f5e-2cc9-41c4-8403-a6bb63236835",
+                    "go": "2df4e05d-af2f-47c5-9f2a-419074043272",
+                    "component_type": "ModelRenderer"
+                  }
+                }
+              ]
+            },
+            {
+              "__guid": "66ab6e18-8e8e-4377-b531-24ada3912a7c",
+              "Name": "Plane (3)",
+              "Position": "0,52.882,-23.437",
+              "Rotation": "-0.7071068,-0.00000003090862,0.7071068,-0.00000003090862",
+              "Scale": "0.3290388,0.3290388,0.3290388",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "1f185717-01d1-464f-85d9-8352d10efcab",
+                  "BodyGroups": 18446744073709551615,
+                  "MaterialOverride": "materials/error.vmat",
+                  "Model": "models/dev/plane.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "FixTransparency",
+                  "__guid": "bc122885-09ae-4987-a32f-6f0642029e40",
+                  "modelRenderer": {
+                    "_type": "component",
+                    "component_id": "1f185717-01d1-464f-85d9-8352d10efcab",
+                    "go": "66ab6e18-8e8e-4377-b531-24ada3912a7c",
+                    "component_type": "ModelRenderer"
+                  }
+                }
+              ]
+            },
+            {
+              "__guid": "77118bb8-28d9-4670-a3d5-bde7dd0c7c6a",
+              "Name": "Plane (3)",
+              "Position": "0.00006103516,56.31583,-67.89764",
+              "Rotation": "-0.7071068,-0.00000003090862,0.7071068,-0.00000003090862",
+              "Scale": "0.3290388,0.3290388,0.3290388",
+              "Enabled": true,
+              "NetworkMode": 2,
+              "Components": [
+                {
+                  "__type": "ModelRenderer",
+                  "__guid": "6ba90c04-7c7b-4206-b29a-820e5f1af89b",
+                  "BodyGroups": 18446744073709551615,
+                  "MaterialOverride": "icons/keyboard \u0026 mouse/dark/shift_key_dark.vmat",
+                  "Model": "models/dev/plane.vmdl",
+                  "RenderType": "On",
+                  "Tint": "1,1,1,1"
+                },
+                {
+                  "__type": "FixTransparency",
+                  "__guid": "647cc1b2-2db2-4cf4-9455-660b2c60cc5b",
+                  "modelRenderer": {
+                    "_type": "component",
+                    "component_id": "6ba90c04-7c7b-4206-b29a-820e5f1af89b",
+                    "go": "77118bb8-28d9-4670-a3d5-bde7dd0c7c6a",
+                    "component_type": "ModelRenderer"
+                  }
+                }
+              ]
             }
           ]
         },
@@ -52,7 +144,6 @@
           "__guid": "9f46abdf-eadc-4fc3-8054-491329400434",
           "Name": "Controller",
           "Position": "0,0,0",
-          "Enabled": true,
           "NetworkMode": 2,
           "Components": [
             {
@@ -627,7 +718,7 @@
     {
       "__guid": "10f6020b-c748-4f5c-bd43-d0a3b85b762f",
       "Name": "Worm Spawn",
-      "Position": "424.0993,412.2133,-1.175394",
+      "Position": "424.0993,412.2133,-2.13696",
       "Enabled": true,
       "NetworkMode": 2,
       "__Prefab": "prefabs/worm spawn.prefab"
@@ -723,7 +814,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-24T23:20:37.7680593\u002B07:00",
+  "LastSaved": "2024-03-25T18:12:10.1864829\u002B07:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []
