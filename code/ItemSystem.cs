@@ -11,9 +11,11 @@ public sealed class ItemSystem : Component
 {
 	[Property] public List<ItemData> Items { get; set; } = new();
 	[Property] public int MaxItems { get; set; }
+	[Property] public SoundPointComponent Chomp { get; set; }
 
 	private MarbleScript marbleScript;
-	[Property] private float effectDuration { get; set; }
+	[Property] public float EffectDuration { get; set; }
+	[Property] public float EffectDurationSet { get; set; }
 
 	protected override void OnStart()
 	{
@@ -26,7 +28,8 @@ public sealed class ItemSystem : Component
 		if ( slot < Items.Count )
 		{
 			marbleScript.CurrentMode = Items[slot].Mode;
-			effectDuration = Items[slot].Duration;
+			EffectDuration = Items[slot].Duration;
+			EffectDurationSet = Items[slot].Duration;
 			Items.RemoveAt( slot );
 		}
 	}
@@ -44,7 +47,7 @@ public sealed class ItemSystem : Component
 			};
 
 			Items.Add( newID );
-
+			Chomp.StartSound();
 			return true;
 		}
 
@@ -53,8 +56,9 @@ public sealed class ItemSystem : Component
 
 	protected override void OnUpdate()
 	{
-		if ( effectDuration <= 0 )
+		if ( EffectDuration <= 0 )
 		{
+			EffectDurationSet=0;
 			marbleScript.CurrentMode = MoveMode.Normal;
 			// TROLLFACEINREALLIFE: loop to avoid a long annoying else if chain, also means you can change the slot count in the inspector
 			for ( int i = 0; i < MaxItems; i++ )
@@ -67,7 +71,7 @@ public sealed class ItemSystem : Component
 		}
 		else
 		{
-			effectDuration -= Time.Delta;
+			EffectDuration -= Time.Delta;
 		}
 	}
 }

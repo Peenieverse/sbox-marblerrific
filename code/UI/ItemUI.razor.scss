@@ -44,6 +44,19 @@ ItemUI
 		align-items: flex-start;
 		z-index: 0;
 	}
+	.duration
+	{
+		position: absolute;
+
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 120px;
+		
+		justify-content: center;
+		align-items: flex-end;
+		z-index: 2;
+	}
 	.itemTable
 	{
 		position: absolute;

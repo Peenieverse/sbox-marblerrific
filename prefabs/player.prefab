@@ -36,7 +36,14 @@
           {
             "__type": "ItemSystem",
             "__guid": "505d5709-b4a2-4c05-b825-239848fc3d31",
-            "effectDuration": 0,
+            "Chomp": {
+              "_type": "component",
+              "component_id": "ca21943f-c07c-4332-aaaf-b87eb5ea5b1c",
+              "go": "15989237-6196-4acd-bb1d-bc0ccdd9b9a5",
+              "component_type": "SoundPointComponent"
+            },
+            "EffectDuration": 0,
+            "EffectDurationSet": 0,
             "Items": [],
             "MaxItems": 4
           },
@@ -115,6 +122,27 @@
             "Zrespwawn": -1000
           },
           {
+            "__type": "SoundPointComponent",
+            "__guid": "ca21943f-c07c-4332-aaaf-b87eb5ea5b1c",
+            "DistanceAttenuation": false,
+            "DistanceAttenuationOverride": false,
+            "Force2d": false,
+            "MaxRepeatTime": 1,
+            "MinRepeatTime": 1,
+            "Occlusion": false,
+            "OcclusionOverride": false,
+            "OcclusionRadius": 32,
+            "Pitch": 1,
+            "PlayOnStart": false,
+            "ReflectionOverride": false,
+            "Reflections": false,
+            "Repeat": false,
+            "SoundEvent": "sounds/player/chomp.sound",
+            "SoundOverride": false,
+            "StopOnNew": false,
+            "Volume": 1
+          },
+          {
             "__type": "ScreenPanel",
             "__guid": "08412c3d-712e-4636-b4cd-27991204bd91",
             "AutoScreenScale": true,
@@ -184,6 +212,7 @@
                 "Name": "Camera",
                 "Position": "-624.9197,-0.00003516128,671.4487",
                 "Rotation": "0.00000003099143,0.3991939,-0.000000001282434,0.9168665",
+                "Tags": "camera",
                 "Enabled": true,
                 "NetworkMode": 2,
                 "Components": [
