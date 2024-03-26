@@ -1,0 +1,109 @@
+{
+  "__guid": "ab311915-161f-429c-a904-2292f90b7837",
+  "GameObjects": [
+    {
+      "__guid": "f8ffff3b-1228-4209-b70b-f6e9ad70ffac",
+      "Name": "player",
+      "Position": "-1041.901,0,254.5668",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "__Prefab": "prefabs/player.prefab"
+    },
+    {
+      "__guid": "0884bafd-424a-4e70-bc6d-461d2812e7aa",
+      "Name": "Sun",
+      "Rotation": "-0.0729315,0.4822396,0.1305433,0.8631827",
+      "Tags": "light_directional,light",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "DirectionalLight",
+          "__guid": "9a9361bc-0995-4253-93cc-e74e136ad415",
+          "FogMode": "Enabled",
+          "FogStrength": 1,
+          "LightColor": "0.94419,0.97767,1,1",
+          "Shadows": true,
+          "SkyColor": "0.2532,0.32006,0.35349,1"
+        }
+      ]
+    },
+    {
+      "__guid": "3fc35d1a-5cc4-4122-bc3d-e30c665c452c",
+      "Name": "2D Skybox",
+      "Tags": "skybox",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "SkyBox2D",
+          "__guid": "0d3b1c1c-0688-44ff-9986-68704aacd407",
+          "SkyMaterial": "materials/skybox/light_test_sky_sunny03.vmat",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "EnvmapProbe",
+          "__guid": "30bd96f3-df3d-462c-abee-c93594645b06",
+          "Bounds": {
+            "Mins": "-512,-512,-512",
+            "Maxs": "512,512,512"
+          },
+          "Feathering": 0.02,
+          "Projection": "Sphere",
+          "Texture": "textures/cubemaps/default2.vtex",
+          "TintColor": "1,1,1,1"
+        }
+      ]
+    },
+    {
+      "__guid": "8f317e81-a611-4c71-a795-13826f747f75",
+      "Name": "Map",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "MapInstance",
+          "__guid": "fc7184a4-4a9a-4971-abc1-391caf0e6819",
+          "MapName": "maps/wormintro.vmap",
+          "UseMapFromLaunch": true
+        }
+      ],
+      "Children": []
+    },
+    {
+      "__guid": "3ed25eb2-912a-41fb-aa8a-d4c934b1accc",
+      "Name": "Object",
+      "Position": "-1041.901,0,254.5668",
+      "Tags": "respawnpoint",
+      "Enabled": true,
+      "NetworkMode": 2
+    }
+  ],
+  "SceneProperties": {
+    "FixedUpdateFrequency": 50,
+    "Lerping": true,
+    "MaxFixedUpdates": 5,
+    "NetworkFrequency": 30,
+    "ThreadedAnimation": true,
+    "TimeScale": 1,
+    "UseFixedUpdate": true,
+    "NavMesh": {
+      "Enabled": false,
+      "IncludeStaticBodies": true,
+      "IncludeKeyframedBodies": true,
+      "EditorAutoUpdate": true,
+      "AgentHeight": 64,
+      "AgentRadius": 16,
+      "AgentStepSize": 18,
+      "AgentMaxSlope": 40,
+      "ExcludedBodies": "",
+      "IncludedBodies": ""
+    }
+  },
+  "Title": "testing map stuff",
+  "Description": "",
+  "LastSaved": "2024-03-25T22:06:12.654454\u002B07:00",
+  "ResourceVersion": 1,
+  "__version": 1,
+  "__references": []
+}

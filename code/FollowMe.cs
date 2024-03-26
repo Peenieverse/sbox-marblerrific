@@ -5,8 +5,8 @@ public sealed class FollowMe : Component
 	[Property] public GameObject Target { get; set; }
 	[Property] public float Offset { get; set; }
 
-	protected override void OnFixedUpdate()
+	protected override void OnPreRender()
 	{
-		Transform.Position = Target.Transform.Position + Offset;
+		if(Target != null) Transform.Position = Target.Transform.Position + Offset;
 	}
 }

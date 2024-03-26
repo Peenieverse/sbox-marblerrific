@@ -7,256 +7,7 @@
       "Position": "160,224,96",
       "Enabled": true,
       "NetworkMode": 2,
-      "Components": [
-        {
-          "__type": "BounceAround",
-          "__guid": "13894cf3-c3e0-4451-9091-3e405867208b",
-          "BounceAmount": 14,
-          "HorizontalSpeed": 4,
-          "RotationSpeed": 50,
-          "VerticalSpeed": 3
-        },
-        {
-          "__type": "ControlsSwitch",
-          "__guid": "4fb21d22-6bcb-4c57-ba2a-5c6f0215799d",
-          "Controller": {
-            "_type": "gameobject",
-            "go": "9f46abdf-eadc-4fc3-8054-491329400434"
-          },
-          "Keyboard": {
-            "_type": "gameobject",
-            "go": "ea0fbb75-2baa-407d-adcf-8c4bf79f9b36"
-          }
-        },
-        {
-          "__type": "LookAtTag",
-          "__guid": "27d8e912-28df-44ee-af7a-68ffa0d85bc3",
-          "tag": "camera"
-        }
-      ],
-      "Children": [
-        {
-          "__guid": "ea0fbb75-2baa-407d-adcf-8c4bf79f9b36",
-          "Name": "Object",
-          "Position": "0,0,0",
-          "Rotation": "0.000000000381449,0.008726535,-0.9999619,-0.00000004370972",
-          "Enabled": true,
-          "NetworkMode": 2,
-          "Components": [
-            {
-              "__type": "TextRenderer",
-              "__guid": "a488ed72-ea23-457b-a5ec-8ab4910b2493",
-              "Color": "1,1,1,1",
-              "FontFamily": "Poppins",
-              "FontSize": 43.18,
-              "Scale": 0.69,
-              "Text": "Controls:\n               to move\n      to jump\n       to brake"
-            }
-          ],
-          "Children": [
-            {
-              "__guid": "2df4e05d-af2f-47c5-9f2a-419074043272",
-              "Name": "Plane (3)",
-              "Position": "0.000848548,67.54892,26.02888",
-              "Rotation": "-0.7071055,-0.00000003166497,0.7071055,-0.00000002997489",
-              "Scale": "0.658,1.316,0.329",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "d0a16f5e-2cc9-41c4-8403-a6bb63236835",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "icons/keyboard \u0026 mouse/dark/wasd.vmat",
-                  "Model": "models/dev/plane.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "FixTransparency",
-                  "__guid": "959e10a0-d478-4950-b57f-f3ab2188ac9e",
-                  "modelRenderer": {
-                    "_type": "component",
-                    "component_id": "d0a16f5e-2cc9-41c4-8403-a6bb63236835",
-                    "go": "2df4e05d-af2f-47c5-9f2a-419074043272",
-                    "component_type": "ModelRenderer"
-                  }
-                }
-              ]
-            },
-            {
-              "__guid": "66ab6e18-8e8e-4377-b531-24ada3912a7c",
-              "Name": "Plane (3)",
-              "Position": "0.0004825796,65.63783,-23.43592",
-              "Rotation": "-0.7071055,-0.00000003166497,0.7071055,-0.00000002997489",
-              "Scale": "0.3290388,0.3290388,0.3290388",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "1f185717-01d1-464f-85d9-8352d10efcab",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "icons/keyboard \u0026 mouse/dark/space.vmat",
-                  "Model": "models/dev/plane.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "FixTransparency",
-                  "__guid": "bc122885-09ae-4987-a32f-6f0642029e40",
-                  "modelRenderer": {
-                    "_type": "component",
-                    "component_id": "1f185717-01d1-464f-85d9-8352d10efcab",
-                    "go": "66ab6e18-8e8e-4377-b531-24ada3912a7c",
-                    "component_type": "ModelRenderer"
-                  }
-                }
-              ]
-            },
-            {
-              "__guid": "77118bb8-28d9-4670-a3d5-bde7dd0c7c6a",
-              "Name": "Plane (3)",
-              "Position": "0.0002382067,69.07167,-67.89655",
-              "Rotation": "-0.7071055,-0.00000003166497,0.7071055,-0.00000002997489",
-              "Scale": "0.3290388,0.3290388,0.3290388",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "6ba90c04-7c7b-4206-b29a-820e5f1af89b",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "icons/keyboard \u0026 mouse/dark/shift_key_dark.vmat",
-                  "Model": "models/dev/plane.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "FixTransparency",
-                  "__guid": "647cc1b2-2db2-4cf4-9455-660b2c60cc5b",
-                  "modelRenderer": {
-                    "_type": "component",
-                    "component_id": "6ba90c04-7c7b-4206-b29a-820e5f1af89b",
-                    "go": "77118bb8-28d9-4670-a3d5-bde7dd0c7c6a",
-                    "component_type": "ModelRenderer"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "__guid": "9f46abdf-eadc-4fc3-8054-491329400434",
-          "Name": "Controller",
-          "Position": "0,0,0",
-          "Rotation": "0.000000000381449,0.008726535,-0.9999619,-0.00000004370972",
-          "NetworkMode": 2,
-          "Components": [
-            {
-              "__type": "TextRenderer",
-              "__guid": "8ef2f618-1bbd-4331-8a16-959ad83a170b",
-              "Color": "1,1,1,1",
-              "FontFamily": "Poppins",
-              "FontSize": 43.18,
-              "Scale": 0.69,
-              "Text": "Controls:\n        to move\n        to jump\n        to brake"
-            }
-          ],
-          "Children": [
-            {
-              "__guid": "af1bddc5-efd0-4778-9672-ebbb596e47ca",
-              "Name": "Plane",
-              "Position": "0.0008637955,67.70531,24.46641",
-              "Rotation": "-0.7071055,-0.00000003166497,0.7071055,-0.00000002997489",
-              "Scale": "0.3290388,0.3290388,0.3290388",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "cbd81979-c0f5-463a-b105-f8596228d594",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "icons/xbox series/left stick.vmat",
-                  "Model": "models/dev/plane.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "FixTransparency",
-                  "__guid": "123bb675-d10a-4c6a-bab1-1e8bfe93e3aa",
-                  "modelRenderer": {
-                    "_type": "component",
-                    "component_id": "cbd81979-c0f5-463a-b105-f8596228d594",
-                    "go": "af1bddc5-efd0-4778-9672-ebbb596e47ca",
-                    "component_type": "ModelRenderer"
-                  }
-                }
-              ]
-            },
-            {
-              "__guid": "469c00b2-d596-45ab-a1d5-f4e2b659f50c",
-              "Name": "Plane (1)",
-              "Position": "0.0004825796,65.63783,-23.43592",
-              "Rotation": "-0.7071055,-0.00000003166497,0.7071055,-0.00000002997489",
-              "Scale": "0.3290388,0.3290388,0.3290388",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "e91f9e3a-6b6c-4bdf-9301-0570a0709260",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "icons/xbox series/abutton.vmat",
-                  "Model": "models/dev/plane.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "FixTransparency",
-                  "__guid": "77b6bce0-9d0f-4a9e-8b08-79adbe982550",
-                  "modelRenderer": {
-                    "_type": "component",
-                    "component_id": "e91f9e3a-6b6c-4bdf-9301-0570a0709260",
-                    "go": "469c00b2-d596-45ab-a1d5-f4e2b659f50c",
-                    "component_type": "ModelRenderer"
-                  }
-                }
-              ]
-            },
-            {
-              "__guid": "1a020022-0f91-4e33-812c-fd54804e9764",
-              "Name": "Plane (2)",
-              "Position": "0.0002382067,69.07167,-67.89655",
-              "Rotation": "-0.7071055,-0.00000003166497,0.7071055,-0.00000002997489",
-              "Scale": "0.3290388,0.3290388,0.3290388",
-              "Enabled": true,
-              "NetworkMode": 2,
-              "Components": [
-                {
-                  "__type": "ModelRenderer",
-                  "__guid": "36410fb3-078d-4a4b-a601-8b52d4fb2da0",
-                  "BodyGroups": 18446744073709551615,
-                  "MaterialOverride": "icons/xbox series/xboxseriesx_left_stick_click.vmat",
-                  "Model": "models/dev/plane.vmdl",
-                  "RenderType": "On",
-                  "Tint": "1,1,1,1"
-                },
-                {
-                  "__type": "FixTransparency",
-                  "__guid": "16b96f63-2088-4f5b-9e06-f142679163aa",
-                  "modelRenderer": {
-                    "_type": "component",
-                    "component_id": "36410fb3-078d-4a4b-a601-8b52d4fb2da0",
-                    "go": "1a020022-0f91-4e33-812c-fd54804e9764",
-                    "component_type": "ModelRenderer"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
+      "__Prefab": "prefabs/controls.prefab"
     },
     {
       "__guid": "bfc59c12-1ed2-4f91-8956-a95a315eac3c",
@@ -506,7 +257,6 @@
     {
       "__guid": "44816772-3c5e-430f-b617-7157073e24e7",
       "Name": "player",
-      "Position": "0,0,46",
       "Enabled": true,
       "NetworkMode": 2,
       "__Prefab": "prefabs/player.prefab"
@@ -796,6 +546,133 @@
           "__Prefab": "prefabs/bee.prefab"
         }
       ]
+    },
+    {
+      "__guid": "de78aa7a-fa9a-4f88-bb23-dcd50dbff05b",
+      "Name": "Cube",
+      "Position": "0,-996.254,-6.893549",
+      "Scale": "5,5,0.2",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__guid": "1cf54b30-e371-4b67-95b4-b1bf43588670",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "MovingPlatform",
+          "__guid": "fd47fc4e-49bd-4a7a-9930-74545be2ce07",
+          "Reverse": false,
+          "Speed": 0.3
+        },
+        {
+          "__type": "BoxCollider",
+          "__guid": "b72e0914-a898-4e1e-a4a5-f5df4a5a2c96",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "d7fbd8a1-3f64-498c-93e5-b6baea542174",
+          "Name": "Point",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2
+        },
+        {
+          "__guid": "110b02b5-17bb-4a6e-8557-145ee47b02fe",
+          "Name": "Point",
+          "Position": "0,-173.323,0",
+          "Enabled": true,
+          "NetworkMode": 2
+        },
+        {
+          "__guid": "9d5294af-c243-4773-afd9-7f427d1739e3",
+          "Name": "Point",
+          "Position": "-81.7207,-173.323,0",
+          "Enabled": true,
+          "NetworkMode": 2
+        },
+        {
+          "__guid": "36c97053-740f-4c08-bcea-7d0ce4c0e91d",
+          "Name": "Point",
+          "Position": "-81.7207,-173.323,2334.948",
+          "Enabled": true,
+          "NetworkMode": 2
+        },
+        {
+          "__guid": "c209258f-e16e-4516-9324-e5db38bdb77e",
+          "Name": "Point (1)",
+          "Position": "-139.5703,0,0",
+          "Scale": "0.2,0.2,5",
+          "Enabled": true,
+          "NetworkMode": 2
+        }
+      ]
+    },
+    {
+      "__guid": "449fc67d-d6c4-4db4-bac0-a5a2c9fe03a9",
+      "Name": "Cube (1)",
+      "Position": "-819.7991,-996.254,-252.0879",
+      "Scale": "5,5,0.2",
+      "Enabled": true,
+      "NetworkMode": 2,
+      "Components": [
+        {
+          "__type": "ModelRenderer",
+          "__guid": "7b694c1c-b974-4280-ba75-d197a33f71a8",
+          "BodyGroups": 18446744073709551615,
+          "Model": "models/dev/box.vmdl",
+          "RenderType": "On",
+          "Tint": "1,1,1,1"
+        },
+        {
+          "__type": "MovingPlatform",
+          "__guid": "36bd4c6c-ba4b-4e28-a5dd-9fc2222330df",
+          "Reverse": false,
+          "Speed": 0.3
+        },
+        {
+          "__type": "BoxCollider",
+          "__guid": "6bcc49bd-40d0-43ea-8693-1125ce892f65",
+          "Center": "0,0,0",
+          "IsTrigger": false,
+          "Scale": "50,50,50",
+          "Static": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "aac3fe23-346e-4fc5-b0f5-e62b5b31b003",
+          "Name": "Point",
+          "Position": "0,0,0",
+          "Enabled": true,
+          "NetworkMode": 2
+        },
+        {
+          "__guid": "1fbff536-b4b9-4728-88b1-f16547040ac9",
+          "Name": "Point (1)",
+          "Position": "0,0,4000",
+          "Scale": "0.2,0.2,5",
+          "Enabled": true,
+          "NetworkMode": 2
+        }
+      ]
+    },
+    {
+      "__guid": "4f3555e9-4942-471c-abe7-0a293f4539d6",
+      "Name": "Object",
+      "Position": "0,0,381.1325",
+      "Tags": "respawnpoint",
+      "Enabled": true,
+      "NetworkMode": 2
     }
   ],
   "SceneProperties": {
@@ -821,7 +698,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-03-25T18:27:48.1629543\u002B07:00",
+  "LastSaved": "2024-03-26T21:15:29.8325647\u002B07:00",
   "ResourceVersion": 1,
   "__version": 1,
   "__references": []

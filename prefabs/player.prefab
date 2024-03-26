@@ -114,12 +114,11 @@
               "go": "15989237-6196-4acd-bb1d-bc0ccdd9b9a5",
               "component_type": "Rigidbody"
             },
-            "RespawnPoint": "0,0,50",
             "SpeedMarkiplier": 1.2,
             "wormMode": 0,
             "WormSpeed": 100,
             "WormSpeedLerp": 10,
-            "Zrespwawn": -1000
+            "Zrespwawn": -5000
           },
           {
             "__type": "SoundPointComponent",

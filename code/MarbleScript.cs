@@ -17,7 +17,6 @@ public sealed class MarbleScript : Component
 	[Category( "Component & Object References" ), Property] private GameObject Camera { get; set; }
 	[Category( "Component & Object References" ), Property] private GameObject ActualCamera { get; set; }
 	[Category( "Component & Object References" ), Property] private Rigidbody rb { get; set; }
-	[Category( "Component & Object References" ), Property] public Vector3 RespawnPoint { get; set; }
 
 	[Category( "Movement Stats Normal" ), Property] private float Acceleration { get; set; }
 	[Category( "Movement Stats Normal" ), Property] private float BrakeAcceleration { get; set; }
@@ -41,13 +40,7 @@ public sealed class MarbleScript : Component
 
 	[Property] public float wormMode { get; set; }
 
-	bool IsOnGround
-	{
-		get
-		{
-			return Scene.Trace.Ray( ForwardAxis.Transform.Position, ForwardAxis.Transform.Position + (Vector3.Down * rayDis) ).IgnoreGameObject( GameObject ).Radius( RaySize ).Run().Hit;
-		}
-	}
+	bool IsOnGround;
 
 	float xRotation = 0f;
 	float yRotation = 0f;
@@ -57,9 +50,10 @@ public sealed class MarbleScript : Component
 	float startFov;
 	Vector3 wormVel;
 	Vector3 grav;
-
+	FollowMe followMe;
 	protected override void OnAwake()
 	{
+		followMe = GameObject.Parent.Components.Get<FollowMe>();
 		grav = Scene.PhysicsWorld.Gravity;
 		CameraComponent.GameObject.Parent.SetParent( null );
 		startFov = CameraComponent.FieldOfView;
@@ -77,11 +71,12 @@ public sealed class MarbleScript : Component
 
 		cameraPosStart = ActualCamera.Transform.LocalPosition;
 		CamRayDis = Vector3.DistanceBetween( ActualCamera.Transform.Position, Camera.Transform.Position );
+		Respawn();
 	}
 
-	public void Respawn( )
+	public void Respawn()
 	{
-		Transform.Position = RespawnPoint;
+		Transform.Position = respawnPoint.Transform.Position;
 		rb.Velocity = Vector3.Zero;
 	}
 
@@ -89,7 +84,7 @@ public sealed class MarbleScript : Component
 	{
 		rb.ApplyForce( forceMultForBetterConfig * Vector3.Up * JumpForce * mult);
 	}
-
+	
 	void CameraControl()
 	{
 		Vector3 dir = (ActualCamera.Transform.Position - Camera.Transform.Position).Normal;
@@ -134,12 +129,24 @@ public sealed class MarbleScript : Component
 			if ( Input.Down( "Run" ) ) rb.ApplyForce( forceMultForBetterConfig * -velocityExludingZ * BrakeAcceleration * Time.Delta );
 		}
 	}
-
-	protected override void OnUpdate()
+	GameObject lastGroundOBJ;
+	protected override void OnPreRender()
 	{
 		CameraControl();
+		
+		var sTR = Scene.Trace.Ray( ForwardAxis.Transform.Position, ForwardAxis.Transform.Position + (Vector3.Down * rayDis) ).IgnoreGameObject( GameObject ).Radius( RaySize ).Run();
+		IsOnGround = sTR.Hit;
 
-		// TROLLFACEINREALLIFE: Setting the Vector Directions and Forward Axis 
+		if(lastGroundOBJ != sTR.GameObject)
+		{
+			Vector3 scale = GameObject.Parent.Transform.Scale;
+			Vector3 pos = GameObject.Parent.Transform.Position;
+			Rotation rot = GameObject.Parent.Transform.Rotation;
+			GameObject.Parent.SetParent(sTR.GameObject);
+			GameObject.Parent.Transform.Position = pos;
+			GameObject.Parent.Transform.Rotation = rot;
+		}
+		
 		Vector3 cameraForwardFlat = Camera.Transform.World.Forward.WithZ( 0 );
 		Angles newRotation = Rotation.LookAt( cameraForwardFlat );
 		ForwardAxis.Transform.Rotation = newRotation;
@@ -183,5 +190,6 @@ public sealed class MarbleScript : Component
 
 			NormalMovement( cameraForwardFlat);
 		}
+		lastGroundOBJ = sTR.GameObject;
 	}
 }
