@@ -1,0 +1,36 @@
+@using Sandbox;
+@namespace Marblerrific.UI
+@inherits PanelComponent
+
+<root>
+    <div class="center">
+        <div class="left">
+            <div class="title">
+                Marblerrific
+            </div>
+
+            <div class="button-list">
+                <div class="button" onclick=@( () => BeginTheGame() )>
+                    Begin the Game
+                </div>
+
+                <div class="button" onclick=@( () => Quit() )>
+                    Quit
+                </div>
+            </div>
+        </div>
+    </div>
+</root>
+
+@code 
+{
+    private void BeginTheGame()
+    {
+        Game.ActiveScene.LoadFromFile("scenes/minimal.scene");
+    }
+
+    private void Quit()
+    {
+        Game.Close();
+    }
+}
