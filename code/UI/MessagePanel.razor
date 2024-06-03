@@ -1,0 +1,24 @@
+@using Sandbox;
+@using Sandbox.UI;
+@inherits PanelComponent
+@using Marblerrific;
+
+<root>
+	<div class="title"></div>
+</root>
+
+@code
+{
+
+	[Property] public List<Chat> Chats {get;set;}
+	[Property] public float MessageOffset {get;set;}
+	[Property] public float MessageSpeed {get;set;}
+	private float messageOffsetCurrent;
+
+	protected override void OnUpdate()
+	{
+
+	} 
+	//protected override int BuildHash() => System.HashCode.Combine( );
+}
+

@@ -1,19 +1,23 @@
 {
   "RootObject": {
     "__guid": "843f742b-3555-4509-b756-4a6e40e7ddec",
+    "Flags": 0,
     "Name": "player",
     "Enabled": true,
     "NetworkMode": 2,
+    "NetworkInterpolation": true,
     "Children": [
       {
         "__guid": "15989237-6196-4acd-bb1d-bc0ccdd9b9a5",
+        "Flags": 0,
         "Name": "Marble",
         "Tags": "player",
         "Enabled": true,
         "NetworkMode": 2,
+        "NetworkInterpolation": true,
         "Components": [
           {
-            "__type": "SphereCollider",
+            "__type": "Sandbox.SphereCollider",
             "__guid": "e2c7e1b0-9cea-4910-aeb7-e56f05b961b7",
             "Center": "0,0,0",
             "IsTrigger": false,
@@ -22,7 +26,7 @@
             "Surface": "surfaces/glass.surface"
           },
           {
-            "__type": "Rigidbody",
+            "__type": "Sandbox.Rigidbody",
             "__guid": "dc542eeb-d10e-4a68-a0bf-94e6799f2974",
             "AngularDamping": 0,
             "Gravity": true,
@@ -34,7 +38,7 @@
             "StartAsleep": false
           },
           {
-            "__type": "ItemSystem",
+            "__type": "Marblerrific.ItemSystem",
             "__guid": "505d5709-b4a2-4c05-b825-239848fc3d31",
             "Chomp": {
               "_type": "component",
@@ -74,7 +78,7 @@
             ]
           },
           {
-            "__type": "MarbleScript",
+            "__type": "Marblerrific.MarbleScript",
             "__guid": "b4fd3ba9-ab85-4be9-8aa9-b92ce8c41159",
             "Acceleration": 100,
             "ActualCamera": {
@@ -121,7 +125,7 @@
             "Zrespwawn": -5000
           },
           {
-            "__type": "SoundPointComponent",
+            "__type": "Sandbox.SoundPointComponent",
             "__guid": "ca21943f-c07c-4332-aaaf-b87eb5ea5b1c",
             "DistanceAttenuation": false,
             "DistanceAttenuationOverride": false,
@@ -139,10 +143,14 @@
             "SoundEvent": "sounds/player/chomp.sound",
             "SoundOverride": false,
             "StopOnNew": false,
+            "TargetMixer": {
+              "Name": "unknown",
+              "Id": "00000000-0000-0000-0000-000000000000"
+            },
             "Volume": 1
           },
           {
-            "__type": "ScreenPanel",
+            "__type": "Sandbox.ScreenPanel",
             "__guid": "08412c3d-712e-4636-b4cd-27991204bd91",
             "AutoScreenScale": true,
             "Opacity": 1,
@@ -150,7 +158,7 @@
             "ZIndex": 100
           },
           {
-            "__type": "ItemUI",
+            "__type": "Marblerrific.UI.ItemUI",
             "__guid": "eaf1bf3c-6ac6-4bd9-94fa-25bd60020f4c",
             "ItemSystem": {
               "_type": "component",
@@ -191,32 +199,49 @@
               "go": "15989237-6196-4acd-bb1d-bc0ccdd9b9a5",
               "component_type": "UiInputImages"
             }
+          },
+          {
+            "__type": "Marblerrific.Message",
+            "__guid": "9d4fdfb4-f2d7-4af6-90f5-51bad5529bba"
+          },
+          {
+            "__type": "MessagePanel",
+            "__guid": "65216a8e-39a3-440d-8aab-6278aebf1ae8",
+            "Chats": [],
+            "MessageOffset": 0,
+            "MessageSpeed": 0
           }
         ],
         "Children": [
           {
             "__guid": "40b885e6-aafa-4312-86ef-7e588c2e983a",
+            "Flags": 0,
             "Name": "upAxis",
             "Enabled": true,
-            "NetworkMode": 2
+            "NetworkMode": 2,
+            "NetworkInterpolation": true
           },
           {
             "__guid": "3385be84-2dc3-4454-8165-3fadbd82931c",
+            "Flags": 0,
             "Name": "CameraRotate",
             "Enabled": true,
             "NetworkMode": 2,
+            "NetworkInterpolation": true,
             "Children": [
               {
                 "__guid": "7ca6661e-2b84-4a2c-aa38-0582e24794f5",
+                "Flags": 0,
                 "Name": "Camera",
                 "Position": "-624.9197,-0.00003516128,671.4487",
                 "Rotation": "0.00000003099143,0.3991939,-0.000000001282434,0.9168665",
                 "Tags": "camera",
                 "Enabled": true,
                 "NetworkMode": 2,
+                "NetworkInterpolation": true,
                 "Components": [
                   {
-                    "__type": "CameraComponent",
+                    "__type": "Sandbox.CameraComponent",
                     "__guid": "b4056d6b-04c8-4941-a460-55f1506f59b5",
                     "BackgroundColor": "0.33333,0.46275,0.52157,1",
                     "ClearFlags": "All",
@@ -233,7 +258,7 @@
                     "ZNear": 1
                   },
                   {
-                    "__type": "Bloom",
+                    "__type": "Sandbox.Bloom",
                     "__guid": "3ff59451-1e37-4127-bbde-197827e247cf",
                     "BloomColor": {
                       "color": [
@@ -262,15 +287,19 @@
                     "ThresholdWidth": 0.5
                   },
                   {
-                    "__type": "Tonemapping",
+                    "__type": "Sandbox.Tonemapping",
                     "__guid": "e2398a93-bdc0-4768-ae81-a307f1626705",
+                    "__version": 1,
+                    "ExposureBias": 2,
                     "ExposureCompensation": 0,
+                    "ExposureMethod": "RGB",
                     "MaximumExposure": 2,
                     "MinimumExposure": 1,
+                    "Mode": "Legacy",
                     "Rate": 1
                   },
                   {
-                    "__type": "Sharpen",
+                    "__type": "Sandbox.Sharpen",
                     "__guid": "62ca4380-3270-4004-bb3a-4ebdd28f3514",
                     "Scale": 0.2
                   }
@@ -280,12 +309,14 @@
           },
           {
             "__guid": "ad5bca84-9403-4c17-833c-390610880614",
+            "Flags": 0,
             "Name": "TerryMarble",
             "Enabled": true,
             "NetworkMode": 2,
+            "NetworkInterpolation": true,
             "Components": [
               {
-                "__type": "ModelRenderer",
+                "__type": "Sandbox.ModelRenderer",
                 "__guid": "56ed1f40-a444-4476-bcec-8a7f22aa7caa",
                 "BodyGroups": 18446744073709551615,
                 "Model": "models/terrymarble/terrymarble.vmdl",
@@ -298,13 +329,15 @@
       },
       {
         "__guid": "96bcfafd-5fb4-4b22-aadc-881affa03c4f",
+        "Flags": 0,
         "Name": "FakeShadow",
         "Rotation": "0,0.7071067,0,0.7071068",
         "Enabled": true,
         "NetworkMode": 2,
+        "NetworkInterpolation": true,
         "Components": [
           {
-            "__type": "DecalRenderer",
+            "__type": "Sandbox.DecalRenderer",
             "__guid": "1e55557f-7bd9-48f3-9c88-dc277402e36a",
             "CutoffAngle": 80,
             "CutoffAngleSoftness": 16.97,
@@ -315,7 +348,7 @@
             "TriPlanar": false
           },
           {
-            "__type": "FollowMe",
+            "__type": "Marblerrific.FollowMe",
             "__guid": "b57b845a-6ab1-4d35-8e74-0bb55739d6f9",
             "Offset": 0,
             "Target": {
@@ -331,6 +364,6 @@
   "MenuPath": null,
   "MenuIcon": null,
   "ResourceVersion": 1,
-  "__version": 1,
-  "__references": []
+  "__references": [],
+  "__version": 1
 }
