@@ -3,23 +3,33 @@ namespace Marblerrific;
 
 public sealed class Message : Component
 {
-	protected override void OnUpdate()
+	private MessagePanel messagePanel;
+	protected override void OnStart()
 	{
-
+		messagePanel = Components.GetOrCreate<MessagePanel>();
+	}
+	public void SendMessage(string chatDataName)
+	{
+		ChatData chatData = ResourceLibrary.Get<ChatData>($"phone resources/{chatDataName}.chdata");
+		foreach(Chat c in chatData.Chats)
+		{
+			messagePanel.Chats.Add(c);
+		}
 	}
 }
-[GameResource("Chat", "ChatData", "Chat data.", Icon = "Chat")]
+[GameResource("Chat", "chdata", "Chat data.", Icon = "Chat")]
 public sealed class ChatData : GameResource
 {
 	[Property] public List<Chat> Chats {get; set;}
 }
 public class Chat
 {
+	[Property] public float Delay {get; set;}
 	[Property] public string CharacterName {get; set;}
 	[Property] public string Message {get; set;}
 }
 
-[GameResource("Characters", "CharactersData", "Chracter data", Icon = "Person")]
+[GameResource("Characters", "chrdata", "Chracter data", Icon = "Person")]
 public sealed class Characters : GameResource
 {
 	public Character findCharacter(string Name)

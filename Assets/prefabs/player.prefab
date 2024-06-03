@@ -207,9 +207,12 @@
           {
             "__type": "MessagePanel",
             "__guid": "65216a8e-39a3-440d-8aab-6278aebf1ae8",
+            "messageOffsetCurrent": 0,
             "Chats": [],
-            "MessageOffset": 0,
-            "MessageSpeed": 0
+            "CurrentChat": {},
+            "MessageOffset": 10,
+            "MessageSpeed": 2,
+            "MessageTime": 3
           }
         ],
         "Children": [

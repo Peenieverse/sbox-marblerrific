@@ -1,5 +1,5 @@
 {
-  "__guid": "9f762741-f059-4dfb-8748-33fe98520fb1",
+  "__guid": "d78a71e8-671a-4605-9316-1554f2f7d9a1",
   "GameObjects": [
     {
       "__guid": "71e30882-b841-4fd7-a378-4a3b393b9736",
@@ -799,10 +799,52 @@
       "__guid": "b3e347e3-c24e-4934-a333-1095356eab8a",
       "Flags": 0,
       "Name": "Message",
-      "Position": "177.273,476.4879,-0.00004136359",
+      "Position": "97.7942,401.2344,54.346",
       "Enabled": true,
       "NetworkMode": 2,
-      "NetworkInterpolation": true
+      "NetworkInterpolation": true,
+      "Components": [
+        {
+          "__type": "Marblerrific.MessageSender",
+          "__guid": "3b95eceb-a9a7-434c-9935-35f23d1bf753",
+          "ChatName": "test",
+          "DeleteAfter": true
+        },
+        {
+          "__type": "Sandbox.BoxCollider",
+          "__guid": "e781710b-6fa7-47d0-8023-b401606f97c9",
+          "Center": "0,0,0",
+          "IsTrigger": true,
+          "Scale": "100,100,100",
+          "Static": false
+        }
+      ],
+      "Children": [
+        {
+          "__guid": "f296efd1-78a2-4433-b33a-05f63adba42d",
+          "Flags": 0,
+          "Name": "Object",
+          "Position": "0,0,0",
+          "Rotation": "0,0,0.7071068,0.7071068",
+          "Enabled": true,
+          "NetworkMode": 2,
+          "NetworkInterpolation": true,
+          "Components": [
+            {
+              "__type": "Sandbox.TextRenderer",
+              "__guid": "6ee68759-8601-480d-80b8-94c7f4500268",
+              "Color": "1,1,1,1",
+              "FontFamily": "Poppins",
+              "FontSize": 15.7,
+              "FontWeight": 514,
+              "Scale": 0.66,
+              "Text": "Test Message\nHere",
+              "Text2": "Hello! \u2764",
+              "TextAlignment": "Center"
+            }
+          ]
+        }
+      ]
     }
   ],
   "SceneProperties": {
@@ -828,7 +870,7 @@
   },
   "Title": "minimal",
   "Description": "",
-  "LastSaved": "2024-06-03T18:59:54.8136449\u002B07:00",
+  "LastSaved": "2024-06-03T20:40:00.8134287\u002B07:00",
   "ResourceVersion": 1,
   "__references": [],
   "__version": 1

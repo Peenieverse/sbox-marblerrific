@@ -4,21 +4,56 @@
 @using Marblerrific;
 
 <root>
-	<div class="title"></div>
+	<div class="Message"; style=@($"top: {messageOffsetCurrent-MessageOffset}%;")>
+		<Image Texture=@(characters.findCharacter(CurrentChat.CharacterName).Image) class="MessageImage"></Image>
+		<div style="flex-direction: column;">
+			<div class="MessageName">@(characters.findCharacter(CurrentChat.CharacterName).Name)</div>
+			<div class="MessageBody">@(CurrentChat.Message)</div>
+		</div>
+		
+	</div>
 </root>
 
 @code
 {
 
+	[Property] public Chat CurrentChat {get;set;}
 	[Property] public List<Chat> Chats {get;set;}
+	[Property] public float MessageTime {get;set;}
 	[Property] public float MessageOffset {get;set;}
 	[Property] public float MessageSpeed {get;set;}
-	private float messageOffsetCurrent;
 
+	private Characters characters;
+	[Property] private float messageOffsetCurrent;
+	bool BuildTheHash;
+	
+	protected override void OnStart()
+	{
+		characters = ResourceLibrary.Get<Characters>("phone resources/characters.chrdata");
+	}
+	float messageTimeCurrent;
 	protected override void OnUpdate()
 	{
-
+		
+		if(messageOffsetCurrent <= 0.1f )
+		{
+			messageTimeCurrent = 0;
+			if(Chats.Count > 0) 
+			{
+				CurrentChat = Chats[0];
+				Chats.RemoveAt(0);
+				
+			}
+			else CurrentChat = null;
+		}
+		if(CurrentChat != null)
+		{
+			
+			BuildTheHash = !BuildTheHash;
+			messageTimeCurrent+=Time.Delta;
+			messageOffsetCurrent = MathX.Lerp(messageOffsetCurrent, messageTimeCurrent < MessageTime ? MessageOffset : 0f, Time.Delta * MessageSpeed);
+		}
 	} 
-	//protected override int BuildHash() => System.HashCode.Combine( );
+	protected override int BuildHash() => System.HashCode.Combine(BuildTheHash,messageOffsetCurrent, CurrentChat, characters,MessageOffset);
 }
 

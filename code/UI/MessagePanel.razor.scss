@@ -5,7 +5,7 @@ MessagePanel
 	left: 0;
 	right: 0;
 	bottom: 0;
-	background-color: #444;
+
 	justify-content: center;
 	align-items: center;
 	font-weight: bold;
@@ -16,5 +16,39 @@ MessagePanel
 		font-size: 25px;
 		font-family: Poppins;
 		color: #fff;
+	}
+	.Message
+	{
+		position: absolute;
+
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		width: 25%;
+		height: 10%;
+		border-radius: 5%;
+
+		justify-content: flex-start;
+		align-items: flex-start;
+		background-color: #fff;
+
+		z-index: 1;
+	}
+	.MessageImage
+	{
+		height: 90%;
+		width: 20%;
+		border-radius: 50%;
+	}
+	.MessageName
+	{
+		font-size: 20%;
+		font-style: bold;
+	}
+	.MessageBody
+	{
+		font-size: 15%;
+
 	}
 }
