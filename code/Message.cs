@@ -16,6 +16,10 @@ public sealed class Message : Component
 			messagePanel.Chats.Add(c);
 		}
 	}
+	protected override async void OnUpdate()
+	{
+
+	}
 }
 [GameResource("Chat", "chdata", "Chat data.", Icon = "Chat")]
 public sealed class ChatData : GameResource

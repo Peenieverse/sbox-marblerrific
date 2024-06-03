@@ -30,30 +30,39 @@
 	protected override void OnStart()
 	{
 		characters = ResourceLibrary.Get<Characters>("phone resources/characters.chrdata");
+		selecting = true;
 	}
 	float messageTimeCurrent;
+	bool selecting;
+	async void select()
+	{
+		await Task.DelaySeconds(Chats[0].Delay);
+		CurrentChat = Chats[0];
+		Chats.RemoveAt(0);
+	}
 	protected override void OnUpdate()
 	{
 		
-		if(messageOffsetCurrent <= 0.1f )
+		if(selecting)
 		{
 			messageTimeCurrent = 0;
 			if(Chats.Count > 0) 
 			{
-				CurrentChat = Chats[0];
-				Chats.RemoveAt(0);
-				
+				CurrentChat = null;
+				selecting = false;
+				select();
 			}
 			else CurrentChat = null;
 		}
-		if(CurrentChat != null)
+		else if (CurrentChat != null)
 		{
-			
 			BuildTheHash = !BuildTheHash;
 			messageTimeCurrent+=Time.Delta;
-			messageOffsetCurrent = MathX.Lerp(messageOffsetCurrent, messageTimeCurrent < MessageTime ? MessageOffset : 0f, Time.Delta * MessageSpeed);
+			messageOffsetCurrent = MathX.Lerp(messageOffsetCurrent, messageTimeCurrent < MessageTime ? MessageOffset : -0.5f, Time.Delta * MessageSpeed);
+			if(messageOffsetCurrent <= 0) selecting =true;
 		}
 	} 
+
 	protected override int BuildHash() => System.HashCode.Combine(BuildTheHash,messageOffsetCurrent, CurrentChat, characters,MessageOffset);
 }
 

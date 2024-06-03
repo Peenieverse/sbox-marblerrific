@@ -1,5 +1,16 @@
 {
-  "Chats": null,
+  "Chats": [
+    {
+      "Delay": 1,
+      "CharacterName": "Massive Cock Marble",
+      "Message": "You are a cunt."
+    },
+    {
+      "Delay": 1,
+      "CharacterName": "Massive Cock Marble",
+      "Message": "I fucking hate you."
+    }
+  ],
   "__references": [],
   "__version": 0
 }
