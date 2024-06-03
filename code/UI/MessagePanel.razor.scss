@@ -5,11 +5,11 @@ MessagePanel
 	left: 0;
 	right: 0;
 	bottom: 0;
-
-	justify-content: center;
-	align-items: center;
+	background-color: #fff0;
 	font-weight: bold;
-	border-radius: 20px;
+	
+	padding: 20px;
+	margin:0%;
 
 	.title
 	{
@@ -17,14 +17,37 @@ MessagePanel
 		font-family: Poppins;
 		color: #fff;
 	}
+	.BottomMiddle
+	{
+		position: absolute;
+		justify-content: center;
+		align-items: center;
+
+		z-index: 1;
+	}
+	.killme
+	{
+		position: absolute;
+
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		justify-content: center;
+		align-items: flex-end;
+
+		z-index: 1;
+	}
+
 	.Message
 	{
 		position: absolute;
 
 		top: 0;
-		left: 10px;
+		left: -300px;
 		right: 0;
-		bottom: 0;
+		bottom: 50;
 		width: 600px;
 		height: 100px;
 		border-radius: 20px;

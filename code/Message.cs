@@ -55,4 +55,6 @@ public class Character
 {
 	[Property] public string Name {get; set;}
 	[Property] public Texture Image {get; set;}
+	[Property] public SoundEvent TalkingSound {get; set;}
+	[Property] public float BlabSpeed {get; set;} = 0.5f;
 }

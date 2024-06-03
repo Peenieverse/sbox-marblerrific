@@ -75,9 +75,7 @@ PS
 	
 	SamplerState g_sSampler0 < Filter( BILINEAR ); AddressU( WRAP ); AddressV( WRAP ); >;
 	CreateInputTexture2D( Color, Srgb, 8, "None", "_color", "Color,0/,0/0", Default4( 1.00, 1.00, 1.00, 1.00 ) );
-	CreateInputTexture2D( Translucency, Linear, 8, "None", "_trans", "Translucent,1/,0/0", Default4( 1.00, 1.00, 1.00, 1.00 ) );
 	Texture2D g_tColor < Channel( RGBA, Box( Color ), Srgb ); OutputFormat( BC7 ); SrgbRead( True ); >;
-	Texture2D g_tTranslucency < Channel( RGBA, Box( Translucency ), Linear ); OutputFormat( BC7 ); SrgbRead( False ); >;
 	float2 g_vTexCoordScale < UiGroup( "Texture Coordinates,5/,0/0" ); Default2( 1,1 ); Range2( 0,0, 1,1 ); >;
 	float2 g_vTexCoordOffset < UiGroup( "Texture Coordinates,5/,0/0" ); Default2( 1,1 ); Range2( 0,0, 1,1 ); >;
 	bool g_bSolidColor < Attribute( "SolidColor" ); >;
@@ -103,11 +101,10 @@ PS
 		float2 l_4 = TileAndOffsetUv( l_1, l_2, l_3 );
 		float4 l_5 = Tex2DS( g_tColor, g_sSampler0, l_4 );
 		float4 l_6 = g_bSolidColor ? float4( l_0, 0 ) : l_5;
-		float4 l_7 = Tex2DS( g_tTranslucency, g_sSampler0, l_4 );
-		float4 l_8 = g_bAlphafromColour ? float4( l_5.a, l_5.a, l_5.a, l_5.a ) : l_7;
+		float4 l_7 = g_bAlphafromColour ? float4( l_5.a, l_5.a, l_5.a, l_5.a ) : l_5;
 		
 		m.Albedo = l_6.xyz;
-		m.Opacity = l_8.x;
+		m.Opacity = l_7.x;
 		m.Roughness = 1;
 		m.Metalness = 0;
 		m.AmbientOcclusion = 1;

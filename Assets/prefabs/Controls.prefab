@@ -1,13 +1,14 @@
 {
   "RootObject": {
     "__guid": "3b028326-345e-40fc-8fac-42445dd7d293",
-    "Name": "Controls",
-    "Position": "160,224,96",
+    "Flags": 0,
+    "Name": "controls",
     "Enabled": true,
     "NetworkMode": 2,
+    "NetworkInterpolation": true,
     "Components": [
       {
-        "__type": "BounceAround",
+        "__type": "Marblerrific.BounceAround",
         "__guid": "13894cf3-c3e0-4451-9091-3e405867208b",
         "BounceAmount": 14,
         "HorizontalSpeed": 4,
@@ -35,37 +36,43 @@
     "Children": [
       {
         "__guid": "ea0fbb75-2baa-407d-adcf-8c4bf79f9b36",
+        "Flags": 0,
         "Name": "Object",
-        "Position": "0,0,0",
         "Rotation": "0.000000000381449,0.008726535,-0.9999619,-0.00000004370972",
         "Enabled": true,
         "NetworkMode": 2,
+        "NetworkInterpolation": true,
         "Components": [
           {
-            "__type": "TextRenderer",
+            "__type": "Sandbox.TextRenderer",
             "__guid": "a488ed72-ea23-457b-a5ec-8ab4910b2493",
             "Color": "1,1,1,1",
             "FontFamily": "Poppins",
             "FontSize": 43.18,
+            "FontWeight": 800,
             "Scale": 0.69,
-            "Text": "Controls:\n               to move\n      to jump\n       to brake"
+            "Text": "Controls:\n               to move\n      to jump\n       to brake",
+            "Text2": "Hello! \u2764",
+            "TextAlignment": "Center"
           }
         ],
         "Children": [
           {
             "__guid": "2df4e05d-af2f-47c5-9f2a-419074043272",
+            "Flags": 0,
             "Name": "Plane (3)",
             "Position": "0.000848548,67.54892,26.02888",
             "Rotation": "-0.7071055,-0.00000003166497,0.7071055,-0.00000002997489",
             "Scale": "0.658,1.316,0.329",
             "Enabled": true,
             "NetworkMode": 2,
+            "NetworkInterpolation": true,
             "Components": [
               {
-                "__type": "ModelRenderer",
+                "__type": "Sandbox.ModelRenderer",
                 "__guid": "d0a16f5e-2cc9-41c4-8403-a6bb63236835",
                 "BodyGroups": 18446744073709551615,
-                "MaterialOverride": "icons/keyboard \u0026 mouse/dark/wasd.vmat",
+                "MaterialOverride": "materials/error.vmat",
                 "Model": "models/dev/plane.vmdl",
                 "RenderType": "On",
                 "Tint": "1,1,1,1"
@@ -84,18 +91,20 @@
           },
           {
             "__guid": "66ab6e18-8e8e-4377-b531-24ada3912a7c",
+            "Flags": 0,
             "Name": "Plane (3)",
             "Position": "0.0004825796,65.63783,-23.43592",
             "Rotation": "-0.7071055,-0.00000003166497,0.7071055,-0.00000002997489",
             "Scale": "0.3290388,0.3290388,0.3290388",
             "Enabled": true,
             "NetworkMode": 2,
+            "NetworkInterpolation": true,
             "Components": [
               {
-                "__type": "ModelRenderer",
+                "__type": "Sandbox.ModelRenderer",
                 "__guid": "1f185717-01d1-464f-85d9-8352d10efcab",
                 "BodyGroups": 18446744073709551615,
-                "MaterialOverride": "icons/keyboard \u0026 mouse/dark/space.vmat",
+                "MaterialOverride": "materials/error.vmat",
                 "Model": "models/dev/plane.vmdl",
                 "RenderType": "On",
                 "Tint": "1,1,1,1"
@@ -114,18 +123,20 @@
           },
           {
             "__guid": "77118bb8-28d9-4670-a3d5-bde7dd0c7c6a",
+            "Flags": 0,
             "Name": "Plane (3)",
             "Position": "0.0002382067,69.07167,-67.89655",
             "Rotation": "-0.7071055,-0.00000003166497,0.7071055,-0.00000002997489",
             "Scale": "0.3290388,0.3290388,0.3290388",
             "Enabled": true,
             "NetworkMode": 2,
+            "NetworkInterpolation": true,
             "Components": [
               {
-                "__type": "ModelRenderer",
+                "__type": "Sandbox.ModelRenderer",
                 "__guid": "6ba90c04-7c7b-4206-b29a-820e5f1af89b",
                 "BodyGroups": 18446744073709551615,
-                "MaterialOverride": "icons/keyboard \u0026 mouse/dark/shift_key_dark.vmat",
+                "MaterialOverride": "materials/error.vmat",
                 "Model": "models/dev/plane.vmdl",
                 "RenderType": "On",
                 "Tint": "1,1,1,1"
@@ -146,36 +157,42 @@
       },
       {
         "__guid": "9f46abdf-eadc-4fc3-8054-491329400434",
+        "Flags": 0,
         "Name": "Controller",
-        "Position": "0,0,0",
         "Rotation": "0.000000000381449,0.008726535,-0.9999619,-0.00000004370972",
         "NetworkMode": 2,
+        "NetworkInterpolation": true,
         "Components": [
           {
-            "__type": "TextRenderer",
+            "__type": "Sandbox.TextRenderer",
             "__guid": "8ef2f618-1bbd-4331-8a16-959ad83a170b",
             "Color": "1,1,1,1",
             "FontFamily": "Poppins",
             "FontSize": 43.18,
+            "FontWeight": 800,
             "Scale": 0.69,
-            "Text": "Controls:\n        to move\n        to jump\n        to brake"
+            "Text": "Controls:\n        to move\n        to jump\n        to brake",
+            "Text2": "Hello! \u2764",
+            "TextAlignment": "Center"
           }
         ],
         "Children": [
           {
             "__guid": "af1bddc5-efd0-4778-9672-ebbb596e47ca",
+            "Flags": 0,
             "Name": "Plane",
             "Position": "0.0008637955,67.70531,24.46641",
             "Rotation": "-0.7071055,-0.00000003166497,0.7071055,-0.00000002997489",
             "Scale": "0.3290388,0.3290388,0.3290388",
             "Enabled": true,
             "NetworkMode": 2,
+            "NetworkInterpolation": true,
             "Components": [
               {
-                "__type": "ModelRenderer",
+                "__type": "Sandbox.ModelRenderer",
                 "__guid": "cbd81979-c0f5-463a-b105-f8596228d594",
                 "BodyGroups": 18446744073709551615,
-                "MaterialOverride": "icons/xbox series/left stick.vmat",
+                "MaterialOverride": "materials/error.vmat",
                 "Model": "models/dev/plane.vmdl",
                 "RenderType": "On",
                 "Tint": "1,1,1,1"
@@ -194,18 +211,20 @@
           },
           {
             "__guid": "469c00b2-d596-45ab-a1d5-f4e2b659f50c",
+            "Flags": 0,
             "Name": "Plane (1)",
             "Position": "0.0004825796,65.63783,-23.43592",
             "Rotation": "-0.7071055,-0.00000003166497,0.7071055,-0.00000002997489",
             "Scale": "0.3290388,0.3290388,0.3290388",
             "Enabled": true,
             "NetworkMode": 2,
+            "NetworkInterpolation": true,
             "Components": [
               {
-                "__type": "ModelRenderer",
+                "__type": "Sandbox.ModelRenderer",
                 "__guid": "e91f9e3a-6b6c-4bdf-9301-0570a0709260",
                 "BodyGroups": 18446744073709551615,
-                "MaterialOverride": "icons/xbox series/abutton.vmat",
+                "MaterialOverride": "materials/error.vmat",
                 "Model": "models/dev/plane.vmdl",
                 "RenderType": "On",
                 "Tint": "1,1,1,1"
@@ -224,18 +243,20 @@
           },
           {
             "__guid": "1a020022-0f91-4e33-812c-fd54804e9764",
+            "Flags": 0,
             "Name": "Plane (2)",
             "Position": "0.0002382067,69.07167,-67.89655",
             "Rotation": "-0.7071055,-0.00000003166497,0.7071055,-0.00000002997489",
             "Scale": "0.3290388,0.3290388,0.3290388",
             "Enabled": true,
             "NetworkMode": 2,
+            "NetworkInterpolation": true,
             "Components": [
               {
-                "__type": "ModelRenderer",
+                "__type": "Sandbox.ModelRenderer",
                 "__guid": "36410fb3-078d-4a4b-a601-8b52d4fb2da0",
                 "BodyGroups": 18446744073709551615,
-                "MaterialOverride": "icons/xbox series/xboxseriesx_left_stick_click.vmat",
+                "MaterialOverride": "materials/error.vmat",
                 "Model": "models/dev/plane.vmdl",
                 "RenderType": "On",
                 "Tint": "1,1,1,1"
@@ -260,6 +281,6 @@
   "MenuPath": null,
   "MenuIcon": null,
   "ResourceVersion": 1,
-  "__version": 1,
-  "__references": []
+  "__references": [],
+  "__version": 1
 }

@@ -103,7 +103,7 @@
         "Output": "A"
       },
       "False": {
-        "Identifier": "8",
+        "Identifier": "3",
         "Output": "Result"
       }
     },
@@ -132,37 +132,12 @@
       }
     },
     {
-      "_class": "TextureSampler",
-      "Image": "icons/xbox series/xboxseriesx_left_stick_click.png",
-      "Sampler": {
-        "Filter": "Bilinear"
-      },
-      "UI": {
-        "Name": "Translucency",
-        "Default": "1,1,1,1",
-        "Extension": "Trans",
-        "ColorSpace": "Linear",
-        "ImageFormat": "BC7",
-        "PrimaryGroup": {
-          "Name": "Translucent",
-          "Priority": 1
-        },
-        "CreateInput": "CreateInputTexture2D"
-      },
-      "Identifier": "8",
-      "Position": "-144,144",
-      "Coords": {
-        "Identifier": "1",
-        "Output": "Result"
-      }
-    },
-    {
       "_class": "Result",
       "DefaultOpacity": 1,
       "DefaultRoughness": 1,
       "DefaultMetalness": 0,
       "DefaultAmbientOcclusion": 1,
-      "Identifier": "9",
+      "Identifier": "8",
       "Position": "480,-144",
       "Albedo": {
         "Identifier": "7",

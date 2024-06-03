@@ -2,25 +2,22 @@
 
 Layer0
 {
-	shader "materials/alphachanneltransparency.shader"
+	shader "materials/texture 2d translucency.shader"
 
-	g_bAlphafromColour "1"
+	//---- Texture Filtering ----
+	F_TEXTURE_FILTERING 3 // Point Sample
 
 	//---- Color ----
 	Color "icons/keyboard & mouse/dark/wasd.png"
-
-	//---- ColorSettings ----
-	g_bSolidColor "0"
 
 	//---- Fog ----
 	g_bFogEnabled "1"
 
 	//---- Texture Coordinates ----
-	g_vTexCoordOffset "[0.000 0.000]"
+	g_vTexCoordOffset "[1.000 1.000]"
 	g_vTexCoordScale "[1.000 1.000]"
 
 	//---- Translucent ----
 	g_flAlphaTestReference "0.500"
 	g_flAntiAliasedEdgeStrength "1.000"
-	Translucency "materials/default/default_trans.tga"
 }

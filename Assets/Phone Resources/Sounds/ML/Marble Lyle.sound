@@ -1,0 +1,22 @@
+{
+  "UI": false,
+  "Volume": "1.00,1.00,0",
+  "Pitch": "1.00,1.00,0",
+  "Decibels": 70,
+  "SelectionMode": "Random",
+  "Sounds": [
+    "phone resources/sounds/ml/1.vsnd",
+    "phone resources/sounds/ml/2.vsnd",
+    "phone resources/sounds/ml/3.vsnd",
+    "phone resources/sounds/ml/4.vsnd",
+    "phone resources/sounds/ml/5.vsnd",
+    "phone resources/sounds/ml/6.vsnd"
+  ],
+  "Occlusion": true,
+  "AirAbsorption": true,
+  "Transmission": true,
+  "OcclusionRadius": 64,
+  "DistanceAttenuation": true,
+  "__references": [],
+  "__version": 0
+}

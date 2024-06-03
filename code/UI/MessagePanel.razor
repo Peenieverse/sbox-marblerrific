@@ -4,14 +4,21 @@
 @using Marblerrific;
 
 <root>
-	<div class="Message"; style=@($"top: {messageOffsetCurrent-MessageOffset+10}px;")>
-		<Image class="MessageImage" Texture=@(characters.findCharacter(CurrentChat.CharacterName).Image)></Image>
-		<div style="width: 10px"></div>
-		<div style="flex-direction: column;">
-			<div class="MessageName">@(characters.findCharacter(CurrentChat.CharacterName).Name)</div>
-			<div class="MessageBody">@(CurrentChat.Message)</div>
+	<div class="killme">
+	<div class="BottomMiddle">
+	@if(CurrentChat!=null)
+	{
+		<div class="Message"; style=@($"top: {-(MessageOffset * (messageOffsetCurrent/MessageOffset))}px;")>
+			<Image class="MessageImage" Texture=@(characters.findCharacter(CurrentChat.CharacterName).Image)></Image>
+			<div style="width: 10px"></div>
+			<div style="flex-direction: column;">
+				<div class="MessageName">@(characters.findCharacter(CurrentChat.CharacterName).Name)</div>
+				<div class="MessageBody">@(currentDialougue)</div>
+			</div>
+			
 		</div>
-		
+	}
+	</div>
 	</div>
 </root>
 
@@ -20,6 +27,7 @@
 
 	[Property] public SoundPointComponent SoundPoint {get;set;}
 	[Property] public Chat CurrentChat {get;set;}
+	[Property] public Character CurrentCharacter {get;set;}
 	[Property] public List<Chat> Chats {get;set;}
 	[Property] public float MessageTime {get;set;}
 	[Property] public float MessageOffset {get;set;}
@@ -35,12 +43,15 @@
 		selecting = true;
 	}
 	float messageTimeCurrent;
+	float lastBlab;
 	bool selecting;
+	string currentDialougue;
 	async void select()
 	{
 		await Task.DelaySeconds(Chats[0].Delay);
-		SoundPoint.StopSound();
-		SoundPoint.StartSound();
+		lastBlab = 0;
+		CurrentCharacter = characters.findCharacter(Chats[0].CharacterName);
+		SoundPoint.SoundEvent = CurrentCharacter.TalkingSound;
 		CurrentChat = Chats[0];
 		Chats.RemoveAt(0);
 	}
@@ -63,10 +74,30 @@
 			BuildTheHash = !BuildTheHash;
 			messageTimeCurrent+=Time.Delta;
 			messageOffsetCurrent = MathX.Lerp(messageOffsetCurrent, messageTimeCurrent < MessageTime ? MessageOffset : -0.5f, Time.Delta * MessageSpeed);
+
+			int Substring = (int)MathF.Round(MathX.Lerp(CurrentChat.Message.Length-1,0, messageTimeCurrent/MessageTime));
+
+			currentDialougue = SubstringRemoveFromEnd(CurrentChat.Message,Substring);
+
+			if(messageTimeCurrent-lastBlab > CurrentCharacter.BlabSpeed && messageTimeCurrent < MessageTime)
+			{
+				lastBlab = messageTimeCurrent;
+				SoundPoint.StopSound();
+				SoundPoint.StartSound();
+			}
 			if(messageOffsetCurrent <= 0) selecting =true;
 		}
 	} 
+	static string SubstringRemoveFromEnd(string str, int removeLength)
+    {
+        if (removeLength >= str.Length)
+        {
+            return string.Empty;
+        }
 
-	protected override int BuildHash() => System.HashCode.Combine(BuildTheHash,messageOffsetCurrent, CurrentChat, characters,MessageOffset);
+        return str.Substring(0, str.Length - removeLength);
+    }
+
+	protected override int BuildHash() => System.HashCode.Combine(BuildTheHash,messageOffsetCurrent, CurrentChat, currentDialougue, characters,MessageOffset);
 }
 
