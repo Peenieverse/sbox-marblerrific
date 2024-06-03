@@ -210,9 +210,40 @@
             "messageOffsetCurrent": 0,
             "Chats": [],
             "CurrentChat": {},
-            "MessageOffset": 10,
+            "MessageOffset": 120,
             "MessageSpeed": 2,
-            "MessageTime": 3
+            "MessageTime": 3,
+            "SoundPoint": {
+              "_type": "component",
+              "component_id": "3c6f53f8-fbd3-41ea-a116-57f72b16e3de",
+              "go": "15989237-6196-4acd-bb1d-bc0ccdd9b9a5",
+              "component_type": "SoundPointComponent"
+            }
+          },
+          {
+            "__type": "Sandbox.SoundPointComponent",
+            "__guid": "3c6f53f8-fbd3-41ea-a116-57f72b16e3de",
+            "DistanceAttenuation": false,
+            "DistanceAttenuationOverride": false,
+            "Force2d": true,
+            "MaxRepeatTime": 1,
+            "MinRepeatTime": 1,
+            "Occlusion": false,
+            "OcclusionOverride": false,
+            "OcclusionRadius": 32,
+            "Pitch": 1,
+            "PlayOnStart": false,
+            "ReflectionOverride": false,
+            "Reflections": false,
+            "Repeat": false,
+            "SoundEvent": "sounds/scream.sound",
+            "SoundOverride": true,
+            "StopOnNew": false,
+            "TargetMixer": {
+              "Name": "unknown",
+              "Id": "00000000-0000-0000-0000-000000000000"
+            },
+            "Volume": 1
           }
         ],
         "Children": [

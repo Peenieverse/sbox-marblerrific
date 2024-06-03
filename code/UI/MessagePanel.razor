@@ -4,8 +4,9 @@
 @using Marblerrific;
 
 <root>
-	<div class="Message"; style=@($"top: {messageOffsetCurrent-MessageOffset}%;")>
+	<div class="Message"; style=@($"top: {messageOffsetCurrent-MessageOffset+10}px;")>
 		<Image class="MessageImage" Texture=@(characters.findCharacter(CurrentChat.CharacterName).Image)></Image>
+		<div style="width: 10px"></div>
 		<div style="flex-direction: column;">
 			<div class="MessageName">@(characters.findCharacter(CurrentChat.CharacterName).Name)</div>
 			<div class="MessageBody">@(CurrentChat.Message)</div>
@@ -17,6 +18,7 @@
 @code
 {
 
+	[Property] public SoundPointComponent SoundPoint {get;set;}
 	[Property] public Chat CurrentChat {get;set;}
 	[Property] public List<Chat> Chats {get;set;}
 	[Property] public float MessageTime {get;set;}
@@ -37,6 +39,8 @@
 	async void select()
 	{
 		await Task.DelaySeconds(Chats[0].Delay);
+		SoundPoint.StopSound();
+		SoundPoint.StartSound();
 		CurrentChat = Chats[0];
 		Chats.RemoveAt(0);
 	}
