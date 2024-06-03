@@ -5,7 +5,7 @@
 
 <root>
 	<div class="Message"; style=@($"top: {messageOffsetCurrent-MessageOffset}%;")>
-		<Image Texture=@(characters.findCharacter(CurrentChat.CharacterName).Image) class="MessageImage"></Image>
+		<Image class="MessageImage" Texture=@(characters.findCharacter(CurrentChat.CharacterName).Image)></Image>
 		<div style="flex-direction: column;">
 			<div class="MessageName">@(characters.findCharacter(CurrentChat.CharacterName).Name)</div>
 			<div class="MessageBody">@(CurrentChat.Message)</div>
