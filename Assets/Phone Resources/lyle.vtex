@@ -1,7 +1,7 @@
 {
   "Sequences": [
     {
-      "Source": "phone resources/image.png",
+      "Source": "phone resources/lyle.png",
       "IsLooping": true,
       "Frames": 64
     }

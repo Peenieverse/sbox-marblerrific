@@ -1,15 +1,10 @@
 {
   "CharacterList": [
     {
-      "Name": "Massive Cock Marble",
-      "Image": "phone resources/image.vtex",
+      "Name": "Marble Lyle",
+      "Image": "phone resources/lyle.vtex",
       "TalkingSound": "phone resources/sounds/ml/marble lyle.sound",
-      "BlabSpeed": 0.1
-    },
-    {
-      "Name": "Master Big Wong",
-      "Image": "phone resources/master big wong.vtex",
-      "BlabSpeed": 0.5
+      "BlabSpeed": 0.2
     }
   ],
   "__references": [],

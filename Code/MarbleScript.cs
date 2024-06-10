@@ -18,6 +18,9 @@ public sealed class MarbleScript : Component
 	[Category( "Component & Object References" ), Property] private GameObject ActualCamera { get; set; }
 	[Category( "Component & Object References" ), Property] private Rigidbody rb { get; set; }
 
+	[Category( "Movement Stats Normal" ), Property] private float DashBoost { get; set; }
+	[Category( "Movement Stats Normal" ), Property] private float DashCooldown { get; set; }
+	[Category( "Movement Stats Normal" ), Property] private float DashCooldownCurrent { get; set; }
 	[Category( "Movement Stats Normal" ), Property] private float Acceleration { get; set; }
 	[Category( "Movement Stats Normal" ), Property] private float BrakeAcceleration { get; set; }
 	[Category( "Movement Stats Normal" ), Property] private float JumpForce { get; set; }
@@ -121,12 +124,21 @@ public sealed class MarbleScript : Component
 
 	void NormalMovement( Vector3 cameraForwardFlat, bool AirControl = false, float mult = 1)
 	{
+		DashCooldownCurrent-=Time.Delta;
 		if ( IsOnGround || AirControl )
 		{
 			rb.ApplyForce( mult * forceMultForBetterConfig * Time.Delta * Acceleration * ((cameraForwardFlat * Input.AnalogMove.x) + (ForwardAxis.Transform.World.Right * -Input.AnalogMove.y)) );
 			Vector3 velocityExludingZ = rb.Velocity;
 			velocityExludingZ.z = 0;
 			if ( Input.Down( "Run" ) ) rb.ApplyForce( forceMultForBetterConfig * -velocityExludingZ * BrakeAcceleration * Time.Delta );
+			
+		}
+		if(Input.Down("attack1") && DashCooldownCurrent <= 0)
+		{
+			Vector3 velocityExludingZ = rb.Velocity;
+			velocityExludingZ.z = 0;
+			rb.Velocity = cameraForwardFlat * velocityExludingZ.Length * DashBoost;
+			DashCooldownCurrent = DashCooldown;
 		}
 	}
 	GameObject lastGroundOBJ;

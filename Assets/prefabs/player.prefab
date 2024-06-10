@@ -99,6 +99,9 @@
             },
             "CameraReturnLerp": 100,
             "CurrentMode": "Normal",
+            "DashBoost": 1.6,
+            "DashCooldown": 5,
+            "DashCooldownCurrent": 0,
             "forceMultForBetterConfig": 500000,
             "ForwardAxis": {
               "_type": "gameobject",
@@ -209,6 +212,9 @@
             "__guid": "65216a8e-39a3-440d-8aab-6278aebf1ae8",
             "messageOffsetCurrent": 0,
             "Chats": [],
+            "CurrentCharacter": {
+              "BlabSpeed": 0.5
+            },
             "CurrentChat": {},
             "MessageOffset": 120,
             "MessageSpeed": 2,
